@@ -1,4 +1,5 @@
-# MathIS Sidon Frontier
+# **MathIS** - Mathematical Integrity System 
+### Sidon Frontier
 
 [![Exact certificate verification](https://github.com/FromAriel/mathis-sidon-frontier/actions/workflows/verify.yml/badge.svg)](https://github.com/FromAriel/mathis-sidon-frontier/actions/workflows/verify.yml)
 
