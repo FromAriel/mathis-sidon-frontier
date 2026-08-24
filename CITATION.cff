@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this certificate or verifier, please cite this repository."
+title: "MathIS Sidon Frontier: An Exact Nine-Kernel Certificate"
+authors:
+  - family-names: "Williams"
+    given-names: "Ariel M."
+version: "1.0.0"
+date-released: 2026-08-24
+type: software
+repository-code: "https://github.com/FromAriel/mathis-sidon-frontier"
+keywords:
+  - Sidon sets
+  - additive combinatorics
+  - exact rational certificate
+  - computer-assisted proof
+  - Mathematical Integrity System
+license: MIT

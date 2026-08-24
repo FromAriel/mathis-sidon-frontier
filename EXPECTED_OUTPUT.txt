@@ -1,0 +1,50 @@
+SIDON FRONTIER CERTIFICATE - EXACT VERIFICATION
+======================================================
+Certificate file: CERTIFICATE.json
+Certificate SHA-256: 85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75
+Schema: mathis.research.sidon.smoothing_certificate.v1
+
+Theorem parameters
+  R (kernels): 9
+  m (kernel length): 32
+  L (boundary depth): 4
+  boundary entries per kernel: 128
+  covering constraints: 129
+
+[1/7] Strict certificate parse and frozen hash ........ PASS
+[2/7] Mixing weights nonnegative; exact sum = 1 ...... PASS
+[3/7] 9 kernels nonnegative, normalized, symmetric .. PASS
+[4/7] 129 exact covering inequalities ............... PASS
+      minimum slack: 0
+      minimum-slack index: q=77
+      equality indices: [77, 128]
+      least positive slack: 538113441787301172842165952893406967863648591806456911/2083333333324999999999991666666666700000000000000000000000000000000
+[5/7] Exact energy and boundary constants ............. PASS
+      a = 878100245194533439266278242084881942584297285596894154878226275344320126334672648863...555560980902777821180555555479600694444357638888889062500000000000000000000000000000 (205 characters; use --verbose for full value)
+      b = 103553585943729846548902897836699810032916373165366975119265445785033349584757962480...223765431905864197531250000000000000000000000000000000000000000000000000000000000000 (267 characters; use --verbose for full value)
+      b > 0: yes
+[6/7] Exact candidate bound ........................... PASS
+      ab = 909304292079623696903939334343985595730416017412110383519906396338481567536181871887...000000000000000000000000000000000000000000000000000000000000000000000000000000000000 (470 characters; use --verbose for full value)
+      ab < (1887/2000)^2: yes
+      gamma (decimal diagnostic): 0.9432424249899389
+[7/7] Exact Hou-Zhao v2 comparison .................... PASS
+      source: arXiv:2607.01169v2
+      Hou-Zhao ab = 34772588622318632383981521978715331189177469643597175481323/39062500000000000000000000000000000000000000000000000000000
+      Hou-Zhao gamma (published display): 0.9434925907135450
+      candidate ab < Hou-Zhao ab: yes
+      exact squared-constant margin: 482393339714591318929724159357971459996099067904251751507076419512075221469496502833...000000000000000000000000000000000000000000000000000000000000000000000000000000000000 (467 characters; use --verbose for full value)
+      gamma improvement (decimal diagnostic): 0.0002501657236061
+
+======================================================
+ALL EXACT CHECKS PASSED
+
+Certified consequence under Hou-Zhao Lemma 2.1:
+  F(N) <= N^(1/2)
+          + 0.9432424249899389... N^(1/4)
+          + O(1).
+
+This improves the exact Hou-Zhao v2 certified coefficient.
+It does not resolve Erdos Problem #30.
+All proof-bearing calculations used exact rational arithmetic.
+Decimals above are diagnostic displays only.
+======================================================

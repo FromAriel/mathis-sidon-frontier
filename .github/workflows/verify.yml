@@ -1,0 +1,50 @@
+name: Exact certificate verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Ubuntu / Python 3.9
+            os: ubuntu-latest
+            python: "3.9"
+          - name: Ubuntu / Python 3.13
+            os: ubuntu-latest
+            python: "3.13"
+          - name: Windows / Python 3.12
+            os: windows-latest
+            python: "3.12"
+          - name: macOS / Python 3.12
+            os: macos-latest
+            python: "3.12"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Verify exact certificate
+        run: python verify.py CERTIFICATE.json
+
+      - name: Confirm deterministic reference output
+        run: >-
+          python -c "import pathlib, subprocess, sys;
+          actual=subprocess.check_output([sys.executable, 'verify.py',
+          'CERTIFICATE.json'], text=True).replace('\r\n', '\n').rstrip();
+          expected=pathlib.Path('EXPECTED_OUTPUT.txt').read_text(encoding='utf-8').replace('\r\n',
+          '\n').rstrip(); raise SystemExit(0 if actual == expected else 1)"
