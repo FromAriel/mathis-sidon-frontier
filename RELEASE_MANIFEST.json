@@ -2,9 +2,9 @@
   "description": "Complete payload inventory except this manifest itself. Historical R16 subset inventory remains separately scoped.",
   "files": [
     {
-      "bytes": 62,
+      "bytes": 87,
       "path": ".gitattributes",
-      "sha256": "298b3771c4cff8520c9b13e4dcde649798ec1d69813386534e3cee46b0accd84"
+      "sha256": "a4d532da068a51c243e458b67314cde3a57f459f90aa23af4b8a9fa1fe187e7f"
     },
     {
       "bytes": 1919,
