@@ -114,7 +114,9 @@ formal proof of the complete analytic theorem.
 
 Historical development, private communication and public release are
 different dates. R9 was recorded August 23, 2026 and privately communicated
-August 24. The version 1.1.0 tagged release has no assigned date or DOI yet.
+August 24. The repository became public on October 17, 2026. The version
+1.1.0 GitHub release and Zenodo DOI are pending; citation metadata records
+October 17 as the software's first public-availability date.
 The earlier private repository history does not establish public priority.
 
 ## Authorship, assistance and citation
@@ -125,8 +127,9 @@ developed MathIS. Numerical search and software development used
 AI-assisted workflows, including review and debugging.
 The numerical optimizer is not part of the proof-bearing certificate.
 
-Use [CITATION.cff](CITATION.cff) for author and version metadata. A DOI and
-actual public-release date will be added only when available.
+Use [CITATION.cff](CITATION.cff) for author and version metadata. The DOI
+will be added once issued. The citation
+date records public availability on October 17, 2026.
 The repository is not affiliated with or endorsed by Hou–Zhao or Wu/wustep.
 
 ## Files and license

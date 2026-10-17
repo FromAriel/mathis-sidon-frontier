@@ -2,6 +2,7 @@
 
 Title: **MathIS Sidon Frontier: Exact R9 and R16 Certificates**.
 Status: content reviewed; tagged release and Zenodo DOI pending.
+Public-availability date: October 17, 2026. Zenodo integration is enabled.
 
 ## Contents
 
@@ -24,8 +25,8 @@ record, an exponent improvement, global optimality or an Erdős#30 solution.
 These are future actions; preparation does not execute them.
 
 1. Ariel has reviewed the proposed public files, release notes and validation report.
-2. Set the actual release date in citation/release metadata; retain August and
-   September dates only in the development history. Recheck changed hashes
+2. Citation metadata now records October 17, 2026 public availability; retain
+   August and September dates only in the development history. Recheck changed hashes
    and rebuild the final candidate after any approved edit.
 3. Commit and push only the approved certificate-repository update, reconciling
    the existing August24 README-only commit. Preserve

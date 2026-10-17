@@ -11,6 +11,7 @@ Prepared for version 1.1.0; tagged-release date and Zenodo DOI pending.
 | August24 | R12 coefficient approximately0.94324232243495565761 privately communicated | Historical certificate hash and dated communication. R12 is not bundled here. |
 | August27 | Inspected external q2 commit records the stronger0.943006169985179 coefficient | [Wu/wustep commit](https://github.com/wustep/maths/commit/da2440b68979b78d201182118d30ca418e3c2001). Commit date and first public availability are separate questions. |
 | September20 | Present retained R16 certificate preserved after exact verification | B3-triple-prime lineage, certificate SHA-256 below; MathIS commit `784fc88dc7825709fe79d35ef48f4f7ebfbe7473`. |
+| October17,2026 | Repository made public with both certificate packets | Public commit `9202cd74070ae1d915b04012da1bb93f58e456fb`; anonymous certificate access and all four hosted CI jobs verified. This is the first established public-availability date in this record. |
 | Tagged release | Pending | Repository availability and a tagged software release are separate events. Final release metadata must use the actual public date, not an August development date. |
 
 This is a development record, not a claim of worldwide first discovery,

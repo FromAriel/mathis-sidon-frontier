@@ -22,14 +22,14 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 864,
+      "bytes": 892,
       "path": "CITATION.cff",
-      "sha256": "e9599c446dd07f9e93ff42ecc4efe80c671407c93894132ccee594378a8065fe"
+      "sha256": "f22e8a83ebc4e85ec71aaa89cfab00f95ae6d94bcdd607bd36ce0af76200f457"
     },
     {
-      "bytes": 5177,
+      "bytes": 5449,
       "path": "DEVELOPMENT_AND_THEOREM.md",
-      "sha256": "b323fed8b0201968c50a0a91df0b31cef3c2c6485b7ac4738f57ccd0775de9b4"
+      "sha256": "9e454fc25bd106bd2373ad9370127933c44405c852898c4ee182b3f4cbb28c11"
     },
     {
       "bytes": 2940,
@@ -42,14 +42,14 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 6430,
+      "bytes": 6592,
       "path": "README.md",
-      "sha256": "59abfe99d9b2e3442ead6679be5ac0bc68f83694532d0e8a2214396e83791ff9"
+      "sha256": "b9b1aeb757e00fe19ad70d029a41bd3cd3671f69210fc12bf511a4d5f6054020"
     },
     {
-      "bytes": 2738,
+      "bytes": 2823,
       "path": "RELEASE_NOTES.md",
-      "sha256": "55246a052ec501630b1ea45643d1a879ec7ddb7f6993ac68f0b8474ca0c2eeec"
+      "sha256": "2585275f47cc43bbe0e4ca0c3ba576dfc8629877e911fe9c63b603f6f09a21c5"
     },
     {
       "bytes": 2741,
@@ -92,6 +92,6 @@
       "sha256": "71ba65656bb7dc27caf302ee148cfc6356d56ad1f1186d806e82c3664ae2a8dd"
     }
   ],
-  "status": "prepared release candidate; public date and DOI unassigned",
+  "status": "repository public since2026-10-17; GitHub release draft and Zenodo DOI pending",
   "version": "1.1.0"
 }
