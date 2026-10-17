@@ -1,179 +1,140 @@
-# MathIS Sidon Frontier
+# MathIS — Mathematical Integrity System
 
-[![Exact certificate verification](https://github.com/FromAriel/mathis-sidon-frontier/actions/workflows/verify.yml/badge.svg)](https://github.com/FromAriel/mathis-sidon-frontier/actions/workflows/verify.yml)
+## Sidon Frontier: Exact R9 and R16 Certificates
 
-An exact rational certificate improving the finite Sidon-set
-\(N^{1/4}\) upper-bound coefficient.
+**Version 1.1.0 preparation — tagged GitHub release and Zenodo DOI pending.**
 
-Let
+Exact rational Sidon smoothing certificates, standalone verification tools,
+and a dated development record by **Ariel M. Williams**. The certificates
+improve the cited Hou–Zhao baseline. Stronger coefficients subsequently
+appeared, including Stephen Wu/wustep's q2 certificate; these are historical
+improvements, not a claim to the current record.
 
+For
 \[
-F(N)=\max\left\{|A|:A\subseteq\{0,1,\ldots,N-1\}
-\text{ is a Sidon set}\right\}.
+F(N)=\max\{|A|:A\subseteq\{0,\ldots,N-1\}\text{ is an integer Sidon set}\},
+\]
+the cited finite smoothing theorem turns a valid fixed certificate into
+\[
+F(N)\le N^{1/2}+\sqrt{ab}\,N^{1/4}+O(1).
 \]
 
-The certificate in this repository verifies
+| Certificate | R | m | L | Coefficient \(\sqrt{ab}\), diagnostic decimal |
+| --- | ---: | ---: | ---: | --- |
+| Original MathIS R9 | 9 | 32 | 4 | 0.943242424989938949… |
+| Retained MathIS R16 | 16 | 32 | 4 | 0.943242255546856199… |
+| Hou–Zhao v2 baseline | 8 | 32 | 4 | 0.9434925907135450… |
+| External Wu/wustep q2 | 11 | 48 | 6 | 0.943006169985179… |
 
-\[
-F(N)
-\le
-N^{1/2}
-+0.9432424249899389\ldots N^{1/4}
-+O(1).
-\]
+The proof-bearing quantities are exact rational values of \(a,b,ab\), not
+the displayed square roots. The q2 data are an attributed external benchmark,
+not a certificate produced by this project. This release does not attempt
+an exhaustive best-known-result catalogue.
 
-This improves the Hou–Zhao v2 certified coefficient
+## Verify both certificates
 
-\[
-0.9434925907135450\ldots.
-\]
+**Python 3.10 or newer** is required to run both existing checkers. Python
+3.12 is the locally checked environment for this release preparation.
+No third-party package, network access, optimizer or MathIS installation
+is needed for certificate verification.
 
-The decisive comparison is performed on exact rational values of
-\(ab=\gamma^2\). Floating-point arithmetic is used only to print readable
-decimal approximations. It is not used to accept the certificate or establish
-the improvement.
+Run from this repository's root:
 
-> This result improves a quantitative frontier associated with Erdős Problem
-> #30. It does **not** resolve Erdős Problem #30 or improve the exponent
-> \(1/4\).
-
-**Research and project direction:** Ariel M. Williams<br>
-**Verification framework:** MathIS — Mathematical Integrity System<br>
-**Analytic foundation:** Hou–Zhao, Lemma 2.1,
-[arXiv:2607.01169v2](https://arxiv.org/abs/2607.01169v2)
-
-## Verify in seconds
-
-Python 3.9 or newer is required. No third-party packages, network connection,
-optimizer, MathIS installation, or original research repository is needed.
-
-```bash
+```text
 python verify.py CERTIFICATE.json
+python certificates/r16/verify.py
 ```
 
-On Windows, double-click:
+The unchanged R9 command ends with `ALL EXACT CHECKS PASSED`.
+The R16 command prints JSON with `"checks_passed": true` and
+`"status": "exact-improvement-certified"`. A nonzero process exit
+means verification failed. R16 also checks the preceding R16 baseline;
+its final gain is positive but below the historical \(10^{-12}\)
+product-gain materiality threshold. It establishes no optimality claim.
 
-```text
-VERIFY_WINDOWS.cmd
-```
+Expected outputs:
+[original R9](EXPECTED_OUTPUT.txt) and
+[retained R16](certificates/r16/EXPECTED_OUTPUT.json).
+For R9's full exact fractions and every slack, add `--verbose`.
+The original [Windows launcher](VERIFY_WINDOWS.cmd) checks **R9 only**;
+use the second command above for R16. R9 alone retains its original
+Python 3.9 requirement; R16's unchanged checker requires Python 3.10.
 
-A successful run ends with:
+[Verification details](VERIFICATION.md) explain output comparison,
+manifest scope and the analytic boundary of these checks.
 
-```text
-ALL EXACT CHECKS PASSED
-```
+## What the checkers reconstruct
 
-For the complete exact fractions and all 129 covering slacks:
+Both checkers use standard-library rational arithmetic for kernel and mixing
+normalization, nonnegativity, actual kernel reflection, all 129 covering
+inequalities, fixed boundary tails, \(a,b,ab\), and \(b>0\).
+R9 checks its frozen hash and exact improvement over the cited Hou–Zhao
+baseline. R16 checks its public-subset manifest, its required baseline
+identity, both certificates' obligations and their exact product comparison.
 
-```bash
-python verify.py CERTIFICATE.json --verbose
-```
+The root R9 certificate SHA-256 is
+`85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75`.
+The retained R16 certificate SHA-256 is
+`bfdd1de9fced9e32010ccefb853803b6154980584ea71335d42572a4d4cc66d8`.
 
-The default successful output is frozen in `EXPECTED_OUTPUT.txt`.
+The R16 [manifest](certificates/r16/MANIFEST.json) is newly assembled for
+this public subset. The certificate, baseline, checker and expected output
+are byte-identical to their historical research-packet members.
+The original research archive and its inventory remain unchanged.
 
-## What is checked
+## Analytic foundation and attribution
 
-Using only Python's standard-library `fractions.Fraction`, the verifier:
+The finite smoothing architecture and analytic implication are due to
+**Jianfeng Hou and Hongbin Zhao**:
+[arXiv:2607.01169v2](https://arxiv.org/abs/2607.01169v2), Lemma 2.1, and
+[v3](https://arxiv.org/abs/2607.01169v3), Theorem 2.1.
+The R9 packet preserves its original v2 comparison. The retained R16
+certificate has a separately reviewed v3 hypothesis mapping.
 
-1. Checks the frozen certificate SHA-256 and strict JSON structure.
-2. Checks that all nine mixing weights are nonnegative and sum exactly to one.
-3. Checks that every kernel is nonnegative, normalized, and exactly symmetric.
-4. Recomputes all 129 Hou–Zhao covering inequalities.
-5. Recomputes the exact energy constant
-   \[
-   a=m\sum_r\lambda_r\sum_i(p_i^{(r)})^2.
-   \]
-6. Recomputes the exact boundary constant
-   \[
-   b=1+2\left(\frac1m\sum_r\lambda_r\sum_j(w_j^{(r)})^2-L\right)
-   \]
-   and checks \(b>0\).
-7. Recomputes \(ab=\gamma^2\), checks the declared bound, and compares the
-   candidate with the exact Hou–Zhao v2 \(ab\).
+Our contributions represented here are certificate search and construction,
+exact rationalization, standalone checking software and reproducible
+artifact preservation within that existing framework. We do not claim
+invention of the smoothing theorem or the first rational Sidon certificate.
 
-The frozen certificate is 177,454 bytes and has SHA-256:
+Credit **Stephen Wu/wustep** for the stronger
+[q2 certificate](https://github.com/wustep/maths/tree/da2440b68979b78d201182118d30ca418e3c2001/problems/sidon-second-term/compute/q2).
+No q2 source or certificate is bundled in this release.
 
-```text
-85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75
-```
+The [theorem and development note](DEVELOPMENT_AND_THEOREM.md) records
+hypotheses, dates, comparison scope and remaining limitations.
 
-## Mathematical source and attribution
+## Scope
 
-The analytic implication is Lemma 2.1 of:
+These certificates do not solve Erdős #30, improve the exponent \(1/4\),
+establish a globally optimal coefficient or prove a physical forced-loss
+theorem. The asymptotic consequence fixes certificate data before
+\(N\to\infty\); no varying-grid uniform remainder is asserted.
+Finite certificate checking is distinct from external peer review or a
+formal proof of the complete analytic theorem.
 
-> Jianfeng Hou and Hongbin Zhao, *Vector-valued smoothing for finite Sidon
-> sets*, arXiv:2607.01169v2.
+Historical development, private communication and public release are
+different dates. R9 was recorded August 23, 2026 and privately communicated
+August 24. The version 1.1.0 tagged release has no assigned date or DOI yet.
+The earlier private repository history does not establish public priority.
 
-Their lemma permits an arbitrary finite number of symmetric probability
-kernels, nonnegative mixing weights summing to one, real boundary vectors
-satisfying the covering inequalities, and a positive boundary constant
-\(b\). Their published certificate uses eight kernels. The certificate here
-uses \(R=9\), \(m=32\), and \(L=4\) within the same published hypothesis
-class.
+## Authorship, assistance and citation
 
-This repository is not affiliated with or endorsed by Hou and Zhao.
+**Ariel M. Williams**, independent researcher and software developer,
+directed the research, acceptance criteria and claim boundaries and
+developed MathIS. Numerical search and software development used
+AI-assisted workflows, including review and debugging.
+The numerical optimizer is not part of the proof-bearing certificate.
 
-## Scope of the result
+Use [CITATION.cff](CITATION.cff) for author and version metadata. A DOI and
+actual public-release date will be added only when available.
+The repository is not affiliated with or endorsed by Hou–Zhao or Wu/wustep.
 
-This repository establishes an improved explicit coefficient in an upper
-bound of the form
+## Files and license
 
-\[
-F(N)\le N^{1/2}+\gamma N^{1/4}+O(1).
-\]
+The root certificate, verifier, expected output and Windows launcher retain
+the original R9 bytes. The R16 files are in `certificates/r16/`.
+[Release notes](RELEASE_NOTES.md) describe this candidate.
 
-It does not:
-
-- resolve Erdős Problem #30;
-- prove an error term \(O_\varepsilon(N^\varepsilon)\);
-- improve the exponent \(1/4\);
-- prove that this nine-kernel certificate is globally optimal;
-- prove that the Hou–Zhao framework can drive \(\gamma\) to zero; or
-- claim peer review or endorsement by the authors of the underlying lemma.
-
-## About MathIS
-
-**MathIS — Mathematical Integrity System** is a research and verification
-framework developed by Ariel M. Williams for computer-assisted mathematics.
-It separates numerical discovery from proof-bearing evidence, checks exact
-certificates independently, preserves provenance and artifact identities, and
-enforces explicit boundaries on what a computation does and does not
-establish.
-
-MathIS was used to organize, audit, rationalize, and independently replay the
-research that produced this certificate. The verifier published here is
-deliberately standalone: users do not need MathIS or the original research
-environment to verify the result.
-
-## About Ariel Williams
-
-Ariel M. Williams is an independent researcher and software developer
-exploring how exact computation, transparent certificates, and carefully
-supervised AI systems can contribute to serious mathematical research. She
-developed MathIS and directed the search and verification program that
-produced this certificate.
-
-## Computational assistance
-
-The research program, acceptance criteria, claim boundaries, and final
-disclosure are directed by Ariel M. Williams. Numerical optimization and
-software development used AI-assisted workflows, including independent review
-and debugging passes.
-
-The numerical optimizer is not part of the proof. The public mathematical
-evidence consists of the Hou–Zhao analytic lemma and the exact rational
-certificate checked by the standalone verifier in this repository.
-
-## Files
-
-- `CERTIFICATE.json` — frozen exact rational certificate.
-- `verify.py` — standalone standard-library exact verifier.
-- `VERIFY_WINDOWS.cmd` — double-click Windows launcher.
-- `EXPECTED_OUTPUT.txt` — deterministic successful reference output.
-- `CITATION.cff` — citation metadata.
-- `LICENSE` — MIT license.
-
-## License
-
-Copyright © 2026 Ariel M. Williams. This repository is released under the
-MIT License. See `LICENSE`.
+Our software, certificate data and accompanying documentation use the
+existing [MIT license](LICENSE), copyright © 2026 Ariel M. Williams.
+Third-party source papers are cited rather than redistributed here.

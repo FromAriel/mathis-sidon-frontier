@@ -1,0 +1,25 @@
+{
+  "description": "New public-subset manifest. Not the original research archive inventory. No third-party source-paper copy or internal campaign files included.",
+  "files": [
+    {
+      "bytes": 301941,
+      "path": "CERTIFICATE.json",
+      "sha256": "bfdd1de9fced9e32010ccefb853803b6154980584ea71335d42572a4d4cc66d8"
+    },
+    {
+      "bytes": 293334,
+      "path": "BASELINE.json",
+      "sha256": "5c441ae04ec2ad404832d9ffa77a2d0c61b07648202aed2805829363e883da77"
+    },
+    {
+      "bytes": 6161,
+      "path": "verify.py",
+      "sha256": "a12448f7d139575ae0d40020e9615bff027ea48bcec462cee9ffc1d39522c8ca"
+    },
+    {
+      "bytes": 18416,
+      "path": "EXPECTED_OUTPUT.json",
+      "sha256": "3f69c03b3ef9f63a82224197384a31b61291e54a8b66a15f82159bbb06edf060"
+    }
+  ]
+}

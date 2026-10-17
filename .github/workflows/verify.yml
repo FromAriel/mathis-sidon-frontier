@@ -16,9 +16,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: Ubuntu / Python 3.9
+          - name: Ubuntu / Python 3.10
             os: ubuntu-latest
-            python: "3.9"
+            python: "3.10"
           - name: Ubuntu / Python 3.13
             os: ubuntu-latest
             python: "3.13"
@@ -38,13 +38,24 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
 
-      - name: Verify exact certificate
+      - name: Verify original R9 certificate
         run: python verify.py CERTIFICATE.json
 
-      - name: Confirm deterministic reference output
+      - name: Confirm original R9 reference output
         run: >-
           python -c "import pathlib, subprocess, sys;
           actual=subprocess.check_output([sys.executable, 'verify.py',
-          'CERTIFICATE.json'], text=True).replace('\r\n', '\n').rstrip();
+          'CERTIFICATE.json'], text=True).replace('\r\n', '\n');
           expected=pathlib.Path('EXPECTED_OUTPUT.txt').read_text(encoding='utf-8').replace('\r\n',
-          '\n').rstrip(); raise SystemExit(0 if actual == expected else 1)"
+          '\n'); raise SystemExit(0 if actual == expected else 1)"
+
+      - name: Verify retained R16 certificate and baseline
+        run: python certificates/r16/verify.py
+
+      - name: Confirm retained R16 reference output
+        run: >-
+          python -c "import pathlib, subprocess, sys;
+          actual=subprocess.check_output([sys.executable,
+          'certificates/r16/verify.py'], text=True).replace('\r\n', '\n');
+          expected=pathlib.Path('certificates/r16/EXPECTED_OUTPUT.json').read_text(encoding='utf-8').replace('\r\n', '\n');
+          raise SystemExit(0 if actual == expected else 1)"

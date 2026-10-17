@@ -1,13 +1,18 @@
 cff-version: 1.2.0
-message: "If you use this certificate or verifier, please cite this repository."
-title: "MathIS Sidon Frontier: An Exact Nine-Kernel Certificate"
+message: "If you use these certificates or verifiers, please cite this release."
+title: "MathIS Sidon Frontier: Exact R9 and R16 Certificates"
 authors:
   - family-names: "Williams"
     given-names: "Ariel M."
-version: "1.0.0"
-date-released: 2026-08-24
+version: "1.1.0"
 type: software
 repository-code: "https://github.com/FromAriel/mathis-sidon-frontier"
+abstract: >-
+  Exact rational R9 and R16 certificates developed within the Hou-Zhao
+  finite Sidon smoothing framework, with standalone standard-library Python
+  verifiers, expected outputs and development history. Historical coefficient
+  improvements superseded by stronger external results; no exponent
+  improvement, optimality or solution of Erdos Problem 30 is claimed.
 keywords:
   - Sidon sets
   - additive combinatorics

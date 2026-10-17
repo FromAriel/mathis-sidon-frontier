@@ -1,0 +1,97 @@
+{
+  "description": "Complete payload inventory except this manifest itself. Historical R16 subset inventory remains separately scoped.",
+  "files": [
+    {
+      "bytes": 62,
+      "path": ".gitattributes",
+      "sha256": "298b3771c4cff8520c9b13e4dcde649798ec1d69813386534e3cee46b0accd84"
+    },
+    {
+      "bytes": 1919,
+      "path": ".github/workflows/verify.yml",
+      "sha256": "a55c1a14124ba31a868cb94bd0902b359fd5e292422ad1e9dfd3c61348e43d9c"
+    },
+    {
+      "bytes": 43,
+      "path": ".gitignore",
+      "sha256": "b5e7d7a61cc12d0aee0bb7a38b66cf0a080ec42023ef03d4615b6b654a5c5afc"
+    },
+    {
+      "bytes": 177454,
+      "path": "CERTIFICATE.json",
+      "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
+    },
+    {
+      "bytes": 864,
+      "path": "CITATION.cff",
+      "sha256": "e9599c446dd07f9e93ff42ecc4efe80c671407c93894132ccee594378a8065fe"
+    },
+    {
+      "bytes": 5177,
+      "path": "DEVELOPMENT_AND_THEOREM.md",
+      "sha256": "b323fed8b0201968c50a0a91df0b31cef3c2c6485b7ac4738f57ccd0775de9b4"
+    },
+    {
+      "bytes": 2940,
+      "path": "EXPECTED_OUTPUT.txt",
+      "sha256": "8d300d9d0563112d7f187587be28bc7d5cac75a8b129b46684c417e64e0ce0e5"
+    },
+    {
+      "bytes": 1074,
+      "path": "LICENSE",
+      "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
+    },
+    {
+      "bytes": 6430,
+      "path": "README.md",
+      "sha256": "59abfe99d9b2e3442ead6679be5ac0bc68f83694532d0e8a2214396e83791ff9"
+    },
+    {
+      "bytes": 2738,
+      "path": "RELEASE_NOTES.md",
+      "sha256": "55246a052ec501630b1ea45643d1a879ec7ddb7f6993ac68f0b8474ca0c2eeec"
+    },
+    {
+      "bytes": 2741,
+      "path": "VERIFICATION.md",
+      "sha256": "d4005db57a7d946e83820431b416db1abce28c6d5228df430b210b4610d4b485"
+    },
+    {
+      "bytes": 855,
+      "path": "VERIFY_WINDOWS.cmd",
+      "sha256": "94b5720dc9b8b8b8a4d2b52b647a62397d89e2259a32148aaccd7c0d52a18547"
+    },
+    {
+      "bytes": 293334,
+      "path": "certificates/r16/BASELINE.json",
+      "sha256": "5c441ae04ec2ad404832d9ffa77a2d0c61b07648202aed2805829363e883da77"
+    },
+    {
+      "bytes": 301941,
+      "path": "certificates/r16/CERTIFICATE.json",
+      "sha256": "bfdd1de9fced9e32010ccefb853803b6154980584ea71335d42572a4d4cc66d8"
+    },
+    {
+      "bytes": 18416,
+      "path": "certificates/r16/EXPECTED_OUTPUT.json",
+      "sha256": "3f69c03b3ef9f63a82224197384a31b61291e54a8b66a15f82159bbb06edf060"
+    },
+    {
+      "bytes": 786,
+      "path": "certificates/r16/MANIFEST.json",
+      "sha256": "f135c3fb86c23c791198a07093617b4db2e518fa65587ce9a5b298f2cda1a3a1"
+    },
+    {
+      "bytes": 6161,
+      "path": "certificates/r16/verify.py",
+      "sha256": "a12448f7d139575ae0d40020e9615bff027ea48bcec462cee9ffc1d39522c8ca"
+    },
+    {
+      "bytes": 14894,
+      "path": "verify.py",
+      "sha256": "71ba65656bb7dc27caf302ee148cfc6356d56ad1f1186d806e82c3664ae2a8dd"
+    }
+  ],
+  "status": "prepared release candidate; public date and DOI unassigned",
+  "version": "1.1.0"
+}
