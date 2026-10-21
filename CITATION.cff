@@ -6,6 +6,7 @@ authors:
     given-names: "Ariel M."
 version: "1.2.0"
 date-released: "2026-10-21"
+doi: "10.5281/zenodo.23548458"
 type: software
 repository-code: "https://github.com/FromAriel/mathis-sidon-frontier"
 abstract: >-

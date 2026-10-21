@@ -22,9 +22,9 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 1070,
+      "bytes": 1101,
       "path": "CITATION.cff",
-      "sha256": "bcac55e4da903a84acd01fc582e502d189d0dc7c2cfd678e80acee7259c9ac0e"
+      "sha256": "a5126f8db65e04c7ebb062f8510a9d03091cb947df184fffb3cc6d5777f5c2f5"
     },
     {
       "bytes": 8581,
@@ -42,14 +42,14 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 5009,
+      "bytes": 5072,
       "path": "README.md",
-      "sha256": "f4a54b88779629439395cdcc61444295daba4bd0524aa04a15bd62f729c10b96"
+      "sha256": "b46e3bd08dc24d8b5af18f72a2713ede79e5df060c2028124ecdbab1fc4bef71"
     },
     {
-      "bytes": 2196,
+      "bytes": 2288,
       "path": "RELEASE_NOTES.md",
-      "sha256": "fc79c82d5adf1d2210689bd82f49dbbe0347376d94fd5fe7edc212931042cc4a"
+      "sha256": "c8159cdea687f8928fb35e4e3fb06c1b87c0bdb1392864dbc84fe5c2a906bd2d"
     },
     {
       "bytes": 2349,

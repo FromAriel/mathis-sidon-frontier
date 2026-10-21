@@ -34,6 +34,7 @@ Wu/wustep are credited without implying endorsement or coauthorship.
 
 The repository first became public October 17, 2026. This release uses its
 actual October 21 date; earlier private development is not public priority.
-Zenodo's new version identifier is recorded after ingestion, never invented
-or substituted with the v1.1.0 DOI. All versions:
+Version 1.2.0 is archived at https://doi.org/10.5281/zenodo.23548458 .
+The immutable v1.2.0 tag and release assets precede this DOI metadata update;
+their certificate and verifier bytes remain unchanged. All versions:
 https://doi.org/10.5281/zenodo.23439039 .
