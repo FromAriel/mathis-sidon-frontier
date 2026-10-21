@@ -1,15 +1,15 @@
 {
-  "description": "Complete payload inventory except this manifest itself. Historical R16 subset inventory remains separately scoped.",
+  "description": "Complete release payload except this manifest; historical subset manifests retain their scopes",
   "files": [
     {
-      "bytes": 87,
+      "bytes": 118,
       "path": ".gitattributes",
-      "sha256": "a4d532da068a51c243e458b67314cde3a57f459f90aa23af4b8a9fa1fe187e7f"
+      "sha256": "f731da2445a717a59b16739d253b3fe7fb37a0adacf5b75607a71aba59f9d573"
     },
     {
-      "bytes": 1919,
+      "bytes": 2208,
       "path": ".github/workflows/verify.yml",
-      "sha256": "a55c1a14124ba31a868cb94bd0902b359fd5e292422ad1e9dfd3c61348e43d9c"
+      "sha256": "1fa40781347e1ed874ab72fd02f912f03c95dd57d256532980e2626e807113e1"
     },
     {
       "bytes": 43,
@@ -22,14 +22,14 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 892,
+      "bytes": 1070,
       "path": "CITATION.cff",
-      "sha256": "f22e8a83ebc4e85ec71aaa89cfab00f95ae6d94bcdd607bd36ce0af76200f457"
+      "sha256": "bcac55e4da903a84acd01fc582e502d189d0dc7c2cfd678e80acee7259c9ac0e"
     },
     {
-      "bytes": 5449,
+      "bytes": 8581,
       "path": "DEVELOPMENT_AND_THEOREM.md",
-      "sha256": "9e454fc25bd106bd2373ad9370127933c44405c852898c4ee182b3f4cbb28c11"
+      "sha256": "300fee39c8bcc1334cbafcdad6d488d7bd39c4ced1ed31a6b22ff949c984b990"
     },
     {
       "bytes": 2940,
@@ -42,19 +42,19 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 6592,
+      "bytes": 5009,
       "path": "README.md",
-      "sha256": "b9b1aeb757e00fe19ad70d029a41bd3cd3671f69210fc12bf511a4d5f6054020"
+      "sha256": "f4a54b88779629439395cdcc61444295daba4bd0524aa04a15bd62f729c10b96"
     },
     {
-      "bytes": 2823,
+      "bytes": 2196,
       "path": "RELEASE_NOTES.md",
-      "sha256": "2585275f47cc43bbe0e4ca0c3ba576dfc8629877e911fe9c63b603f6f09a21c5"
+      "sha256": "fc79c82d5adf1d2210689bd82f49dbbe0347376d94fd5fe7edc212931042cc4a"
     },
     {
-      "bytes": 2741,
+      "bytes": 2349,
       "path": "VERIFICATION.md",
-      "sha256": "d4005db57a7d946e83820431b416db1abce28c6d5228df430b210b4610d4b485"
+      "sha256": "65ae3b98f25060029c62251535b07cb44421cd4d377a05976c74333ac0011574"
     },
     {
       "bytes": 855,
@@ -87,11 +87,75 @@
       "sha256": "a12448f7d139575ae0d40020e9615bff027ea48bcec462cee9ffc1d39522c8ca"
     },
     {
+      "bytes": 3700,
+      "path": "certificates/two_sided/EXPECTED_RESULTS.json",
+      "sha256": "5c66103a4183929ebf3d0bac4334cce384ee33aa2a3f9b1b9019dc3ac02a6624"
+    },
+    {
+      "bytes": 2226,
+      "path": "certificates/two_sided/MANIFEST.json",
+      "sha256": "dde829c1fb07bbc656a60bfb6d5b41277755807a1201da6d194b56cebdfa62b3"
+    },
+    {
+      "bytes": 1844,
+      "path": "certificates/two_sided/README.md",
+      "sha256": "bce4d5dc344832fcb27d4729a08780d7440a27f5e597dcac77edec577388bae7"
+    },
+    {
+      "bytes": 28818,
+      "path": "certificates/two_sided/smoothing_verify.py",
+      "sha256": "513b870fab25999b2f92467337ca8ace26519227c7eba76657dea2e4b6082213"
+    },
+    {
+      "bytes": 320047,
+      "path": "certificates/two_sided/two_sided_linear_m1024_L8_certificate.json",
+      "sha256": "831faf3b61b4ff48c95dc012b253fc01f14cc0bece0d6f1acb497d47de64d98f"
+    },
+    {
+      "bytes": 39883,
+      "path": "certificates/two_sided/two_sided_linear_m128_L8_certificate.json",
+      "sha256": "277adf32c4488d40137010c7b372474fa67bcf465f647029d99e46bcadae5fdd"
+    },
+    {
+      "bytes": 79509,
+      "path": "certificates/two_sided/two_sided_linear_m256_L8_certificate.json",
+      "sha256": "d4fad0f2bed736fb057d3769faace9725b071704f6d2c9b0e06ae7f6d0322ef6"
+    },
+    {
+      "bytes": 10154,
+      "path": "certificates/two_sided/two_sided_linear_m32_L8_certificate.json",
+      "sha256": "ab35899ac91c5f403476651927508395c2add29c425855d5812c72ac788e58d1"
+    },
+    {
+      "bytes": 196638,
+      "path": "certificates/two_sided/two_sided_linear_m512_L10_certificate.json",
+      "sha256": "26f07b610e5d38c4777dd04535a9ba857c4deeff1f2aaa738fd117bb830c9af7"
+    },
+    {
+      "bytes": 159506,
+      "path": "certificates/two_sided/two_sided_linear_m512_L8_certificate.json",
+      "sha256": "224423d108314c5cb411022892f99009434a237fd3a286ab608ff8fa76fd0d6d"
+    },
+    {
+      "bytes": 19968,
+      "path": "certificates/two_sided/two_sided_linear_m64_L8_certificate.json",
+      "sha256": "c0ed5fe6735abbd3c9a288c2dbcd2ecb688ca6e699d0cb4796a1e72e4f2b4938"
+    },
+    {
+      "bytes": 3602,
+      "path": "certificates/two_sided/verify.py",
+      "sha256": "9d3c42ba50cfec264819aaff7a1d1262c63a379210c5ce8133c654b0dd28fc73"
+    },
+    {
+      "bytes": 6705,
+      "path": "tests/test_two_sided_public.py",
+      "sha256": "8c8ade7e49b37d441fd532f354fa5bb016b0564cf49e5b8e104cff57dca9baf8"
+    },
+    {
       "bytes": 14894,
       "path": "verify.py",
       "sha256": "71ba65656bb7dc27caf302ee148cfc6356d56ad1f1186d806e82c3664ae2a8dd"
     }
   ],
-  "status": "repository public since2026-10-17; GitHub release draft and Zenodo DOI pending",
-  "version": "1.1.0"
+  "version": "1.2.0"
 }

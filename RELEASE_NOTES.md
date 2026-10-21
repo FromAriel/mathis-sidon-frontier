@@ -1,49 +1,39 @@
-# Release 1.1.0 preparation
+# Version 1.2.0 - October 21, 2026
 
-Title: **MathIS Sidon Frontier: Exact R9 and R16 Certificates**.
-Status: content reviewed; tagged release and Zenodo DOI pending.
-Public-availability date: October 17, 2026. Zenodo integration is enabled.
+Title: **MathIS Sidon Frontier: R9, R16 and Exact Two-Sided Certificates.**
 
-## Contents
+Adds seven exact rational two-sided linear-ramp certificates and a portable
+standard-library verifier. The strongest proves sqrt(ab) < 0.942810721.
+Every finite covering row and exact energy constant was independently checked.
+The earlier R9/R16 proof-bearing files, commands and expected outputs remain
+unchanged. Version 1.1.0 remains archived at
+https://doi.org/10.5281/zenodo.23439041 .
 
-- Preserves the original R9 certificate, checker, expected output and command.
-- Adds the retained R16 certificate, required preceding baseline and existing
-  checker/expected output, with a new explicitly scoped public manifest.
-- Documents both coefficients, exact-check commands, dated development,
-  Hou--Zhao theorem dependencies, attribution and limitations.
-- Updates citation metadata and the proposed CI checks for both certificates.
-  Both checkers together require Python3.10 or newer.
-- Omits private correspondence, internal campaigns and full third-party papers.
+The new coefficient improves on Stephen Wu/wustep's cited q2 coefficient
+0.943006169985179, but remains above John Akwei's reported 0.942809522.
+No current-record, novelty, optimality, exponent improvement or Erdos #30
+solution claim is made. The fixed-certificate consequence relies on Akwei's
+Proposition 2.3 and Appendix C, extending the Hou--Zhao framework.
 
-The R9 and R16 coefficients improve the cited Hou--Zhao baseline and have
-been surpassed by external results including Wu/wustep q2. This is a
-reproducible research-artifact release, not an announcement of a current
-record, an exponent improvement, global optimality or an Erdős#30 solution.
+This release corrects research-checker handling of nonpositive declared
+coefficient bounds, malformed array shapes, nonpositive-energy diagnostics
+and certificate-verification exit codes. It preserves legitimate real boundary
+coordinates and joint mixture covers. Public tests include rejection and
+compatibility controls. Verification is solver-independent; numerical
+generation used SciPy L-BFGS-B and is not bundled.
 
-## Subsequent publication checklist
+An erroneous private draft's continuum profile and finite proof were withdrawn.
+This release maps to the inspected source theorem and does not present that
+draft as a new proof. Akwei's ramp/renewal attainment and sharp floor are
+attributed source results. The seven finite files do not prove an asymptotic
+convergence rate or attainability within reflected signed C5.
 
-These are future actions; preparation does not execute them.
+Ariel M. Williams directed the research and artifact acceptance. Software,
+construction and review used AI-assisted workflows. Hou--Zhao, Akwei and
+Wu/wustep are credited without implying endorsement or coauthorship.
 
-1. Ariel has reviewed the proposed public files, release notes and validation report.
-2. Citation metadata now records October 17, 2026 public availability; retain
-   August and September dates only in the development history. Recheck changed hashes
-   and rebuild the final candidate after any approved edit.
-3. Commit and push only the approved certificate-repository update, reconciling
-   the existing August24 README-only commit. Preserve
-   the historical commit and leave the larger private MathIS repository private.
-4. Make this compact repository public and verify unauthenticated access.
-5. Connect the public repository through Zenodo's GitHub integration before
-   creating the GitHub release. Review any account authorization personally.
-6. Publish the GitHub release tagged v1.1.0, then inspect its processed Zenodo
-   record, author, title, version, license, files, DOI and archival status.
-7. Add the real DOI/citation link and verify it resolves. Never invent a DOI
-   or backdate the public release to a private-development event.
-
-If integration fails, inspect the reported metadata/processing error rather
-than assume a DOI exists. A separately approved direct Zenodo upload is an
-alternative; avoid creating duplicate records for the same object by accident.
-
-Zenodo [repository setup](https://help.zenodo.org/docs/github/enable-repository/)
-and [release archiving](https://help.zenodo.org/docs/github/archive-software/github-upload/)
-describe the account and ingestion steps. This release uses CITATION.cff
-alone; no competing .zenodo.json or placeholder identifiers are included.
+The repository first became public October 17, 2026. This release uses its
+actual October 21 date; earlier private development is not public priority.
+Zenodo's new version identifier is recorded after ingestion, never invented
+or substituted with the v1.1.0 DOI. All versions:
+https://doi.org/10.5281/zenodo.23439039 .

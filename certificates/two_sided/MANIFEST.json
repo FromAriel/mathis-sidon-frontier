@@ -1,0 +1,62 @@
+{
+  "certificate_source": "MathIS frozen two-sided linear-ramp research artifacts, 2026-10-21",
+  "files": [
+    {
+      "bytes": 3700,
+      "path": "EXPECTED_RESULTS.json",
+      "sha256": "5c66103a4183929ebf3d0bac4334cce384ee33aa2a3f9b1b9019dc3ac02a6624"
+    },
+    {
+      "bytes": 1844,
+      "path": "README.md",
+      "sha256": "bce4d5dc344832fcb27d4729a08780d7440a27f5e597dcac77edec577388bae7"
+    },
+    {
+      "bytes": 28818,
+      "path": "smoothing_verify.py",
+      "sha256": "513b870fab25999b2f92467337ca8ace26519227c7eba76657dea2e4b6082213"
+    },
+    {
+      "bytes": 320047,
+      "path": "two_sided_linear_m1024_L8_certificate.json",
+      "sha256": "831faf3b61b4ff48c95dc012b253fc01f14cc0bece0d6f1acb497d47de64d98f"
+    },
+    {
+      "bytes": 39883,
+      "path": "two_sided_linear_m128_L8_certificate.json",
+      "sha256": "277adf32c4488d40137010c7b372474fa67bcf465f647029d99e46bcadae5fdd"
+    },
+    {
+      "bytes": 79509,
+      "path": "two_sided_linear_m256_L8_certificate.json",
+      "sha256": "d4fad0f2bed736fb057d3769faace9725b071704f6d2c9b0e06ae7f6d0322ef6"
+    },
+    {
+      "bytes": 10154,
+      "path": "two_sided_linear_m32_L8_certificate.json",
+      "sha256": "ab35899ac91c5f403476651927508395c2add29c425855d5812c72ac788e58d1"
+    },
+    {
+      "bytes": 196638,
+      "path": "two_sided_linear_m512_L10_certificate.json",
+      "sha256": "26f07b610e5d38c4777dd04535a9ba857c4deeff1f2aaa738fd117bb830c9af7"
+    },
+    {
+      "bytes": 159506,
+      "path": "two_sided_linear_m512_L8_certificate.json",
+      "sha256": "224423d108314c5cb411022892f99009434a237fd3a286ab608ff8fa76fd0d6d"
+    },
+    {
+      "bytes": 19968,
+      "path": "two_sided_linear_m64_L8_certificate.json",
+      "sha256": "c0ed5fe6735abbd3c9a288c2dbcd2ecb688ca6e699d0cb4796a1e72e4f2b4938"
+    },
+    {
+      "bytes": 3602,
+      "path": "verify.py",
+      "sha256": "9d3c42ba50cfec264819aaff7a1d1262c63a379210c5ce8133c654b0dd28fc73"
+    }
+  ],
+  "scope": "Seven preserved finite certificates and portable verification payload; excludes this manifest itself",
+  "source_module_sha256": "513b870fab25999b2f92467337ca8ace26519227c7eba76657dea2e4b6082213"
+}

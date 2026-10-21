@@ -2,3 +2,4 @@
 *.cmd text eol=crlf
 CERTIFICATE.json -text
 certificates/r16/* -text
+certificates/two_sided/* -text

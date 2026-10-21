@@ -59,3 +59,9 @@ jobs:
           'certificates/r16/verify.py'], text=True).replace('\r\n', '\n');
           expected=pathlib.Path('certificates/r16/EXPECTED_OUTPUT.json').read_text(encoding='utf-8').replace('\r\n', '\n');
           raise SystemExit(0 if actual == expected else 1)"
+
+      - name: Verify all seven two-sided certificates and exact expected results
+        run: python -I -S certificates/two_sided/verify.py --all
+
+      - name: Run standard-library public checker rejection and compatibility tests
+        run: python -I -S tests/test_two_sided_public.py

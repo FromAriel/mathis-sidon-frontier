@@ -1,19 +1,21 @@
 cff-version: 1.2.0
 message: "If you use these certificates or verifiers, please cite this release."
-title: "MathIS Sidon Frontier: Exact R9 and R16 Certificates"
+title: "MathIS Sidon Frontier: R9, R16 and Exact Two-Sided Certificates"
 authors:
   - family-names: "Williams"
     given-names: "Ariel M."
-version: "1.1.0"
-date-released: "2026-10-17"
+version: "1.2.0"
+date-released: "2026-10-21"
 type: software
 repository-code: "https://github.com/FromAriel/mathis-sidon-frontier"
 abstract: >-
-  Exact rational R9 and R16 certificates developed within the Hou-Zhao
-  finite Sidon smoothing framework, with standalone standard-library Python
-  verifiers, expected outputs and development history. Historical coefficient
-  improvements superseded by stronger external results; no exponent
-  improvement, optimality or solution of Erdos Problem 30 is claimed.
+  Exact rational R9, R16 and seven asymmetric two-sided Sidon smoothing
+  certificates with standalone standard-library Python verifiers. The strongest
+  included certificate proves sqrt(ab) < 0.942810721 using Akwei's ramp
+  construction within the Hou-Zhao lineage. It improves the cited Wu/wustep q2
+  coefficient but remains above Akwei's reported stronger certificate. No
+  current record, novelty, optimality, exponent advance or solution of Erdos
+  Problem 30 is claimed. Development and review used AI-assisted workflows.
 keywords:
   - Sidon sets
   - additive combinatorics

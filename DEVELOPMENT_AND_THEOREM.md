@@ -1,6 +1,7 @@
 # Development history and theorem mapping
 
-Prepared for version 1.1.0; tagged-release date and Zenodo DOI pending.
+Version 1.2.0, October 21, 2026. Version 1.1.0 was published October 17,
+2026 and is archived at https://doi.org/10.5281/zenodo.23439041 .
 
 ## Dated development
 
@@ -12,7 +13,8 @@ Prepared for version 1.1.0; tagged-release date and Zenodo DOI pending.
 | August27 | Inspected external q2 commit records the stronger0.943006169985179 coefficient | [Wu/wustep commit](https://github.com/wustep/maths/commit/da2440b68979b78d201182118d30ca418e3c2001). Commit date and first public availability are separate questions. |
 | September20 | Present retained R16 certificate preserved after exact verification | B3-triple-prime lineage, certificate SHA-256 below; MathIS commit `784fc88dc7825709fe79d35ef48f4f7ebfbe7473`. |
 | October17,2026 | Repository made public with both certificate packets | Public commit `9202cd74070ae1d915b04012da1bb93f58e456fb`; anonymous certificate access and all four hosted CI jobs verified. This is the first established public-availability date in this record. |
-| Tagged release | Pending | Repository availability and a tagged software release are separate events. Final release metadata must use the actual public date, not an August development date. |
+| October17,2026 | Tagged v1.1.0 published and independently replayed from Zenodo | DOI 10.5281/zenodo.23439041; original record and assets remain unchanged. |
+| October21,2026 | Seven two-sided finite certificates independently checked for v1.2.0 | Best exact declared coefficient bound 942810721/1000000000; actual publication is the tagged release event, not a backdated private-development claim. |
 
 This is a development record, not a claim of worldwide first discovery,
 the first rational Sidon certificate, current record status, or peer review.
@@ -20,14 +22,14 @@ No claim is made that another group used our private materials.
 Historical correspondence and the larger private research history are not
 part of the public package.
 
-## Analytic dependency
+## Historical R9/R16 analytic dependency
 
 Hou and Zhao's [v2 Lemma2.1](https://arxiv.org/abs/2607.01169v2) and
 [v3 Theorem2.1](https://arxiv.org/abs/2607.01169v3) supply the finite smoothing
-inequality. Our finite certificate class has:
+inequality. The historical R9/R16 certificate class has:
 
 - Fixed positive integers R,m,L; rational data are a subset of the allowed
-  real data. Both included certificates use m=32,L=4.
+  real data. Both historical R9/R16 certificates use m=32,L=4.
 - Symmetric nonnegative probability kernels, nonnegative mixing weights
   summing to one, and real finite boundary coordinates.
 - Boundary tail equal to one at indices j>=Lm, and every covering row
@@ -81,7 +83,63 @@ checking implementations reconstruct exact obligations rather than trust
 numerical search objectives or saved success flags.
 
 Hou--Zhao supplied the analytic framework and earlier exact certificate.
-Wu/wustep supplied the stronger external q2 result. Neither external result
-is presented as ours. No author endorsement or institutional affiliation is
+Wu/wustep supplied the external q2 result, stronger than the historical R9/R16
+certificates but weaker in coefficient than the new two-sided certificate.
+Neither external result is presented as ours. No author endorsement or institutional affiliation is
 implied. The included results do not resolve Erdős#30, improve its exponent,
 prove global optimality or establish a universal physical fluctuation law.
+
+## Two-sided certificates: source mapping and exact new result
+
+John Akwei's [pinned October 5 manuscript](https://github.com/johnakwei/Science/blob/7934a1b1193307b09326c8cb3638f50552603388/The_limit_of_vector-valued_smoothing_for_Sidon_sets.pdf),
+Section 2.2, equations (2.3), Proposition 2.3 and Appendix C, extends the Hou--Zhao framework
+to nonnegative asymmetric kernels. The checker verifies precisely these
+finite conditions:
+
+- m,L positive; each kernel p is a nonnegative probability vector; normalized
+  nonnegative mixture weights; arbitrary real left/right boundary vectors.
+- Every joint left cover uses p_i; every joint right cover uses p_(m-1-i),
+  for q=0,...,Lm. Both tails equal one. No boundary-positivity restriction.
+- a=m sum_r lambda_r sum_i p_(r,i)^2 and
+  b=1+(1/m) sum_r lambda_r sum_(j<Lm)(u_(r,j)^2+v_(r,j)^2-2), with b>0.
+
+For H=mh, the source block-replicates the kernel: K_r(t)=p_(r,i)/h on each
+integer block ih<=t<(i+1)h. Thus its squared norm is a_r/H, not a_r/m.
+For N>=2LH, weights are defined over every row 0,...,N+H-2 with two disjoint
+LH boundary strips. The right strip reflects at N+H-2-x. Joint covers
+interpolate between adjacent discrete rows; real boundary signs cause no
+division because the argument uses inner products and squared norms.
+
+The source energy and weight identities, followed by direct-sum
+Cauchy--Schwarz, give Lemma C.1:
+
+```text
+k^2 <= (N-1+bH) (1+(k-1)a/H).
+```
+
+Source Corollary C.2 then yields sqrt(N)+sqrt(ab) N^(1/4)+O(1) for fixed
+certificate data. Its threshold depends on a,b,m,L. The checkers do not
+formally prove this source theorem, and no varying-grid uniform remainder
+is claimed.
+
+The best new certificate, m=1024,L=8, has exactly
+
+```text
+a  = 1398101/1048576
+b  = 682669260471443050366205717/1024000000000000000000000000
+ab = 954440575734385000160042579143417/1073741824000000000000000000000000
+sqrt(ab) < 942810721/1000000000.
+```
+
+It improves the cited q2 coefficient but remains above Akwei's reported
+sqrt(ab)<0.942809522. Construction used one ramp p_i=(2i+1)/m^2 and SciPy
+L-BFGS-B boundary generation, followed by exact recovery and independent
+finite reconstruction. Verification is solver-independent.
+
+Akwei's source Theorem 5.1 supplies continuum sharpness, with boundary
+omega(t)=exp(t)-1 for 0<=t<1 and omega(t)=integral_0^1 x r(t-x)dx for t>=1.
+This is an attributed source result, not a fresh proof here. An erroneous
+private draft used (1/2) integral_0^t r(s)ds; that profile fails the cover at
+zero and grows instead of tending to one. That derivation was withdrawn.
+The finite certificates do not depend on it. No convergence-rate theorem
+or reflected signed-C5 attainment is established by the seven finite files.
