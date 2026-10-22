@@ -1,0 +1,43 @@
+{
+  "certificate_source": "MathIS frozen recovered one-ramp right-ones certificate; original source bytes preserved",
+  "files": [
+    {
+      "bytes": 1703,
+      "path": "EXPECTED_RESULTS.json",
+      "sha256": "bb6f9bd45afdacaf336f1c8ae3fee1d340f71e4d6a2009e70340d499ec5f4736"
+    },
+    {
+      "bytes": 3644,
+      "path": "README.md",
+      "sha256": "3a7a6922caf7d83a6994e2ce774a28ed8a159c950a9a62b295ccd8160abce204"
+    },
+    {
+      "bytes": 3134,
+      "path": "PROVENANCE.md",
+      "sha256": "c92d0a0c35e3c59f4f8a36e0acb4057f287a3b3f61d2547e1670cef053ed6327"
+    },
+    {
+      "bytes": 28818,
+      "path": "smoothing_verify.py",
+      "sha256": "513b870fab25999b2f92467337ca8ace26519227c7eba76657dea2e4b6082213"
+    },
+    {
+      "bytes": 8130,
+      "path": "independent.py",
+      "sha256": "7ad75263622788175b7276503e4cfa68393900e7d724d998753cac9ebd190eb9"
+    },
+    {
+      "bytes": 795624,
+      "path": "two_sided_linear_m1024_L8_recovered_certificate.json",
+      "sha256": "42f85414452e5114f5ae25cee3b9b927698ae232f3f2483136d7f6957f8f1be2"
+    },
+    {
+      "bytes": 5111,
+      "path": "verify.py",
+      "sha256": "acebdec86babb249f68e96248d125daa98d5772c681140c13842e96752cc4b89"
+    }
+  ],
+  "independent_source_sha256": "7ad75263622788175b7276503e4cfa68393900e7d724d998753cac9ebd190eb9",
+  "scope": "One recovered m1024 L8 certificate, both unchanged exact checking implementations and portable replay; excludes this manifest",
+  "source_module_sha256": "513b870fab25999b2f92467337ca8ace26519227c7eba76657dea2e4b6082213"
+}

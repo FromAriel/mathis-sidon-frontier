@@ -1,7 +1,9 @@
 # Development history and theorem mapping
 
-Version 1.2.0, October 21, 2026. Version 1.1.0 was published October 17,
-2026 and is archived at https://doi.org/10.5281/zenodo.23439041 .
+Version 1.3.0, October 22, 2026. The preserved v1.2.0 release
+is archived at https://doi.org/10.5281/zenodo.23548458 . Version 1.1.0 was
+published October 17, 2026 and is archived at
+https://doi.org/10.5281/zenodo.23439041 .
 
 ## Dated development
 
@@ -15,6 +17,8 @@ Version 1.2.0, October 21, 2026. Version 1.1.0 was published October 17,
 | October17,2026 | Repository made public with both certificate packets | Public commit `9202cd74070ae1d915b04012da1bb93f58e456fb`; anonymous certificate access and all four hosted CI jobs verified. This is the first established public-availability date in this record. |
 | October17,2026 | Tagged v1.1.0 published and independently replayed from Zenodo | DOI 10.5281/zenodo.23439041; original record and assets remain unchanged. |
 | October21,2026 | Seven two-sided finite certificates independently checked for v1.2.0 | Best exact declared coefficient bound 942810721/1000000000; actual publication is the tagged release event, not a backdated private-development claim. |
+| October21,2026 | Fixed m=1024, L=8 recovery experiment produced a stronger finite certificate | Exact declaration 188561854127/200000000000, independently checked against all 16,386 left/right covers; private acceptance is separate from public availability. |
+| October22,2026 | Additive v1.3.0 release | Preserves all previous release artifacts; the new DOI is added only after inspection of the issued record and archive. |
 
 This is a development record, not a claim of worldwide first discovery,
 the first rational Sidon certificate, current record status, or peer review.
@@ -122,7 +126,7 @@ certificate data. Its threshold depends on a,b,m,L. The checkers do not
 formally prove this source theorem, and no varying-grid uniform remainder
 is claimed.
 
-The best new certificate, m=1024,L=8, has exactly
+The preserved best v1.2.0 certificate, m=1024,L=8, has exactly
 
 ```text
 a  = 1398101/1048576
@@ -131,7 +135,7 @@ ab = 954440575734385000160042579143417/1073741824000000000000000000000000
 sqrt(ab) < 942810721/1000000000.
 ```
 
-It improves the cited q2 coefficient but remains above Akwei's reported
+That historical certificate improves the cited q2 coefficient but remains above Akwei's reported
 sqrt(ab)<0.942809522. Construction used one ramp p_i=(2i+1)/m^2 and SciPy
 L-BFGS-B boundary generation, followed by exact recovery and independent
 finite reconstruction. Verification is solver-independent.
@@ -143,3 +147,44 @@ private draft used (1/2) integral_0^t r(s)ds; that profile fails the cover at
 zero and grows instead of tending to one. That derivation was withdrawn.
 The finite certificates do not depend on it. No convergence-rate theorem
 or reflected signed-C5 attainment is established by the seven finite files.
+
+## Version 1.3.0: exact feasibility recovery on the same grid
+
+The added certificate retains m=1024, L=8, the same ramp, a right boundary
+identically one and fixed tails. Its exact declaration is
+
+```text
+a = 1398101/1048576
+sqrt(ab) < 188561854127/200000000000 = 0.942809270635.
+```
+
+The exact b and ab are reconstructed from the certificate by both included
+checking routes and retained in its expected results. The certificate SHA-256 is
+`42f85414452e5114f5ae25cee3b9b927698ae232f3f2483136d7f6957f8f1be2`.
+Its declaration is below the fixed reported Akwei bound 0.942809522 by exactly
+50273/200000000000. This is a comparison of the specified coefficient bounds,
+not an independent replay of an unavailable exact Akwei certificate or a claim
+of the current worldwide record.
+
+Construction used sparse lifted primal trust-constr optimization and exact
+rational direction-and-lift recovery. The numerical trajectory was deliberately
+stopped after its saved best point stopped improving; this is not a solver
+convergence claim. A partial active-row KKT refinement supplied a weaker
+comparison certificate. The winning recovery optimizes its stated two-parameter
+family, not all feasible boundary vectors. Exact finite verification, rather
+than solver termination or a small floating-point residual, establishes the
+published certificate obligations.
+
+The existing general two-sided checker is preserved. A separate standard-library
+checker directly reconstructs the one-ramp/right-ones covers, including the
+reversed right kernel, fixed tails and both structural end rows. It imports no
+producer arithmetic. Neither checker formally verifies the analytic source
+theorem. The source mapping above is unchanged: Akwei supplies the asymmetric
+construction and finite theorem within the Hou--Zhao lineage. Our contribution
+is certificate construction, numerical implementation and exact recovery,
+independent finite checking and reproducible preservation, with AI assistance.
+
+The new file does not prove a convergence law, global boundary optimality,
+continuum or signed-C5 attainment, a physical forced-loss theorem, or an
+Erdos #30 exponent improvement. All older certificates, theorem dependencies
+and immutable release identities retain their historical scope.

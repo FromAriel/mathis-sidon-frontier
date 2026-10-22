@@ -1,15 +1,15 @@
 {
-  "description": "Complete release payload except this manifest; historical subset manifests retain their scopes",
+  "description": "Complete v1.3.0 payload except this manifest; historical subset manifests retain their scopes",
   "files": [
     {
-      "bytes": 118,
+      "bytes": 158,
       "path": ".gitattributes",
-      "sha256": "f731da2445a717a59b16739d253b3fe7fb37a0adacf5b75607a71aba59f9d573"
+      "sha256": "e7a874aaaf39231e12d7cb4326a32fa523594d8489f5619229e4168718e72137"
     },
     {
-      "bytes": 2208,
+      "bytes": 2509,
       "path": ".github/workflows/verify.yml",
-      "sha256": "1fa40781347e1ed874ab72fd02f912f03c95dd57d256532980e2626e807113e1"
+      "sha256": "f2efd265f6ef7d835ea63d8b61498c151094f4ad4cb4ea6748464658a2abb5c2"
     },
     {
       "bytes": 43,
@@ -22,14 +22,14 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 1101,
+      "bytes": 1136,
       "path": "CITATION.cff",
-      "sha256": "a5126f8db65e04c7ebb062f8510a9d03091cb947df184fffb3cc6d5777f5c2f5"
+      "sha256": "1b4142b989f6e84514247eedd51caef7c389ec673ebcb57da6c2547e4b69d859"
     },
     {
-      "bytes": 8581,
+      "bytes": 11396,
       "path": "DEVELOPMENT_AND_THEOREM.md",
-      "sha256": "300fee39c8bcc1334cbafcdad6d488d7bd39c4ced1ed31a6b22ff949c984b990"
+      "sha256": "478c2fb221e5107a7f7532483acf7d16220e2d9848083ec2f596251b60b57a08"
     },
     {
       "bytes": 2940,
@@ -42,19 +42,19 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 5072,
+      "bytes": 6119,
       "path": "README.md",
-      "sha256": "b46e3bd08dc24d8b5af18f72a2713ede79e5df060c2028124ecdbab1fc4bef71"
+      "sha256": "ef11904a89303a5004b01a2a0d3f07f9a37ba3c1ff32437a7e5d1a0bf0da92d8"
     },
     {
-      "bytes": 2288,
+      "bytes": 4680,
       "path": "RELEASE_NOTES.md",
-      "sha256": "c8159cdea687f8928fb35e4e3fb06c1b87c0bdb1392864dbc84fe5c2a906bd2d"
+      "sha256": "901c54eae99f8683c6d1b765f6a689c119c462b8f4e2d7e549caf0d5d5ee893e"
     },
     {
-      "bytes": 2349,
+      "bytes": 4263,
       "path": "VERIFICATION.md",
-      "sha256": "65ae3b98f25060029c62251535b07cb44421cd4d377a05976c74333ac0011574"
+      "sha256": "2e3e84c87072a557b7d96e620880c7253cdee79dd94c9fd92d0e15e029f81450"
     },
     {
       "bytes": 855,
@@ -147,15 +147,59 @@
       "sha256": "9d3c42ba50cfec264819aaff7a1d1262c63a379210c5ce8133c654b0dd28fc73"
     },
     {
+      "bytes": 1703,
+      "path": "certificates/two_sided_recovery/EXPECTED_RESULTS.json",
+      "sha256": "bb6f9bd45afdacaf336f1c8ae3fee1d340f71e4d6a2009e70340d499ec5f4736"
+    },
+    {
+      "bytes": 1597,
+      "path": "certificates/two_sided_recovery/MANIFEST.json",
+      "sha256": "553067dff3de56a4382a6bec57ea7e2e5cae7f850bb9ed4c0c560d8dda5c6d0f"
+    },
+    {
+      "bytes": 3134,
+      "path": "certificates/two_sided_recovery/PROVENANCE.md",
+      "sha256": "c92d0a0c35e3c59f4f8a36e0acb4057f287a3b3f61d2547e1670cef053ed6327"
+    },
+    {
+      "bytes": 3644,
+      "path": "certificates/two_sided_recovery/README.md",
+      "sha256": "3a7a6922caf7d83a6994e2ce774a28ed8a159c950a9a62b295ccd8160abce204"
+    },
+    {
+      "bytes": 8130,
+      "path": "certificates/two_sided_recovery/independent.py",
+      "sha256": "7ad75263622788175b7276503e4cfa68393900e7d724d998753cac9ebd190eb9"
+    },
+    {
+      "bytes": 28818,
+      "path": "certificates/two_sided_recovery/smoothing_verify.py",
+      "sha256": "513b870fab25999b2f92467337ca8ace26519227c7eba76657dea2e4b6082213"
+    },
+    {
+      "bytes": 795624,
+      "path": "certificates/two_sided_recovery/two_sided_linear_m1024_L8_recovered_certificate.json",
+      "sha256": "42f85414452e5114f5ae25cee3b9b927698ae232f3f2483136d7f6957f8f1be2"
+    },
+    {
+      "bytes": 5111,
+      "path": "certificates/two_sided_recovery/verify.py",
+      "sha256": "acebdec86babb249f68e96248d125daa98d5772c681140c13842e96752cc4b89"
+    },
+    {
       "bytes": 6705,
       "path": "tests/test_two_sided_public.py",
       "sha256": "8c8ade7e49b37d441fd532f354fa5bb016b0564cf49e5b8e104cff57dca9baf8"
+    },
+    {
+      "bytes": 8186,
+      "path": "tests/test_two_sided_recovery_public.py",
+      "sha256": "92067fe45c45f451a4873f52832492ba65b8f6766046e13a7d2bae6621a89e3e"
     },
     {
       "bytes": 14894,
       "path": "verify.py",
       "sha256": "71ba65656bb7dc27caf302ee148cfc6356d56ad1f1186d806e82c3664ae2a8dd"
     }
-  ],
-  "version": "1.2.0"
+  ]
 }

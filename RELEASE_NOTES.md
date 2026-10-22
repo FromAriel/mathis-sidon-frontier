@@ -1,3 +1,43 @@
+# Version 1.3.0 - October 22, 2026
+
+Title: **MathIS Sidon Frontier: R9, R16 and Exact Two-Sided Certificates.**
+
+Adds one independently checked exact rational certificate proving
+sqrt(ab) < 188561854127/200000000000 = 0.942809270635. It uses m=1024,
+L=8, Akwei's asymmetric linear ramp, a right boundary identically one and
+fixed tails. The strict declaration is below the fixed reported Akwei bound
+0.942809522 by exactly 0.000000251365, and below the cited Wu/wustep q2
+coefficient. No current-record, novelty, global-optimality, exponent-improvement
+or Erdos #30 solution claim is made.
+
+All 16,386 original left/right covers, dimensions, fixed tails and exact a,b,ab
+are reconstructed by the preserved general verifier and a separately implemented
+standard-library direct checker. The new scoped package includes the certificate,
+both checking routes, expected exact results, provenance and a manifest. Checking
+works with isolated Python and no optimizer, network or MathIS installation.
+
+The winning numerical point came from SciPy sparse lifted primal trust-constr
+optimization, followed by exact rational direction-and-lift recovery. The
+trajectory was deliberately stopped after its saved best point stopped improving;
+solver convergence is not claimed. A partial active-row KKT point was a weaker
+comparison. Neither the numerical campaign nor private runtime state is bundled.
+The seven preserved v1.2.0 files used L-BFGS-B generation; their bytes and checker
+behavior remain unchanged.
+
+John Akwei supplies the asymmetric construction and finite theorem in
+Proposition 2.3 and Appendix C, within Jianfeng Hou and Hongbin Zhao's smoothing
+lineage. Stephen Wu/wustep is credited for the external q2 comparison. Ariel M.
+Williams directed construction, recovery, acceptance and preservation, with
+AI-assisted software and review. The new finite certificate does not establish
+an attainment theorem, convergence law or signed-C5 upper attainment.
+
+This is an additive release. R9, R16, all seven v1.2.0 certificates, historical
+verifiers, expected outputs, tags, assets and existing Zenodo records remain
+preserved. The v1.3.0 DOI is pending until publication and archive inspection;
+the older version DOI must not be used as its identity. The preserved v1.2.0 DOI
+is https://doi.org/10.5281/zenodo.23548458 and the all-versions DOI remains
+https://doi.org/10.5281/zenodo.23439039 .
+
 # Version 1.2.0 - October 21, 2026
 
 Title: **MathIS Sidon Frontier: R9, R16 and Exact Two-Sided Certificates.**

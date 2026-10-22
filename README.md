@@ -2,11 +2,11 @@
 
 ## R9, R16 and exact two-sided Sidon certificates
 
-**Version 1.2.0. Author: Ariel M. Williams.**
+**Version 1.3.0. Author: Ariel M. Williams.**
 
 Exact rational certificates, standalone standard-library Python checkers, and
 theorem/development mappings. The strongest included certificate proves
-**sqrt(ab) < 0.942810721**, using Akwei's asymmetric ramp construction within
+**sqrt(ab) < 0.942809270635**, using Akwei's asymmetric ramp construction within
 the Hou--Zhao smoothing lineage.
 
 For the maximum size F(N) of an integer Sidon set in {0,...,N-1}, the cited
@@ -17,13 +17,15 @@ fixed-certificate theorem gives F(N) <= sqrt(N) + sqrt(ab) N^(1/4) + O(1).
 | Original MathIS R9 | Symmetric, 9 kernels | 0.943242424989939 |
 | Retained MathIS R16 | Symmetric, 16 kernels | 0.943242255546856 |
 | External Wu/wustep q2 | Symmetric, 11 kernels | 0.943006169985179 |
-| Included m=1024, L=8 certificate | Asymmetric two-sided, 1 ramp | 0.942810720298845 |
-| Akwei's reported stronger certificate bound | Asymmetric two-sided | < 0.942809522 |
+| Preserved v1.2.0 m=1024, L=8 certificate | Asymmetric two-sided, 1 ramp | 0.942810720298845 |
+| Akwei's fixed reported certificate bound | Asymmetric two-sided | < 0.942809522 |
+| New m=1024, L=8 recovered certificate | Asymmetric two-sided, 1 ramp | < 0.942809270635 |
 | Akwei's two-sided method floor | Continuum/infimum | 2 sqrt(2)/3 = 0.942809041582... |
 
-The new finite certificate improves on the cited q2 coefficient, remains above
-Akwei's reported certificate, and makes no current-record, novelty, optimality,
-exponent-improvement or Erdos #30 solution claim. Certificate-dependent O(1)
+The new finite certificate improves on the cited q2 coefficient and is below
+the fixed reported Akwei bound. This comparison makes no current-record, novelty, optimality,
+exponent-improvement or Erdos #30 solution claim. The unavailable exact Akwei
+certificate has not been independently replayed here. Certificate-dependent O(1)
 terms are not compared here. This is not an exhaustive current-results catalogue.
 
 ## Verify independently
@@ -35,23 +37,28 @@ From the extracted repository root:
 python verify.py CERTIFICATE.json
 python certificates/r16/verify.py
 python -I -S certificates/two_sided/verify.py --all
+python -I -S certificates/two_sided_recovery/verify.py
 python -I -S tests/test_two_sided_public.py
+python -I -S tests/test_two_sided_recovery_public.py
 ```
 
 To check only the strongest new certificate:
 
 ```text
-python -I -S certificates/two_sided/verify.py certificates/two_sided/two_sided_linear_m1024_L8_certificate.json
+python -I -S certificates/two_sided_recovery/verify.py
 ```
 
 An explicit relative certificate path is relative to the current directory.
---all locates the seven bundled files beside the script and works from any
-directory. Exit codes: 0 accepted, 1 mathematical rejection, 2 malformed input
-or usage. R9 ends with `ALL EXACT CHECKS PASSED`; R16 reports `checks_passed: true`.
+--all in the historical two-sided checker locates its seven bundled files beside the script and works from any
+directory. The historical two-sided checker exits 0 on acceptance, 1 on
+mathematical rejection and 2 on malformed input or usage. The new recovery
+wrapper also exits 1 for benchmark failure or checker disagreement, and 2 for
+package-integrity failure. R9 ends with `ALL EXACT CHECKS PASSED`; R16 reports `checks_passed: true`.
 The historical Windows launcher checks R9 only. All R9/R16 proof-bearing files,
 expected outputs and commands retain their historical bytes.
 
-[Verification details](VERIFICATION.md), [new certificate inventory](certificates/two_sided/README.md),
+[Verification details](VERIFICATION.md), [new recovery certificate](certificates/two_sided_recovery/README.md),
+[preserved seven-certificate inventory](certificates/two_sided/README.md),
 and [theorem/development mapping](DEVELOPMENT_AND_THEOREM.md) explain the checks.
 
 ## Attribution and scope
@@ -70,8 +77,13 @@ Its files are not bundled; q2 is not Akwei's one-ramp certificate.
 
 Our contributions are finite certificate construction/recovery, checking
 software, independent finite validation and reproducible preservation.
-Generation used SciPy L-BFGS-B; verification is solver-independent. Numerical
-generation and its dependencies are not bundled.
+The seven v1.2.0 certificates used SciPy L-BFGS-B generation. The new recovery
+used SciPy sparse trust-constr on a lifted primal problem, followed by exact
+rational direction-and-lift recovery. The numerical trajectory was deliberately
+stopped after its saved best point stopped improving; solver convergence is
+not claimed. A partial active-row KKT result was a comparator, not the winning
+certificate. Verification is solver-independent. Numerical generation and its
+dependencies are not bundled.
 
 The new files do not prove continuum attainment, a convergence-rate theorem,
 attainability within reflected signed C5, or a general physical forced-loss
@@ -88,6 +100,8 @@ with or endorsement by the cited authors is implied.
 R9 was recorded August 23, 2026 and privately communicated August 24. The
 repository and v1.1.0 became public October 17, 2026. Version 1.2.0 is dated
 October 21, 2026; private development dates do not establish public priority.
+Version 1.3.0 is dated October 22, 2026. Its new version DOI is added only after
+the release archive and issued record are independently inspected.
 
 - [Version 1.2.0 DOI](https://doi.org/10.5281/zenodo.23548458)
 - [Version 1.1.0 DOI](https://doi.org/10.5281/zenodo.23439041)

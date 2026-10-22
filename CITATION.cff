@@ -4,19 +4,19 @@ title: "MathIS Sidon Frontier: R9, R16 and Exact Two-Sided Certificates"
 authors:
   - family-names: "Williams"
     given-names: "Ariel M."
-version: "1.2.0"
-date-released: "2026-10-21"
-doi: "10.5281/zenodo.23548458"
+version: "1.3.0"
+date-released: "2026-10-22"
 type: software
 repository-code: "https://github.com/FromAriel/mathis-sidon-frontier"
 abstract: >-
-  Exact rational R9, R16 and seven asymmetric two-sided Sidon smoothing
-  certificates with standalone standard-library Python verifiers. The strongest
-  included certificate proves sqrt(ab) < 0.942810721 using Akwei's ramp
-  construction within the Hou-Zhao lineage. It improves the cited Wu/wustep q2
-  coefficient but remains above Akwei's reported stronger certificate. No
-  current record, novelty, optimality, exponent advance or solution of Erdos
-  Problem 30 is claimed. Development and review used AI-assisted workflows.
+  Exact rational R9, R16, seven historical asymmetric two-sided Sidon smoothing
+  certificates and one stronger recovered certificate, with standalone
+  standard-library Python verifiers. The strongest included certificate proves
+  sqrt(ab) < 0.942809270635 using Akwei's ramp construction within the Hou-Zhao
+  lineage. Its exact declared bound is below the fixed reported Akwei bound
+  0.942809522 and the cited Wu/wustep q2 coefficient. No current record,
+  novelty, optimality, exponent advance or solution of Erdos Problem 30 is
+  claimed. Development and review used AI-assisted workflows.
 keywords:
   - Sidon sets
   - additive combinatorics

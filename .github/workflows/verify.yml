@@ -65,3 +65,9 @@ jobs:
 
       - name: Run standard-library public checker rejection and compatibility tests
         run: python -I -S tests/test_two_sided_public.py
+
+      - name: Cross-check recovered m1024 certificate and fixed benchmark exactly
+        run: python -I -S certificates/two_sided_recovery/verify.py
+
+      - name: Run standard-library recovery package acceptance and rejection tests
+        run: python -I -S tests/test_two_sided_recovery_public.py
