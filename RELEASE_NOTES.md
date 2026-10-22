@@ -33,8 +33,9 @@ an attainment theorem, convergence law or signed-C5 upper attainment.
 
 This is an additive release. R9, R16, all seven v1.2.0 certificates, historical
 verifiers, expected outputs, tags, assets and existing Zenodo records remain
-preserved. The v1.3.0 DOI is pending until publication and archive inspection;
-the older version DOI must not be used as its identity. The preserved v1.2.0 DOI
+preserved. The v1.3.0 DOI is https://doi.org/10.5281/zenodo.23555594 . Its issued
+record and downloaded source archive were inspected, and every historical and
+new verification command passed from that extraction. The preserved v1.2.0 DOI
 is https://doi.org/10.5281/zenodo.23548458 and the all-versions DOI remains
 https://doi.org/10.5281/zenodo.23439039 .
 

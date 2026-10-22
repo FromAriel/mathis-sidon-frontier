@@ -100,9 +100,12 @@ with or endorsement by the cited authors is implied.
 R9 was recorded August 23, 2026 and privately communicated August 24. The
 repository and v1.1.0 became public October 17, 2026. Version 1.2.0 is dated
 October 21, 2026; private development dates do not establish public priority.
-Version 1.3.0 is dated October 22, 2026. Its new version DOI is added only after
-the release archive and issued record are independently inspected.
+Version 1.3.0 was published October 22, 2026. Its Zenodo record and downloaded
+source archive were inspected, and every certificate replay passed from that
+archive, including both exact checking implementations for the recovered result.
 
+- [Version 1.3.0 DOI](https://doi.org/10.5281/zenodo.23555594)
+- [Version 1.3.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.3.0)
 - [Version 1.2.0 DOI](https://doi.org/10.5281/zenodo.23548458)
 - [Version 1.1.0 DOI](https://doi.org/10.5281/zenodo.23439041)
 - [All versions on Zenodo](https://doi.org/10.5281/zenodo.23439039)

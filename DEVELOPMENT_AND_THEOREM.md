@@ -1,6 +1,7 @@
 # Development history and theorem mapping
 
-Version 1.3.0, October 22, 2026. The preserved v1.2.0 release
+Version 1.3.0, October 22, 2026, is archived at
+https://doi.org/10.5281/zenodo.23555594 . The preserved v1.2.0 release
 is archived at https://doi.org/10.5281/zenodo.23548458 . Version 1.1.0 was
 published October 17, 2026 and is archived at
 https://doi.org/10.5281/zenodo.23439041 .
@@ -18,7 +19,7 @@ https://doi.org/10.5281/zenodo.23439041 .
 | October17,2026 | Tagged v1.1.0 published and independently replayed from Zenodo | DOI 10.5281/zenodo.23439041; original record and assets remain unchanged. |
 | October21,2026 | Seven two-sided finite certificates independently checked for v1.2.0 | Best exact declared coefficient bound 942810721/1000000000; actual publication is the tagged release event, not a backdated private-development claim. |
 | October21,2026 | Fixed m=1024, L=8 recovery experiment produced a stronger finite certificate | Exact declaration 188561854127/200000000000, independently checked against all 16,386 left/right covers; private acceptance is separate from public availability. |
-| October22,2026 | Additive v1.3.0 release | Preserves all previous release artifacts; the new DOI is added only after inspection of the issued record and archive. |
+| October22,2026 | Additive v1.3.0 release and inspected Zenodo archive | DOI 10.5281/zenodo.23555594; every historical and new certificate replay passed from the downloaded source archive. Previous release artifacts remain preserved. |
 
 This is a development record, not a claim of worldwide first discovery,
 the first rational Sidon certificate, current record status, or peer review.
