@@ -4,6 +4,9 @@ Python 3.10+; standard library only. No original MathIS checkout, generator,
 optimizer, external Python packages or network is required.
 
 ```text
+python -I -S certificates/finite_grid/verify.py
+python -I -S tests/test_finite_grid_public.py
+python -I -S tests/test_finite_grid_arrays_public.py
 python -I -S certificates/symmetric/verify.py
 python -I -S tests/test_symmetric_public.py
 python -I -S verify.py CERTIFICATE.json
@@ -17,6 +20,81 @@ python -I -S tests/test_two_sided_recovery_public.py
 Run these from the extracted root. --all finds files beside its script. An
 explicit relative certificate path is relative to the invoking directory.
 Absolute script/certificate paths work from an unrelated directory with -I -S.
+
+## Version 1.5.0: compact finite-grid witness
+
+The strongest replay reads `certificates/finite_grid/WITNESS.json`. It
+independently checks the directed renewal recurrence and exact reconstruction,
+all 122,881 original covering rows, positive b, exact energy and the stronger
+declared bound. It needs no numerical solver, earlier multiplier, private
+research input, network or third-party Python package. The bundled exact
+reference values are compared only after fresh mathematical reconstruction.
+
+The component count is n=K=2048, kernel-array length M=4096 and boundary
+depth L=30. Each component has J=M*L=122880 finite boundary coordinates;
+the original full array therefore has 251,658,240 finite entries. Invisible
+prefixes are fixed zero and every entry from J onward is exactly one. The
+source theorem permits real finite boundary signs. Acceptance requires
+
+```text
+a = 5592405/4194304
+b > 0
+all joint covers q=0,...,122880 equal 1
+ab < (11785113371/12500000000)^2
+0 < 11785113371/12500000000 < 1121/1189.
+```
+
+The actual squared coefficient also satisfies the exact integer-square bracket
+
+```text
+(0.942809069679958604)^2 < ab < (0.942809069679958605)^2.
+```
+
+The decimal bound 0.942809069680 represents the exact rational
+11785113371/12500000000. Rounded square-root displays never decide acceptance.
+Kernel and mixture normalization, individual reflection, original finite
+indices and the final structural cover are part of the checks.
+
+The compact witness stores 80-bit dyadic proposals from a directly enclosed
+renewal sequence and the exact widest-box repair. The independently checked
+recurrence uses 128 fractional bits with exact integer accumulation and
+directed endpoint division. This precision is not an unqualified floating-point
+significand claim. A prospective bound including recurrence and proposal error
+selected L=30 for the initial Pell benchmark 1121/1189 before constructing the
+full point. Exact finite verification then supports the stronger public bound.
+The proof and source mapping
+are in [certificates/finite_grid/PROOF.md](certificates/finite_grid/PROOF.md).
+
+The original symmetric JSON may be exported into gzip and checked from the
+actual array through a separate standard-library streaming implementation:
+
+```text
+python -I -S certificates/finite_grid/verify.py --export-gzip tmp/finite_grid.json.gz --state-dir tmp/finite_grid_export
+python -I -S certificates/finite_grid/verify.py --check-array tmp/finite_grid.json.gz --state-dir tmp/finite_grid_array
+```
+
+The dense representation is large. It is prepared as an optional separate
+GitHub release asset; the source archive contains the lossless compact witness
+and complete offline reconstruction/export/checking code. Gzip changes storage
+only, and decompression yields the original symmetric certificate JSON schema.
+The ordinary compact replay does not require downloading the dense asset.
+
+Use a dedicated controlled state directory for each operation. The default
+is repository-local `tmp/finite_grid_replay`; an explicit `--state-dir` may
+select another directory you control, including another controlled checkout.
+Checkpoints bind exact input and code
+identities, use atomic latest/previous snapshots and OS exclusivity, and emit
+ten-second heartbeats. Interrupted component arithmetic can resume; a completed
+prior run starts fresh arithmetic. `--no-checkpoint` disables saved compact
+replay state. Resume only private state created by your own replay. Checksums
+detect corruption and input/code mismatch; they do not authenticate untrusted
+checkpoint contents. Use a fresh state directory or `--no-checkpoint` when
+checking inputs without trusted saved work. Streaming parser position is not advertised as a restorable
+solver state. Package integrity, fresh arithmetic, optional array verification,
+hosted CI and downloaded-archive replay remain separate checks.
+
+The historical replay commands and descriptions below retain their original
+version-specific scope. They do not imply v1.5.0 hosted or archive acceptance.
 
 ## Version 1.4.0: compact symmetric witness
 
@@ -143,6 +221,12 @@ construction; the historical checkers and packages retain their bytes and
 documented scope. No private correspondence, historical runtime database,
 unpublished candidate collection or third-party manuscript copy is needed.
 
+The additive v1.5.0 finite-grid subset has its own WITNESS.json, exact expected
+results, proof, prediction receipt, separate compact/array checking code,
+reproducible exporter and scoped manifest. It does not widen or replace the
+preserved v1.4.0 checker's accepted envelope. Every older mathematical file,
+expected output and subset manifest retains its historical bytes.
+
 The original R9/R16 hashes remain in the development note. Git intentionally
 exports VERIFY_WINDOWS.cmd with CRLF under .gitattributes. All proof-bearing
 certificate and checker bytes must otherwise match manifests exactly.
@@ -170,3 +254,9 @@ three public test suites with 10, 9 and 13 tests respectively. The fresh
 symmetric replay took approximately 303 seconds and verified all 16,385
 covers exactly one, exact energy and the stronger strict coefficient bound.
 These are completed archive replays in addition to the hosted checks.
+
+Version 1.5.0 is prepared for publication on October 23, 2026. Its new version
+DOI is pending; the existing concept DOI identifies the release series.
+Fresh v1.5.0 hosted checks and actual downloaded-archive identity/replay will
+be reported after completion. The v1.4.0 archive sizes, hashes and completed
+checks above remain historical evidence for v1.4.0.

@@ -4,23 +4,25 @@ title: "MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates"
 authors:
   - family-names: "Williams"
     given-names: "Ariel M."
-version: "1.4.0"
+version: "1.5.0"
 date-released: "2026-10-23"
-doi: "10.5281/zenodo.23592514"
 type: software
 repository-code: "https://github.com/FromAriel/mathis-sidon-frontier"
 abstract: >-
   Exact symmetric and asymmetric two-sided Sidon smoothing certificates,
   standalone standard-library Python verifiers and reproducible preservation.
-  Version 1.4.0 adds a compact centered-box witness with 1024 kernels at
-  M=2048 and L=8, proving sqrt(ab) < 471404576987/500000000000 =
-  0.942809153974 in the original Hou-Zhao finite symmetric model. Exact replay
-  reconstructs all 16385 covers and energy values without a numerical solver.
-  Earlier R9, R16 and two-sided packages retain their historical scope.
-  Hou-Zhao, Akwei, Chen and classical optimization/filter methods receive
-  explicit attribution. No current record, significant new generic theorem,
-  global optimality, finite-rate law, exponent advance or solution of Erdos
-  Problem 30 is claimed. Development and review used AI-assisted workflows.
+  Version 1.5.0 adds a compact exact centered-box witness with 2048 kernels at
+  M=4096 and L=30, proving sqrt(ab) < 11785113371/12500000000 =
+  0.942809069680 in the original Hou-Zhao finite symmetric model. Exact replay
+  reconstructs all 122881 covers and energy values without a numerical solver.
+  A fixed-family proof and prospective finite error bound accompany the witness.
+  Earlier R9, R16, two-sided and v1.4.0 symmetric packages retain their bytes
+  and historical scope. Hou-Zhao, Akwei, Chen, Wu/wustep and classical
+  renewal/filter methods receive explicit attribution. No current record,
+  significant new generic theorem, global optimality, exponent advance or
+  solution of Erdos Problem 30 is claimed. Development, drafting and review
+  used AI-assisted workflows. The new version DOI is pending; the reference
+  below identifies the existing release series.
 keywords:
   - Sidon sets
   - additive combinatorics

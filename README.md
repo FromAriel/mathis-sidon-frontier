@@ -1,13 +1,15 @@
 # MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates
 
-**Version 1.4.0. October 23, 2026. Author: Ariel M. Williams.**
+**Version 1.5.0. October 23, 2026. Author: Ariel M. Williams.**
 
 Exact rational certificates, standalone standard-library Python checkers, and
 theorem/development mappings. The project's strongest included certificate proves
-**sqrt(ab) < 471404576987/500000000000 = 0.942809153974**, using 1,024 centered
+**sqrt(ab) < 11785113371/12500000000 = 0.942809069680**, using 2,048 centered
 box kernels in the original symmetric Hou--Zhao finite model. Its diagnostic
-coefficient is approximately 0.942809153973600631. The new compact exact witness
-reconstructs every boundary value without an optimizer or the older boundary.
+coefficient is approximately 0.9428090696799586049. The new compact exact
+witness reconstructs every boundary value through a directed renewal recurrence
+and exact repair, without an optimizer or an older boundary. All earlier
+certificate packages and issued releases remain preserved.
 
 For the maximum size F(N) of an integer Sidon set in {0,...,N-1}, the cited
 fixed-certificate theorem gives F(N) <= sqrt(N) + sqrt(ab) N^(1/4) + O(1).
@@ -20,18 +22,22 @@ fixed-certificate theorem gives F(N) <= sqrt(N) + sqrt(ab) N^(1/4) + O(1).
 | Preserved v1.2.0 m=1024, L=8 certificate | Asymmetric two-sided, 1 ramp | 0.942810720298845 |
 | Akwei's fixed reported certificate bound | Asymmetric two-sided | < 0.942809522 |
 | Preserved v1.3.0 recovered certificate | Asymmetric two-sided, 1 ramp | < 0.942809270635 |
-| New v1.4.0 centered-box certificate | Symmetric, R=1024, M=2048, L=8 | < 0.942809153974 |
+| Preserved v1.4.0 centered-box certificate | Symmetric, R=1024, M=2048, L=8 | < 0.942809153974 |
+| New v1.5.0 finite-grid certificate | Symmetric, R=2048, M=4096, L=30 | < 0.942809069680 |
 | Akwei's smoothing-method lower bound | Continuum/infimum | 2 sqrt(2)/3 = 0.942809041582... |
 
 The new certificate gives the project's best strict coefficient, improving
 its earlier certificates within the original symmetric model and preserving
 the earlier two-sided results. This is a
 software, certificate-data and verification milestone. It makes no current-
-record, significant new generic theorem, global-optimality, finite-rate,
+record, significant new generic theorem, global-optimality,
 exponent-improvement or Erdos #30 solution claim. Akwei already reports the
-approximate finite linear-kernel behavior discussed in the
-[proof note](certificates/symmetric/PROOF.md); Chen separately gives the limiting
-physical coefficient in his stated model. Certificate-dependent O(1) terms
+approximate finite linear-kernel behavior credited in the
+[v1.5.0 proof and source mapping](certificates/finite_grid/PROOF.md). The new
+analysis gives an exact half-line optimum and an explicit finite realization
+bound for the prescribed boxes and weights. It does not optimize over other
+kernels or mixtures. Chen separately gives the limiting physical coefficient
+in his stated model. Certificate-dependent O(1) terms
 are not compared here, and this is not an exhaustive results catalogue.
 
 ## Verify independently
@@ -40,6 +46,9 @@ Python **3.10 or newer**; no dependencies, network, optimizer or MathIS install.
 From the extracted repository root:
 
 ```text
+python -I -S certificates/finite_grid/verify.py
+python -I -S tests/test_finite_grid_public.py
+python -I -S tests/test_finite_grid_arrays_public.py
 python -I -S certificates/symmetric/verify.py
 python -I -S tests/test_symmetric_public.py
 python verify.py CERTIFICATE.json
@@ -54,8 +63,48 @@ To check only the strongest new certificate, reconstructing every exact cover
 and energy value from the compact witness:
 
 ```text
-python -I -S certificates/symmetric/verify.py
+python -I -S certificates/finite_grid/verify.py
 ```
+
+The v1.5.0 point has n=K=2048, kernel length M=4096 and boundary depth L=30.
+Every one of its 122,881 original covers equals one exactly. Each component
+has J=M*L=122880 finite boundary coordinates followed by an exact unit tail;
+unused prefixes are fixed zero. The complete original array has 251,658,240
+finite boundary entries. Boundary signs are unrestricted by the source theorem.
+
+The compact `certificates/finite_grid/WITNESS.json` losslessly specifies that
+array through exact dyadic renewal proposals and a rational widest-box repair.
+The public replay independently reconstructs the recurrence, all covers and
+exact energy. It uses only Python's standard library and runs offline.
+The proof's prospective rational error bound selected L=30 for the initial
+Pell benchmark 1121/1189 before construction. Exact verification then supports
+the stronger decimal declaration. The historical v1.4.0 multiplier is not an input.
+
+Optional original-schema export and a separate actual-array checker are available:
+
+```text
+python -I -S certificates/finite_grid/verify.py --export-gzip tmp/finite_grid.json.gz --state-dir tmp/finite_grid_export
+python -I -S certificates/finite_grid/verify.py --check-array tmp/finite_grid.json.gz --state-dir tmp/finite_grid_array
+```
+
+The dense representation is large and is prepared as an optional GitHub release
+asset. The Zenodo GitHub source archive contains the compact witness and complete
+offline reconstruction, export and checking tools; the dense gzip is separate.
+Decompression yields the original symmetric JSON schema. Use a dedicated state
+directory for each operation. Defaults stay under `tmp/finite_grid_replay` in
+this repository; an explicit `--state-dir` may select another directory you
+control, including one in another controlled checkout. Resume only private
+state created by your own replay. Checksums detect corruption and input/code
+mismatch; they do not authenticate state supplied by someone else. Use a fresh
+state directory or `--no-checkpoint` for fresh arithmetic without saved state.
+Interrupted component work can resume, while a completed prior run starts
+fresh arithmetic. Full details are in the
+[finite-grid guide](certificates/finite_grid/README.md).
+
+### Preserved v1.4.0 replay and dense asset
+
+The following description records the unchanged v1.4.0 package. Its commands,
+declaration and asset identities remain valid independently of v1.5.0.
 
 The new point has n=K=1024, kernel length M=2048 and boundary depth L=8.
 Every one of its 16,385 covers is exactly one. The finite boundary has length
@@ -96,7 +145,8 @@ package-integrity failure. R9 ends with `ALL EXACT CHECKS PASSED`; R16 reports `
 The historical Windows launcher checks R9 only. All R9/R16 proof-bearing files,
 expected outputs and commands retain their historical bytes.
 
-[Verification details](VERIFICATION.md), [new symmetric certificate](certificates/symmetric/README.md),
+[Verification details](VERIFICATION.md), [new finite-grid certificate](certificates/finite_grid/README.md),
+[preserved v1.4.0 symmetric certificate](certificates/symmetric/README.md),
 [preserved recovery certificate](certificates/two_sided_recovery/README.md),
 [preserved seven-certificate inventory](certificates/two_sided/README.md),
 and [theorem/development mapping](DEVELOPMENT_AND_THEOREM.md) explain the checks.
@@ -118,6 +168,14 @@ finite linear-kernel observations motivated the choice of fixed kernels and
 the comparison. Standard weighted least-norm projection, quadratic-program
 duality and finite geometric-sum filter algebra supply the recovery machinery.
 The proof note identifies those dependencies and their sources.
+
+The v1.5.0 construction uses a positive discrete renewal recurrence with 128
+fractional interval bits, 80-bit dyadic proposals and exact finite repair.
+Akwei's quantitative finite construction and localized repair are also credited
+in its [provenance note](certificates/finite_grid/PROVENANCE.md), alongside
+classical renewal, spectral factorization and finite-filter arguments. The
+new fixed-family analysis and finite certificate do not establish a new
+universal floor or broad implementation priority.
 
 **Haoyu Chen** gives a distinct physical cardinality theorem with coefficient
 2 sqrt(2)/3 and explicit onset in his [version 3 note](https://zenodo.org/records/23273526).
@@ -142,8 +200,10 @@ not claimed. A partial active-row KKT result was a comparator, not the winning
 certificate. Verification is solver-independent. Numerical generation and its
 dependencies are not bundled.
 
-The files do not prove attainment of the limiting coefficient, a general
-convergence-rate theorem or a universal physical forced-loss inequality.
+The finite certificates do not attain the limiting coefficient or establish
+a universal physical forced-loss inequality. The v1.5.0 proof gives a
+fixed-family finite-depth limit and an explicit error bound; it does not give
+a general convergence-rate theorem over other kernels and mixtures.
 Data are fixed before N tends to infinity; no varying-data uniform
 remainder is asserted. Exact finite checking is not external peer review or
 formal verification of the complete analytic source theorem.
@@ -154,7 +214,10 @@ Ariel M. Williams directed the research, acceptance criteria and claim scope.
 Construction, software and review used AI-assisted workflows. No affiliation
 with or endorsement by the cited authors is implied.
 
-R9 was recorded August 23, 2026 and privately communicated August 24. The
+R9 was recorded August 23, 2026 and privately communicated August 24. Those
+specific records predate the inspected August 27 Wu/wustep q2 certificate
+commit. They do not identify when all of Wu's work began, establish public
+priority, or imply that another group used private materials. The
 repository and v1.1.0 became public October 17, 2026. Version 1.2.0 is dated
 October 21, 2026; private development dates do not establish public priority.
 Version 1.3.0 was published October 22, 2026. Its Zenodo record and downloaded
@@ -171,6 +234,13 @@ from the downloaded Zenodo archive: R9, R16, all seven historical two-sided
 certificates, the recovered certificate, the new symmetric witness and all
 32 public tests. The fresh symmetric replay verified all 16,385 covers exactly
 one and the stronger strict coefficient bound.
+
+Version 1.5.0 is prepared as an additive October 23 release with the stronger
+fixed-grid certificate. Its version DOI is pending; use the existing concept
+DOI for the release series until the new record is issued and inspected.
+The v1.4.0 hosted and archive checks above are historical evidence for that
+version. Fresh v1.5.0 hosted checks, downloaded-archive replay and preservation
+checks will be recorded separately after publication.
 
 - [Version 1.4.0 DOI](https://doi.org/10.5281/zenodo.23592514)
 - [Version 1.4.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.4.0)

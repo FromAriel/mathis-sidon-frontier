@@ -1,15 +1,15 @@
 {
-  "description": "Complete current v1.4.0 payload except this manifest; citation DOI follow-up preserves tagged release assets",
+  "description": "Complete v1.5.0 payload except this manifest; historical subsets preserved",
   "files": [
     {
-      "bytes": 189,
+      "bytes": 222,
       "path": ".gitattributes",
-      "sha256": "bc34f6303252dedbaa7c8d47b58fb88fa7c6dc27f95e02f7479ba9a081a6fd4e"
+      "sha256": "9608ffea8dd8e048ab1cb464b4e6a5f7cd1a21010b098d133b4b9783ffc9f97f"
     },
     {
-      "bytes": 2764,
+      "bytes": 3186,
       "path": ".github/workflows/verify.yml",
-      "sha256": "0b7ea290232059351ff8e5072b24d103f5e71723fa524dd7c9deaa11c2abeed5"
+      "sha256": "feb2163719900ca7fe2d4a6f591f97661da69b7cea6a91014bc0b27ec81d9ab1"
     },
     {
       "bytes": 43,
@@ -22,14 +22,14 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 1601,
+      "bytes": 1780,
       "path": "CITATION.cff",
-      "sha256": "1b31b1970bea8a2f4542d989b6f3e1e15b76affa302736914def13e8775f51b6"
+      "sha256": "afefdc9e0c7e7cb04b9ac4a9cdcad46045f192cf272f5665060084c701ad98d4"
     },
     {
-      "bytes": 16977,
+      "bytes": 22090,
       "path": "DEVELOPMENT_AND_THEOREM.md",
-      "sha256": "948b9a1ce6914be037cdd78024ad06800e9011cb54dd5e19a0f4195d476594b0"
+      "sha256": "602e901b6bb4a147e50ef51ca2f4d37372434c9efce677923d16409b988c58dd"
     },
     {
       "bytes": 2940,
@@ -42,24 +42,84 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 11087,
+      "bytes": 15459,
       "path": "README.md",
-      "sha256": "142111aa7cc436129f082212c21001c2a2a2f2bb8aec4e1f1c71668271772a36"
+      "sha256": "54ce0a6dd8b19c3ab6349dfd41a31b863f3fee2b107aadb14e4de554770a1ae0"
     },
     {
-      "bytes": 8733,
+      "bytes": 12908,
       "path": "RELEASE_NOTES.md",
-      "sha256": "99f54ac2409c0d8f340ddf1ea083b9ed82a7c2be33a3fab7a0ecfbccec32b15a"
+      "sha256": "3805a5c5ae5e4b26be99590a729f881ff0dc60171e31ed38bb01db32fd2e4e13"
     },
     {
-      "bytes": 9370,
+      "bytes": 14277,
       "path": "VERIFICATION.md",
-      "sha256": "88a2ed2a5e9dd70f387a43b36f5606b3baf83162a2049669f9d186004eab6f27"
+      "sha256": "fcddf0fe09836c050852c460843316791bb8a6235fca6c0fb71aaa4c9812166f"
     },
     {
       "bytes": 855,
       "path": "VERIFY_WINDOWS.cmd",
       "sha256": "94b5720dc9b8b8b8a4d2b52b647a62397d89e2259a32148aaccd7c0d52a18547"
+    },
+    {
+      "bytes": 792,
+      "path": "certificates/finite_grid/EXPECTED_RESULTS.json",
+      "sha256": "699fdcd9edc1a9a8b632d92c58645cc04544a57f289b69fa9e4fae789f3f9b23"
+    },
+    {
+      "bytes": 1672,
+      "path": "certificates/finite_grid/MANIFEST.json",
+      "sha256": "13f4354b7d1ab078195eb99fce1625725cbf319e36b765fb9c3d2142199f8b69"
+    },
+    {
+      "bytes": 88836,
+      "path": "certificates/finite_grid/PREDICTION.json",
+      "sha256": "483b9dd04df7b78b83a6d3769b18ff0c373b3d8254e886bd570c3861a26f9799"
+    },
+    {
+      "bytes": 13647,
+      "path": "certificates/finite_grid/PROOF.md",
+      "sha256": "e1e4c685263043fb3925d9af190adba150a66c5bd1fdfc69a3ab24cf69cdddb0"
+    },
+    {
+      "bytes": 5315,
+      "path": "certificates/finite_grid/PROVENANCE.md",
+      "sha256": "0c12ff4c1c6c7b16d8cb6953757496693c8330938df903e5147088e775b59965"
+    },
+    {
+      "bytes": 5307,
+      "path": "certificates/finite_grid/README.md",
+      "sha256": "bb24bccfa97cbaacfda2600ca3b347dc05dc67617f548c539c169049a2b19db3"
+    },
+    {
+      "bytes": 5011498,
+      "path": "certificates/finite_grid/WITNESS.json",
+      "sha256": "0d4f09d641a451edc657e9d8a33494096eec2b5265bac7ddfb7b81cbe0b2538a"
+    },
+    {
+      "bytes": 17680,
+      "path": "certificates/finite_grid/arraycheck.py",
+      "sha256": "d5520574e4a29541d019f4cdf1cad840f87cfb1f60dad02af81ebfd4fd39cf46"
+    },
+    {
+      "bytes": 11189,
+      "path": "certificates/finite_grid/exporter.py",
+      "sha256": "94a3539ebddf967d5ae4da348c0d0c7310eca7981cfc4b7cb92bdcd0512a6f1d"
+    },
+    {
+      "bytes": 13028,
+      "path": "certificates/finite_grid/reconstruction.py",
+      "sha256": "6ffa7664d5b11b8fc283a2a15c7200bba8cdb9dfec8ee3dd4ffe79ff7058530b"
+    },
+    {
+      "bytes": 5090,
+      "path": "certificates/finite_grid/runtime.py",
+      "sha256": "b8e42c0c8a8c4574e011be77b7eb23ab16ab108247534e7777c417f4961c50d8"
+    },
+    {
+      "bytes": 8376,
+      "path": "certificates/finite_grid/verify.py",
+      "sha256": "8e07d2005005b42f11e63329cd1c7fe7c29a84878a474680e652e36541da25ac"
     },
     {
       "bytes": 293334,
@@ -237,6 +297,16 @@
       "sha256": "acebdec86babb249f68e96248d125daa98d5772c681140c13842e96752cc4b89"
     },
     {
+      "bytes": 13697,
+      "path": "tests/test_finite_grid_arrays_public.py",
+      "sha256": "fe44046ca83e04f85104907421453fe807043ebccf6ecb1317f84bf77ad7ddcf"
+    },
+    {
+      "bytes": 19220,
+      "path": "tests/test_finite_grid_public.py",
+      "sha256": "0179ddccbe0be08337710559e91d4b74f833fb34233b1eecdd53c783c2d90b1b"
+    },
+    {
       "bytes": 13905,
       "path": "tests/test_symmetric_public.py",
       "sha256": "49d0b43174d259e2d9dfe2811baa9105767813fb3a80c4639b933240a54529a5"
@@ -257,5 +327,5 @@
       "sha256": "71ba65656bb7dc27caf302ee148cfc6356d56ad1f1186d806e82c3664ae2a8dd"
     }
   ],
-  "version": "1.4.0"
+  "version": "1.5.0"
 }

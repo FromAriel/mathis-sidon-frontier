@@ -77,3 +77,12 @@ jobs:
 
       - name: Run symmetric package acceptance and rejection tests
         run: python -I -S tests/test_symmetric_public.py
+
+      - name: Verify finite-grid symmetric certificate and stronger bound exactly
+        run: python -I -S certificates/finite_grid/verify.py
+
+      - name: Run finite-grid compact witness acceptance and rejection tests
+        run: python -I -S tests/test_finite_grid_public.py
+
+      - name: Run finite-grid actual-array acceptance and rejection tests
+        run: python -I -S tests/test_finite_grid_arrays_public.py

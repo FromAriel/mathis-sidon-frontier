@@ -1,5 +1,13 @@
 # Development history and theorem mapping
 
+Version 1.5.0 is prepared as an additive October 23, 2026 release. Its
+strongest strict declaration is `sqrt(ab) < 11785113371/12500000000 =
+0.942809069680`, in the original symmetric Hou--Zhao model with n=K=2048,
+M=4096 and L=30. The new version DOI is pending; the unchanged concept DOI
+continues to identify the series. Fresh publication, hosted CI and archive
+acceptance will be recorded after completion. The earlier release histories
+and theorem mappings below remain intact.
+
 Version 1.4.0 was published October 23, 2026. It adds a compact exact symmetric
 certificate and standard-library replay in the original Hou--Zhao finite
 model. Its version DOI is [10.5281/zenodo.23592514](https://doi.org/10.5281/zenodo.23592514);
@@ -32,12 +40,20 @@ https://doi.org/10.5281/zenodo.23439041 .
 | October21,2026 | Fixed m=1024, L=8 recovery experiment produced a stronger finite certificate | Exact declaration 188561854127/200000000000, independently checked against all 16,386 left/right covers; private acceptance is separate from public availability. |
 | October22,2026 | Additive v1.3.0 release and inspected Zenodo archive | DOI 10.5281/zenodo.23555594; every historical and new certificate replay passed from the downloaded source archive. Previous release artifacts remain preserved. |
 | October 23, 2026 | Exact symmetric centered-box certificate independently accepted and v1.4.0 published | DOI 10.5281/zenodo.23592514; stronger exact declaration 471404576987/500000000000, all 16,385 covers exactly one. Issued archive identity, eight main/tag hosted jobs, and all eight verification commands including 32 public tests passed from the downloaded Zenodo archive. |
+| October 23, 2026 | Fixed-grid renewal certificate independently accepted; v1.5.0 prepared | n=2048, M=4096, L=30; strict declaration 11785113371/12500000000, all 122,881 covers exactly one. Publication/DOI/hosted-archive checks remain separate events. |
 
 This is a development record, not a claim of worldwide first discovery,
 the first rational Sidon certificate, current record status, or peer review.
 No claim is made that another group used our private materials.
 Historical correspondence and the larger private research history are not
 part of the public package.
+
+The August 23 R9 record and August 24 private communication specifically
+predate the inspected August 27 q2 certificate record. This does not assert
+that all of Wu/wustep's work began later: the external repository describes
+earlier Sidon activity. Development dates, private communication and first
+public availability retain their separate meanings; no use of private
+materials by another group is alleged.
 
 ## Historical R9/R16 analytic dependency
 
@@ -274,3 +290,77 @@ computation, software, drafting and review used AI assistance. Internal
 analytic review and exact finite checks are distinct from external peer
 review or formal verification of the complete source theorem. Third-party
 sources are cited without endorsement, redistribution or relicensing.
+
+## Version 1.5.0: effective finite-grid renewal construction
+
+The new certificate uses n=K=2048 centered boxes of length M=4096, with the
+same prescribed weight formulas as the fixed-family analysis. At depth L=30,
+each component has J=122880 finite boundary coordinates followed by an exact
+unit tail. Every cover q=0,...,J equals one, including q=J. Invisible prefixes
+are zero; the source model permits real boundary signs. The stored original
+arrays have 251,658,240 finite entries.
+
+The exact energy constant and strict public declaration are
+
+```text
+a = 5592405/4194304
+sqrt(ab) < 11785113371/12500000000 = 0.942809069680.
+0.942809069679958604 < sqrt(ab) < 0.942809069679958605.
+```
+
+Acceptance uses the exact squared rational comparison. The bracket follows
+from integer-square comparisons; displayed longer square-root digits are
+diagnostics. The earlier Pell benchmark 1121/1189 is also strictly beaten,
+without changing the mathematical data. That benchmark is not an asserted
+optimum or a new Diophantine result.
+
+The [fixed-family proof](certificates/finite_grid/PROOF.md) supplies
+
+```text
+a_n = 4/3 - 1/(3n^2)
+beta_infinity,n = 2/3 + 1/(3n^2)
+a_n*beta_infinity,n = 8/9 + 2/(9n^2) - 1/(9n^4).
+```
+
+Here beta_infinity,n is the optimum in the specified half-line profile class
+for these boxes and weights. Both finite equality and inequality minima
+converge nonincreasingly to it as L grows with n fixed. Each finite minimum
+strictly exceeds it for n>=2; at n=1 all three values are one. Equality and
+inequality minima are not identified with each other at finite depth.
+
+For n=1024 the limiting product already exceeds (1121/1189)^2, so no finite
+depth can reach that benchmark within this prescribed family. For n=2048 the
+limiting product is below it. A rational prospective error bound, including
+directed recurrence and proposal rounding, selected L=30 as the smallest
+passing depth among 8,...,32 before constructing the full point. This is the
+smallest passing depth for that conservative bound, not a minimum feasible
+depth theorem. The actual finite correction
+`b - 2796203/4194304` is strictly positive, approximately 6.6727480930988364e-46.
+
+Construction uses 128 fractional-bit directed intervals for a positive renewal
+recurrence, 80-bit dyadic proposals and an exact widest-box residual repair.
+There is no floating solver, optimizer, alternate kernel/weight trial, or older
+boundary input. The lossless public WITNESS.json records the exact data needed
+to reconstruct every finite component. Independent compact and actual-array
+implementations reconstruct covers and energy separately; saved reference
+values and provenance hashes cannot replace that arithmetic.
+
+Hou--Zhao's original finite symmetric theorem supplies the fixed-certificate
+Sidon consequence directly. Akwei's ramp/renewal analysis, approximate
+finite-grid formulas, quantitative construction and localized repair are
+credited dependencies. Classical renewal, spectral factorization, coefficient
+root exclusion and finite-filter repair are used explicitly. The new analysis
+is an effective specialization to the prescribed boxes and weights, not a
+claim to first discovery of those methods or formulas. The bounded source
+audit does not establish broad implementation priority, and unavailable
+advertised artifacts are not evidence of novelty.
+
+The finite coefficient remains above the inherited limit 2*sqrt(2)/3 and
+does not improve Chen's distinct stated physical coefficient. No worldwide
+record, significant new generic theorem, optimality over other kernels or
+mixtures, uniform varying-data remainder, exponent improvement or Erdos #30
+solution is claimed. A standalone-manuscript significance recommendation has
+not been established. Ariel M. Williams directed construction, acceptance,
+software and preservation with AI-assisted computation, drafting and review.
+All earlier packages and immutable release identities retain their historical
+bytes and scope.

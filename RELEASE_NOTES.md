@@ -1,3 +1,76 @@
+# Version 1.5.0 - October 23, 2026
+
+Title: **MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates.**
+
+Adds one compact exact finite-grid certificate with 2,048 centered box kernels,
+M=4096, L=30 and J=122880 finite boundary coordinates per component. It proves
+the project's strongest strict declaration
+
+```text
+sqrt(ab) < 11785113371/12500000000 = 0.942809069680.
+```
+
+The actual coefficient has the exact strict bracket
+`0.942809069679958604 < sqrt(ab) < 0.942809069679958605`. Every one of the
+122,881 original covers equals one exactly, including the structural unit-tail
+row. Kernel and mixture normalization, reflection, unused zero prefixes,
+positive b and the strict squared-rational comparison are checked. The
+original Hou--Zhao finite symmetric theorem supplies the Sidon consequence
+for this fixed certificate.
+
+The compact WITNESS.json stores exact dyadic renewal proposals and a rational
+widest-box repair. Its default standard-library replay independently checks
+the directed recurrence, every original cover and exact energy without an
+optimizer, older certificate, private input or network. A separate streaming
+implementation checks actual original-schema gzip arrays. The new commands are
+
+```text
+python -I -S certificates/finite_grid/verify.py
+python -I -S tests/test_finite_grid_public.py
+python -I -S tests/test_finite_grid_arrays_public.py
+python -I -S certificates/finite_grid/verify.py --export-gzip tmp/finite_grid.json.gz --state-dir tmp/finite_grid_export
+python -I -S certificates/finite_grid/verify.py --check-array tmp/finite_grid.json.gz --state-dir tmp/finite_grid_array
+```
+
+The source archive contains the lossless compact witness, proof, prospective
+error calculation and complete offline reconstruction/export/checking tools.
+The dense gzip is prepared as an optional separate GitHub release asset.
+Gzip changes storage only: decompression yields the original symmetric JSON
+certificate schema. The public declaration is stronger than the research
+construction's initial Pell benchmark 1121/1189, with identical mathematical
+kernel, weight and boundary data. The new declaration has its own byte hashes;
+the sealed research artifact is preserved.
+
+For the prescribed boxes and weights, the proof establishes the exact
+half-line optimum and a strictly positive correction at every finite depth
+when n>=2. An explicit rational realization bound selected L=30 for the
+initial Pell benchmark before construction. The finite equality and inequality minima remain distinct
+objects; no optimization over arbitrary kernels or mixtures is claimed.
+
+Hou--Zhao supply the analytic framework. Akwei's ramp/renewal analysis,
+approximate finite-grid formulas, quantitative construction and localized
+repair are credited dependencies, alongside classical spectral-factor and
+finite-filter arguments. Chen's distinct limiting physical coefficient remains
+stronger than this finite coefficient. Wu/wustep's q2 remains an attributed
+historical comparison. The August 23 R9 record and August 24 private
+communication predate the inspected August 27 q2 artifact; this does not date
+all external work, establish public priority or allege use of private material.
+
+This is an attributed software, certificate-data and verification release.
+It claims no worldwide record, new universal floor, significant generic-method
+priority, global optimality over other kernels/weights, exponent advance or
+solution of Erdos Problem 30. Internal proof reviews and exact finite checks
+are distinct from external peer review and formal proof verification.
+AI-assisted computation, software, drafting and review are disclosed.
+
+All earlier proof-bearing certificate/checker packages, expected results,
+commands, tags, release assets and issued Zenodo versions remain preserved.
+Version 1.4.0 remains at https://doi.org/10.5281/zenodo.23592514 . The v1.5.0
+version DOI is pending; the existing all-versions concept DOI remains
+https://doi.org/10.5281/zenodo.23439039 . Fresh hosted and downloaded-archive
+acceptance will be reported only after they have completed. Historical release
+notes below retain their original scope and completed verification records.
+
 # Version 1.4.0 - October 23, 2026
 
 Title: **MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates.**

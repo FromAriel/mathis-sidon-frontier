@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "bytes": 17680,
+      "path": "arraycheck.py",
+      "sha256": "d5520574e4a29541d019f4cdf1cad840f87cfb1f60dad02af81ebfd4fd39cf46"
+    },
+    {
+      "bytes": 792,
+      "path": "EXPECTED_RESULTS.json",
+      "sha256": "699fdcd9edc1a9a8b632d92c58645cc04544a57f289b69fa9e4fae789f3f9b23"
+    },
+    {
+      "bytes": 11189,
+      "path": "exporter.py",
+      "sha256": "94a3539ebddf967d5ae4da348c0d0c7310eca7981cfc4b7cb92bdcd0512a6f1d"
+    },
+    {
+      "bytes": 88836,
+      "path": "PREDICTION.json",
+      "sha256": "483b9dd04df7b78b83a6d3769b18ff0c373b3d8254e886bd570c3861a26f9799"
+    },
+    {
+      "bytes": 13647,
+      "path": "PROOF.md",
+      "sha256": "e1e4c685263043fb3925d9af190adba150a66c5bd1fdfc69a3ab24cf69cdddb0"
+    },
+    {
+      "bytes": 5315,
+      "path": "PROVENANCE.md",
+      "sha256": "0c12ff4c1c6c7b16d8cb6953757496693c8330938df903e5147088e775b59965"
+    },
+    {
+      "bytes": 5307,
+      "path": "README.md",
+      "sha256": "bb24bccfa97cbaacfda2600ca3b347dc05dc67617f548c539c169049a2b19db3"
+    },
+    {
+      "bytes": 13028,
+      "path": "reconstruction.py",
+      "sha256": "6ffa7664d5b11b8fc283a2a15c7200bba8cdb9dfec8ee3dd4ffe79ff7058530b"
+    },
+    {
+      "bytes": 5090,
+      "path": "runtime.py",
+      "sha256": "b8e42c0c8a8c4574e011be77b7eb23ab16ab108247534e7777c417f4961c50d8"
+    },
+    {
+      "bytes": 8376,
+      "path": "verify.py",
+      "sha256": "8e07d2005005b42f11e63329cd1c7fe7c29a84878a474680e652e36541da25ac"
+    },
+    {
+      "bytes": 5011498,
+      "path": "WITNESS.json",
+      "sha256": "0d4f09d641a451edc657e9d8a33494096eec2b5265bac7ddfb7b81cbe0b2538a"
+    }
+  ],
+  "version": "1.5.0"
+}
