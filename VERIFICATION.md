@@ -255,8 +255,40 @@ symmetric replay took approximately 303 seconds and verified all 16,385
 covers exactly one, exact energy and the stronger strict coefficient bound.
 These are completed archive replays in addition to the hosted checks.
 
-Version 1.5.0 is prepared for publication on October 23, 2026. Its new version
-DOI is pending; the existing concept DOI identifies the release series.
-Fresh v1.5.0 hosted checks and actual downloaded-archive identity/replay will
-be reported after completion. The v1.4.0 archive sizes, hashes and completed
-checks above remain historical evidence for v1.4.0.
+Version 1.5.0 was published October 23, 2026, at
+[DOI 10.5281/zenodo.23600836](https://doi.org/10.5281/zenodo.23600836), under the
+unchanged [concept DOI](https://doi.org/10.5281/zenodo.23439039). Its actual
+Zenodo ZIP has 1,789,140 bytes, advertised MD5
+`a4767628a188775ad53ebe0fbcf924cf` and calculated SHA-256
+`f9e869b4cf03d397047da7ddd7b7b3b5f5bdd596062589a2bfd2f13aaa31fb84`.
+All 65 members other than VERIFY_WINDOWS.cmd match the frozen payload and
+actual tagged Git blobs byte-for-byte. That historical launcher alone has the
+documented CRLF export: 898 bytes, SHA-256
+`82f04aecab24342a0125591813fcf6f52aed1309d4b500f02f112ccad260103e`;
+its canonical LF bytes match the tag. There are 66 source files and no dense
+gzip inside this source archive.
+
+All eleven verification commands passed from the clean extracted frozen
+source package. The compact replay accepted all 122,881 covers exactly one,
+exact energy and the strict 0.942809069680 declaration. The actual Zenodo
+mathematical payload is byte-identical to that accepted package, so archive
+acceptance transfers by payload identity; no additional arithmetic replay
+was run from the Zenodo extraction. The actual
+[main run](https://github.com/FromAriel/mathis-sidon-frontier/actions/runs/39981382618)
+and [tag run](https://github.com/FromAriel/mathis-sidon-frontier/actions/runs/39981383126)
+each passed all four hosted jobs at commit
+`f4e0ebd2301b53e4726c8295b3df0ac8d4e2ba51`.
+
+All four actual GitHub assets were downloaded and hashed. The optional dense
+gzip has 1,454,032,720 bytes and SHA-256
+`709a569a91839c0ea936620924bde0fd437b54bcaa4a25e5c156814cfc6b054f`.
+Its mathematical arrays retain every compressed component member of the
+original independently checked certificate; only the bound declaration in
+the header changed. That completed check accepted all 122,881 covers and exact
+energy; the stronger declaration passes a separate exact squared-rational
+comparison. This identity transfers the original actual-array verification.
+The additional public streaming replay remains incomplete and is not counted
+as completed verification. All four earlier tags/releases, assets and Zenodo
+record/archive identities passed the separate post-publication preservation
+audit. The frozen v1.5.0 source/tag/assets and all historical certificate bytes
+remain unchanged by the subsequent DOI documentation commit.

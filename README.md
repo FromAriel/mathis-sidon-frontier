@@ -87,8 +87,10 @@ python -I -S certificates/finite_grid/verify.py --export-gzip tmp/finite_grid.js
 python -I -S certificates/finite_grid/verify.py --check-array tmp/finite_grid.json.gz --state-dir tmp/finite_grid_array
 ```
 
-The dense representation is large and is prepared as an optional GitHub release
-asset. The Zenodo GitHub source archive contains the compact witness and complete
+The dense representation is published as the optional GitHub release asset
+[FINITE_GRID_CERTIFICATE.json.gz](https://github.com/FromAriel/mathis-sidon-frontier/releases/download/v1.5.0/FINITE_GRID_CERTIFICATE.json.gz)
+with its [checksum](https://github.com/FromAriel/mathis-sidon-frontier/releases/download/v1.5.0/FINITE_GRID_CERTIFICATE.json.gz.sha256).
+The Zenodo GitHub source archive contains the compact witness and complete
 offline reconstruction, export and checking tools; the dense gzip is separate.
 Decompression yields the original symmetric JSON schema. Use a dedicated state
 directory for each operation. Defaults stay under `tmp/finite_grid_replay` in
@@ -235,13 +237,22 @@ certificates, the recovered certificate, the new symmetric witness and all
 32 public tests. The fresh symmetric replay verified all 16,385 covers exactly
 one and the stronger strict coefficient bound.
 
-Version 1.5.0 is prepared as an additive October 23 release with the stronger
-fixed-grid certificate. Its version DOI is pending; use the existing concept
-DOI for the release series until the new record is issued and inspected.
-The v1.4.0 hosted and archive checks above are historical evidence for that
-version. Fresh v1.5.0 hosted checks, downloaded-archive replay and preservation
-checks will be recorded separately after publication.
+Version 1.5.0 was published October 23, 2026, at
+[DOI 10.5281/zenodo.23600836](https://doi.org/10.5281/zenodo.23600836), under the
+unchanged release-series concept DOI. The actual Zenodo source ZIP checksum
+and all 66 source members match the frozen tagged payload, allowing the
+documented CRLF export of the historical Windows launcher. All mathematical
+files are byte-identical to the freshly replayed source package, from which
+all eleven verification commands passed. The Zenodo archive is accepted by
+that payload identity; no additional arithmetic replay was run from its
+extraction. The actual [main run](https://github.com/FromAriel/mathis-sidon-frontier/actions/runs/39981382618)
+and [tag run](https://github.com/FromAriel/mathis-sidon-frontier/actions/runs/39981383126)
+each passed all four hosted jobs. All four prior releases and their assets
+and Zenodo records passed the separate post-publication preservation audit.
+The documentation follow-up does not alter the frozen v1.5.0 tag or assets.
 
+- [Version 1.5.0 DOI](https://doi.org/10.5281/zenodo.23600836)
+- [Version 1.5.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.5.0)
 - [Version 1.4.0 DOI](https://doi.org/10.5281/zenodo.23592514)
 - [Version 1.4.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.4.0)
 - [Version 1.3.0 DOI](https://doi.org/10.5281/zenodo.23555594)

@@ -34,7 +34,9 @@ python -I -S certificates/finite_grid/verify.py --check-array tmp/finite_grid.js
 
 The source archive contains the lossless compact witness, proof, prospective
 error calculation and complete offline reconstruction/export/checking tools.
-The dense gzip is prepared as an optional separate GitHub release asset.
+The dense gzip is published as an optional separate
+[GitHub release asset](https://github.com/FromAriel/mathis-sidon-frontier/releases/download/v1.5.0/FINITE_GRID_CERTIFICATE.json.gz)
+with its [checksum](https://github.com/FromAriel/mathis-sidon-frontier/releases/download/v1.5.0/FINITE_GRID_CERTIFICATE.json.gz.sha256).
 Gzip changes storage only: decompression yields the original symmetric JSON
 certificate schema. The public declaration is stronger than the research
 construction's initial Pell benchmark 1121/1189, with identical mathematical
@@ -65,11 +67,24 @@ AI-assisted computation, software, drafting and review are disclosed.
 
 All earlier proof-bearing certificate/checker packages, expected results,
 commands, tags, release assets and issued Zenodo versions remain preserved.
-Version 1.4.0 remains at https://doi.org/10.5281/zenodo.23592514 . The v1.5.0
-version DOI is pending; the existing all-versions concept DOI remains
-https://doi.org/10.5281/zenodo.23439039 . Fresh hosted and downloaded-archive
-acceptance will be reported only after they have completed. Historical release
-notes below retain their original scope and completed verification records.
+Version 1.4.0 remains at https://doi.org/10.5281/zenodo.23592514 . Version 1.5.0
+was published October 23, 2026, at
+[DOI 10.5281/zenodo.23600836](https://doi.org/10.5281/zenodo.23600836); the existing
+all-versions concept DOI remains https://doi.org/10.5281/zenodo.23439039 .
+The actual Zenodo ZIP checksum and tagged source payload passed inspection,
+with only the documented historical Windows-launcher CRLF export. Its
+mathematical bytes match the clean source package from which all eleven
+verification commands passed, including the compact replay of all 122,881 covers.
+Archive acceptance uses that exact payload identity; no additional arithmetic
+replay from the Zenodo extraction was run. Both main/tag hosted runs passed
+all eight jobs in total. Actual downloaded GitHub assets match their frozen
+hashes. Dense-array verification transfers from the completed independent
+original-array check through unchanged compressed component members and the
+exact stronger-bound comparison; the additional incomplete public streaming
+replay is not counted as completed. All four earlier releases and Zenodo
+versions passed the separate post-publication preservation audit. Historical
+release notes below retain their original scope and completed verification
+records; the frozen v1.5.0 tag and assets are unchanged by this DOI follow-up.
 
 # Version 1.4.0 - October 23, 2026
 

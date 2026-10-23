@@ -6,6 +6,7 @@ authors:
     given-names: "Ariel M."
 version: "1.5.0"
 date-released: "2026-10-23"
+doi: "10.5281/zenodo.23600836"
 type: software
 repository-code: "https://github.com/FromAriel/mathis-sidon-frontier"
 abstract: >-
@@ -21,8 +22,8 @@ abstract: >-
   renewal/filter methods receive explicit attribution. No current record,
   significant new generic theorem, global optimality, exponent advance or
   solution of Erdos Problem 30 is claimed. Development, drafting and review
-  used AI-assisted workflows. The new version DOI is pending; the reference
-  below identifies the existing release series.
+  used AI-assisted workflows. The version DOI identifies this archived release;
+  the reference below identifies the existing release series.
 keywords:
   - Sidon sets
   - additive combinatorics

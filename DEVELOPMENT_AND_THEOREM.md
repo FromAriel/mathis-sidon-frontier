@@ -1,12 +1,13 @@
 # Development history and theorem mapping
 
-Version 1.5.0 is prepared as an additive October 23, 2026 release. Its
+Version 1.5.0 was published October 23, 2026, at
+[DOI 10.5281/zenodo.23600836](https://doi.org/10.5281/zenodo.23600836). Its
 strongest strict declaration is `sqrt(ab) < 11785113371/12500000000 =
 0.942809069680`, in the original symmetric Hou--Zhao model with n=K=2048,
-M=4096 and L=30. The new version DOI is pending; the unchanged concept DOI
-continues to identify the series. Fresh publication, hosted CI and archive
-acceptance will be recorded after completion. The earlier release histories
-and theorem mappings below remain intact.
+M=4096 and L=30. The unchanged concept DOI continues to identify the series.
+The actual source archive passed identity checks against the frozen tagged
+payload and accepted clean-archive replay; all eight main/tag hosted jobs
+passed. Earlier release histories and theorem mappings below remain intact.
 
 Version 1.4.0 was published October 23, 2026. It adds a compact exact symmetric
 certificate and standard-library replay in the original Hou--Zhao finite
@@ -40,7 +41,7 @@ https://doi.org/10.5281/zenodo.23439041 .
 | October21,2026 | Fixed m=1024, L=8 recovery experiment produced a stronger finite certificate | Exact declaration 188561854127/200000000000, independently checked against all 16,386 left/right covers; private acceptance is separate from public availability. |
 | October22,2026 | Additive v1.3.0 release and inspected Zenodo archive | DOI 10.5281/zenodo.23555594; every historical and new certificate replay passed from the downloaded source archive. Previous release artifacts remain preserved. |
 | October 23, 2026 | Exact symmetric centered-box certificate independently accepted and v1.4.0 published | DOI 10.5281/zenodo.23592514; stronger exact declaration 471404576987/500000000000, all 16,385 covers exactly one. Issued archive identity, eight main/tag hosted jobs, and all eight verification commands including 32 public tests passed from the downloaded Zenodo archive. |
-| October 23, 2026 | Fixed-grid renewal certificate independently accepted; v1.5.0 prepared | n=2048, M=4096, L=30; strict declaration 11785113371/12500000000, all 122,881 covers exactly one. Publication/DOI/hosted-archive checks remain separate events. |
+| October 23, 2026 | Fixed-grid renewal certificate independently accepted; v1.5.0 published | DOI 10.5281/zenodo.23600836; n=2048, M=4096, L=30; strict declaration 11785113371/12500000000, all 122,881 covers exactly one. Actual archive identity, eleven clean-source verification commands, eight hosted jobs and four-version preservation passed. |
 
 This is a development record, not a claim of worldwide first discovery,
 the first rational Sidon certificate, current record status, or peer review.
@@ -364,3 +365,13 @@ not been established. Ariel M. Williams directed construction, acceptance,
 software and preservation with AI-assisted computation, drafting and review.
 All earlier packages and immutable release identities retain their historical
 bytes and scope.
+
+The issued v1.5.0 archive was downloaded and checked against the actual tag:
+all mathematical files match the accepted clean-source package byte-for-byte;
+only the historical Windows launcher has its documented Git CRLF export.
+Acceptance transfers by that exact payload identity, without another arithmetic
+replay from the Zenodo extraction. Dense-array acceptance uses the completed
+independent original-array check, unchanged compressed component members and
+the exact stronger-bound comparison. An additional public streaming replay
+remains incomplete and is not counted as completed verification. All four
+earlier release/tag/asset and Zenodo identities passed the separate AFTER audit.

@@ -1,5 +1,5 @@
 {
-  "description": "Complete v1.5.0 payload except this manifest; historical subsets preserved",
+  "description": "Current v1.5.0 documentation with issued DOI; immutable release tag retains original manifest",
   "files": [
     {
       "bytes": 222,
@@ -22,14 +22,14 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 1780,
+      "bytes": 1829,
       "path": "CITATION.cff",
-      "sha256": "afefdc9e0c7e7cb04b9ac4a9cdcad46045f192cf272f5665060084c701ad98d4"
+      "sha256": "6762038e542d1c28f85c1c129b9f9bd92ebe5c13ef6d0f4e46370f437b845d98"
     },
     {
-      "bytes": 22090,
+      "bytes": 22963,
       "path": "DEVELOPMENT_AND_THEOREM.md",
-      "sha256": "602e901b6bb4a147e50ef51ca2f4d37372434c9efce677923d16409b988c58dd"
+      "sha256": "7982a238955e1aa1b6a2e99882e8bf3013bd09f34099a965959c443fab4aad90"
     },
     {
       "bytes": 2940,
@@ -42,19 +42,19 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 15459,
+      "bytes": 16457,
       "path": "README.md",
-      "sha256": "54ce0a6dd8b19c3ab6349dfd41a31b863f3fee2b107aadb14e4de554770a1ae0"
+      "sha256": "fd3c8f1c1aca3c8d5e5f33118725d08ccd263a71475fd9e1fc4ca95e0e9704b6"
     },
     {
-      "bytes": 12908,
+      "bytes": 14111,
       "path": "RELEASE_NOTES.md",
-      "sha256": "3805a5c5ae5e4b26be99590a729f881ff0dc60171e31ed38bb01db32fd2e4e13"
+      "sha256": "8dcd0d0607f9e60a8cf0f51fffe41343c0d06de4d2c2de1d782b0774ecb298e5"
     },
     {
-      "bytes": 14277,
+      "bytes": 16292,
       "path": "VERIFICATION.md",
-      "sha256": "fcddf0fe09836c050852c460843316791bb8a6235fca6c0fb71aaa4c9812166f"
+      "sha256": "66ed3406d303fefa2b3ceb988b8b852855ccdf3b109c0b8010710b5f447f630b"
     },
     {
       "bytes": 855,
