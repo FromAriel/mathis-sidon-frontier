@@ -1,9 +1,15 @@
 # Development history and theorem mapping
 
-Version 1.4.0 is dated October 23, 2026. It adds a compact exact symmetric
+Version 1.4.0 was published October 23, 2026. It adds a compact exact symmetric
 certificate and standard-library replay in the original Hou--Zhao finite
-model. Its own version DOI will be added after issuance and archive inspection;
-the existing concept DOI is https://doi.org/10.5281/zenodo.23439039 .
+model. Its version DOI is [10.5281/zenodo.23592514](https://doi.org/10.5281/zenodo.23592514);
+the existing concept DOI is https://doi.org/10.5281/zenodo.23439039 . The issued
+record, source ZIP checksum and mathematical payload identities were inspected.
+Main and tag hosted runs each passed all four jobs. All eight verification
+commands passed from the downloaded Zenodo archive, including every historical
+certificate, the new symmetric witness and all 32 public tests. The fresh
+symmetric replay verified all 16,385 covers exactly one and the stronger
+strict coefficient bound.
 
 Version 1.3.0, October 22, 2026, is archived at
 https://doi.org/10.5281/zenodo.23555594 . The preserved v1.2.0 release
@@ -25,7 +31,7 @@ https://doi.org/10.5281/zenodo.23439041 .
 | October21,2026 | Seven two-sided finite certificates independently checked for v1.2.0 | Best exact declared coefficient bound 942810721/1000000000; actual publication is the tagged release event, not a backdated private-development claim. |
 | October21,2026 | Fixed m=1024, L=8 recovery experiment produced a stronger finite certificate | Exact declaration 188561854127/200000000000, independently checked against all 16,386 left/right covers; private acceptance is separate from public availability. |
 | October22,2026 | Additive v1.3.0 release and inspected Zenodo archive | DOI 10.5281/zenodo.23555594; every historical and new certificate replay passed from the downloaded source archive. Previous release artifacts remain preserved. |
-| October 23, 2026 | Exact symmetric centered-box certificate independently accepted; v1.4.0 prepared | Stronger exact declaration 471404576987/500000000000, all 16,385 covers exactly one. Construction/acceptance and public release/archive dates remain separate events. |
+| October 23, 2026 | Exact symmetric centered-box certificate independently accepted and v1.4.0 published | DOI 10.5281/zenodo.23592514; stronger exact declaration 471404576987/500000000000, all 16,385 covers exactly one. Issued archive identity, eight main/tag hosted jobs, and all eight verification commands including 32 public tests passed from the downloaded Zenodo archive. |
 
 This is a development record, not a claim of worldwide first discovery,
 the first rational Sidon certificate, current record status, or peer review.

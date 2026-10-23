@@ -151,5 +151,22 @@ certificate and checker bytes must otherwise match manifests exactly.
 from its Hou--Zhao/Akwei analytic dependency. The O(1) term depends on the fixed
 certificate data. Finite checking does not establish external peer review,
 significant generic-method novelty, a current record, exponent advance or a
-full solution. Hosted CI and release/archive validation are separate checks
-and are reported only after they have actually completed for that version.
+full solution. Hosted CI and release/archive validation are separate checks.
+
+Version 1.4.0 was published October 23, 2026, at
+[DOI 10.5281/zenodo.23592514](https://doi.org/10.5281/zenodo.23592514), under
+[concept DOI 10.5281/zenodo.23439039](https://doi.org/10.5281/zenodo.23439039).
+The downloaded Zenodo source ZIP has 688,823 bytes, advertised MD5
+`5a57d81b03a3c5d4e7779b7ecb9af723` and SHA-256
+`7a6fe534ddcee0181b1352d3ba30e5951bbc258404d67b5cdef71e74d9a5606a`.
+Its 52 source files match the actual tag's mathematical bytes; the historical
+Windows launcher has the documented CRLF export transformation above.
+The actual [main hosted run](https://github.com/FromAriel/mathis-sidon-frontier/actions/runs/39936375949)
+and [tag hosted run](https://github.com/FromAriel/mathis-sidon-frontier/actions/runs/39936436894)
+each passed all four jobs. All eight verification commands passed from the
+downloaded Zenodo extraction: R9, R16, all seven historical two-sided
+certificates, the recovered certificate, the symmetric witness, and the
+three public test suites with 10, 9 and 13 tests respectively. The fresh
+symmetric replay took approximately 303 seconds and verified all 16,385
+covers exactly one, exact energy and the stronger strict coefficient bound.
+These are completed archive replays in addition to the hosted checks.

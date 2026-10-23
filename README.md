@@ -77,13 +77,15 @@ Checkpoint files default to `tmp/symmetric_replay` within this repository;
 `--state-dir PATH` selects an explicit state directory and `--no-checkpoint`
 disables saved replay state.
 
-The optional GitHub release asset `SYMMETRIC_CERTIFICATE.json.gz` and its
-checksum are prepared separately from the compact source package. The gzip
+The optional GitHub release asset [SYMMETRIC_CERTIFICATE.json.gz](https://github.com/FromAriel/mathis-sidon-frontier/releases/download/v1.4.0/SYMMETRIC_CERTIFICATE.json.gz)
+and its [checksum](https://github.com/FromAriel/mathis-sidon-frontier/releases/download/v1.4.0/SYMMETRIC_CERTIFICATE.json.gz.sha256)
+are published separately from the compact source package. The gzip
 is 155,162,896 bytes. Its uncompressed JSON SHA-256 is
 `6fe10ab401d66c1f3e71ec930338374b6c86ba3b4f16d43ffba74c96176c2f3c`.
 Zenodo's GitHub source archive contains the compact witness and self-contained
-replay/export tools; the dense gzip is a separate release asset. Hosted and
-downloaded-archive validation will be reported after publication.
+replay/export tools; the dense gzip is a separate release asset. The issued
+archive identity, hosted checks and full arithmetic replay from the downloaded
+archive all passed, as documented below.
 
 An explicit relative certificate path is relative to the current directory.
 --all in the historical two-sided checker locates its seven bundled files beside the script and works from any
@@ -158,11 +160,20 @@ October 21, 2026; private development dates do not establish public priority.
 Version 1.3.0 was published October 22, 2026. Its Zenodo record and downloaded
 source archive were inspected, and every certificate replay passed from that
 archive, including both exact checking implementations for the recovered result.
-Version 1.4.0 is dated October 23, 2026. Its new version DOI will be added only
-after it is issued and the archived payload is inspected. The concept DOI
-below continues to identify the release series. No v1.4.0 hosted CI or archive
-acceptance is inferred from the historical release's checks.
+Version 1.4.0 was published October 23, 2026, at DOI
+[10.5281/zenodo.23592514](https://doi.org/10.5281/zenodo.23592514), under the
+existing release-series concept DOI. The downloaded Zenodo source archive's
+advertised checksum and mathematical payload identities were inspected.
+The actual [main run](https://github.com/FromAriel/mathis-sidon-frontier/actions/runs/39936375949)
+and [tag run](https://github.com/FromAriel/mathis-sidon-frontier/actions/runs/39936436894)
+each passed all four hosted jobs. All eight verification commands also passed
+from the downloaded Zenodo archive: R9, R16, all seven historical two-sided
+certificates, the recovered certificate, the new symmetric witness and all
+32 public tests. The fresh symmetric replay verified all 16,385 covers exactly
+one and the stronger strict coefficient bound.
 
+- [Version 1.4.0 DOI](https://doi.org/10.5281/zenodo.23592514)
+- [Version 1.4.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.4.0)
 - [Version 1.3.0 DOI](https://doi.org/10.5281/zenodo.23555594)
 - [Version 1.3.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.3.0)
 - [Version 1.2.0 DOI](https://doi.org/10.5281/zenodo.23548458)

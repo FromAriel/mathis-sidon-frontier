@@ -55,9 +55,17 @@ journal-significance recommendation has not been established by this release.
 The historical R9/R16 and two-sided proof-bearing files, checkers, expected
 outputs, tags, release assets and issued Zenodo records remain preserved.
 Version 1.3.0 remains at https://doi.org/10.5281/zenodo.23555594 . The existing
-all-versions concept DOI remains https://doi.org/10.5281/zenodo.23439039 . A
-v1.4.0 version DOI and hosted/archive acceptance will be reported only after
-they are issued and verified. The existing MIT license covers our own new
+all-versions concept DOI remains https://doi.org/10.5281/zenodo.23439039 .
+Version 1.4.0 was published October 23, 2026, at
+[DOI 10.5281/zenodo.23592514](https://doi.org/10.5281/zenodo.23592514), with its
+[GitHub release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.4.0).
+The issued Zenodo record, source ZIP checksum and mathematical payload
+identities were inspected. Actual main and tag hosted runs each passed all
+four jobs. All eight verification commands passed from the downloaded Zenodo
+archive, covering every historical certificate, the new symmetric witness
+and all 32 public tests. The fresh symmetric replay verified all 16,385 covers
+exactly one and the stronger strict coefficient bound. The existing MIT
+license covers our own new
 software, certificate data and documentation; third-party papers are cited
 without redistribution or relicensing.
 

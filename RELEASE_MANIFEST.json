@@ -1,5 +1,5 @@
 {
-  "description": "Complete v1.4.0 payload except this manifest; historical subsets preserved",
+  "description": "Complete current v1.4.0 payload except this manifest; citation DOI follow-up preserves tagged release assets",
   "files": [
     {
       "bytes": 189,
@@ -22,14 +22,14 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 1570,
+      "bytes": 1601,
       "path": "CITATION.cff",
-      "sha256": "a76ff23cab8e8c82fc7fe0c036fa5053a6fde6abfbc2d1af456e5452289db901"
+      "sha256": "1b31b1970bea8a2f4542d989b6f3e1e15b76affa302736914def13e8775f51b6"
     },
     {
-      "bytes": 16430,
+      "bytes": 16977,
       "path": "DEVELOPMENT_AND_THEOREM.md",
-      "sha256": "82a12d453b11e719a17ff6e7707f8b79b876da243015f7af191b639466e89266"
+      "sha256": "948b9a1ce6914be037cdd78024ad06800e9011cb54dd5e19a0f4195d476594b0"
     },
     {
       "bytes": 2940,
@@ -42,19 +42,19 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 10118,
+      "bytes": 11087,
       "path": "README.md",
-      "sha256": "27bdbc7d1ff606b260d91052e817a0d01b71320676a731fd988ed24baf737f54"
+      "sha256": "142111aa7cc436129f082212c21001c2a2a2f2bb8aec4e1f1c71668271772a36"
     },
     {
-      "bytes": 8191,
+      "bytes": 8733,
       "path": "RELEASE_NOTES.md",
-      "sha256": "b7941b2f80adeacd24a47eeea2a206fc0587e28f5dd119892820a8d418e199fa"
+      "sha256": "99f54ac2409c0d8f340ddf1ea083b9ed82a7c2be33a3fab7a0ecfbccec32b15a"
     },
     {
-      "bytes": 8194,
+      "bytes": 9370,
       "path": "VERIFICATION.md",
-      "sha256": "8dc11903c691e0a59e14dc26a0b82922f62f27eccdc6565df43baa05eed72c29"
+      "sha256": "88a2ed2a5e9dd70f387a43b36f5606b3baf83162a2049669f9d186004eab6f27"
     },
     {
       "bytes": 855,
