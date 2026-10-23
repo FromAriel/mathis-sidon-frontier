@@ -1,23 +1,25 @@
 cff-version: 1.2.0
 message: "If you use these certificates or verifiers, please cite this release."
-title: "MathIS Sidon Frontier: R9, R16 and Exact Two-Sided Certificates"
+title: "MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates"
 authors:
   - family-names: "Williams"
     given-names: "Ariel M."
-version: "1.3.0"
-date-released: "2026-10-22"
-doi: "10.5281/zenodo.23555594"
+version: "1.4.0"
+date-released: "2026-10-23"
 type: software
 repository-code: "https://github.com/FromAriel/mathis-sidon-frontier"
 abstract: >-
-  Exact rational R9, R16, seven historical asymmetric two-sided Sidon smoothing
-  certificates and one stronger recovered certificate, with standalone
-  standard-library Python verifiers. The strongest included certificate proves
-  sqrt(ab) < 0.942809270635 using Akwei's ramp construction within the Hou-Zhao
-  lineage. Its exact declared bound is below the fixed reported Akwei bound
-  0.942809522 and the cited Wu/wustep q2 coefficient. No current record,
-  novelty, optimality, exponent advance or solution of Erdos Problem 30 is
-  claimed. Development and review used AI-assisted workflows.
+  Exact symmetric and asymmetric two-sided Sidon smoothing certificates,
+  standalone standard-library Python verifiers and reproducible preservation.
+  Version 1.4.0 adds a compact centered-box witness with 1024 kernels at
+  M=2048 and L=8, proving sqrt(ab) < 471404576987/500000000000 =
+  0.942809153974 in the original Hou-Zhao finite symmetric model. Exact replay
+  reconstructs all 16385 covers and energy values without a numerical solver.
+  Earlier R9, R16 and two-sided packages retain their historical scope.
+  Hou-Zhao, Akwei, Chen and classical optimization/filter methods receive
+  explicit attribution. No current record, significant new generic theorem,
+  global optimality, finite-rate law, exponent advance or solution of Erdos
+  Problem 30 is claimed. Development and review used AI-assisted workflows.
 keywords:
   - Sidon sets
   - additive combinatorics
@@ -25,3 +27,10 @@ keywords:
   - computer-assisted proof
   - Mathematical Integrity System
 license: MIT
+references:
+  - type: software
+    title: "MathIS Sidon Frontier release series: all versions"
+    authors:
+      - family-names: "Williams"
+        given-names: "Ariel M."
+    doi: "10.5281/zenodo.23439039"

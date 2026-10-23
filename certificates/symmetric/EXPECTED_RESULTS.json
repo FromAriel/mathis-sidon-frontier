@@ -1,0 +1,21 @@
+{
+  "a": "1398101/1048576",
+  "ab": "21284665364460124072120385414188643928190572926493227/23945242826029513411849172299223580994042798784118784",
+  "accepted": true,
+  "all_covers_exactly_one": true,
+  "b": "31163492480907941540439802949031689499546958896769/46745216431505598024420982071409864706807717429248",
+  "block_size": 2048,
+  "boundary_entries": 16777216,
+  "component_count": 1024,
+  "cover_count": 16385,
+  "declared_bound": "471404576987/500000000000",
+  "energy": "732341738953491911906754534020179660101662720335489/45649625421392185570723615304111196002741911552",
+  "exact_unit_tail": true,
+  "minimum_cover_slack": "0",
+  "normalization": true,
+  "positive_b": true,
+  "reflection": true,
+  "strict_bound_holds": true,
+  "unused_prefixes_zero": true,
+  "window_length": 8
+}

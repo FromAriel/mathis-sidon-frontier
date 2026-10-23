@@ -4,3 +4,4 @@ CERTIFICATE.json -text
 certificates/r16/* -text
 certificates/two_sided/* -text
 certificates/two_sided_recovery/* -text
+certificates/symmetric/* -text

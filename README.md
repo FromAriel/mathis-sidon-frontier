@@ -1,13 +1,13 @@
-# MathIS - Mathematical Integrity System
+# MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates
 
-## R9, R16 and exact two-sided Sidon certificates
-
-**Version 1.3.0. Author: Ariel M. Williams.**
+**Version 1.4.0. October 23, 2026. Author: Ariel M. Williams.**
 
 Exact rational certificates, standalone standard-library Python checkers, and
-theorem/development mappings. The strongest included certificate proves
-**sqrt(ab) < 0.942809270635**, using Akwei's asymmetric ramp construction within
-the Hou--Zhao smoothing lineage.
+theorem/development mappings. The project's strongest included certificate proves
+**sqrt(ab) < 471404576987/500000000000 = 0.942809153974**, using 1,024 centered
+box kernels in the original symmetric Hou--Zhao finite model. Its diagnostic
+coefficient is approximately 0.942809153973600631. The new compact exact witness
+reconstructs every boundary value without an optimizer or the older boundary.
 
 For the maximum size F(N) of an integer Sidon set in {0,...,N-1}, the cited
 fixed-certificate theorem gives F(N) <= sqrt(N) + sqrt(ab) N^(1/4) + O(1).
@@ -19,14 +19,20 @@ fixed-certificate theorem gives F(N) <= sqrt(N) + sqrt(ab) N^(1/4) + O(1).
 | External Wu/wustep q2 | Symmetric, 11 kernels | 0.943006169985179 |
 | Preserved v1.2.0 m=1024, L=8 certificate | Asymmetric two-sided, 1 ramp | 0.942810720298845 |
 | Akwei's fixed reported certificate bound | Asymmetric two-sided | < 0.942809522 |
-| New m=1024, L=8 recovered certificate | Asymmetric two-sided, 1 ramp | < 0.942809270635 |
-| Akwei's two-sided method floor | Continuum/infimum | 2 sqrt(2)/3 = 0.942809041582... |
+| Preserved v1.3.0 recovered certificate | Asymmetric two-sided, 1 ramp | < 0.942809270635 |
+| New v1.4.0 centered-box certificate | Symmetric, R=1024, M=2048, L=8 | < 0.942809153974 |
+| Akwei's smoothing-method lower bound | Continuum/infimum | 2 sqrt(2)/3 = 0.942809041582... |
 
-The new finite certificate improves on the cited q2 coefficient and is below
-the fixed reported Akwei bound. This comparison makes no current-record, novelty, optimality,
-exponent-improvement or Erdos #30 solution claim. The unavailable exact Akwei
-certificate has not been independently replayed here. Certificate-dependent O(1)
-terms are not compared here. This is not an exhaustive current-results catalogue.
+The new certificate gives the project's best strict coefficient, improving
+its earlier certificates within the original symmetric model and preserving
+the earlier two-sided results. This is a
+software, certificate-data and verification milestone. It makes no current-
+record, significant new generic theorem, global-optimality, finite-rate,
+exponent-improvement or Erdos #30 solution claim. Akwei already reports the
+approximate finite linear-kernel behavior discussed in the
+[proof note](certificates/symmetric/PROOF.md); Chen separately gives the limiting
+physical coefficient in his stated model. Certificate-dependent O(1) terms
+are not compared here, and this is not an exhaustive results catalogue.
 
 ## Verify independently
 
@@ -34,6 +40,8 @@ Python **3.10 or newer**; no dependencies, network, optimizer or MathIS install.
 From the extracted repository root:
 
 ```text
+python -I -S certificates/symmetric/verify.py
+python -I -S tests/test_symmetric_public.py
 python verify.py CERTIFICATE.json
 python certificates/r16/verify.py
 python -I -S certificates/two_sided/verify.py --all
@@ -42,11 +50,40 @@ python -I -S tests/test_two_sided_public.py
 python -I -S tests/test_two_sided_recovery_public.py
 ```
 
-To check only the strongest new certificate:
+To check only the strongest new certificate, reconstructing every exact cover
+and energy value from the compact witness:
 
 ```text
-python -I -S certificates/two_sided_recovery/verify.py
+python -I -S certificates/symmetric/verify.py
 ```
+
+The new point has n=K=1024, kernel length M=2048 and boundary depth L=8.
+Every one of its 16,385 covers is exactly one. The finite boundary has length
+J=M*L=16384 in each component, with zero unused prefixes and exact unit tails.
+The successful flat-cover construction depends on the fixed kernels and
+weights; the older asymmetric boundary is not an input to this replay.
+
+The original-schema array can be exported and checked separately:
+
+```text
+python -I -S certificates/symmetric/verify.py --export tmp/symmetric_certificate.json
+python -I -S certificates/symmetric/verify.py --check-array tmp/symmetric_certificate.json
+```
+
+The dense JSON is 682,492,622 bytes. The compact witness is a lossless
+mathematical representation and is the normal replay input. It reconstructs
+the complete exact certificate offline; it is not a numerical approximation.
+Checkpoint files default to `tmp/symmetric_replay` within this repository;
+`--state-dir PATH` selects an explicit state directory and `--no-checkpoint`
+disables saved replay state.
+
+The optional GitHub release asset `SYMMETRIC_CERTIFICATE.json.gz` and its
+checksum are prepared separately from the compact source package. The gzip
+is 155,162,896 bytes. Its uncompressed JSON SHA-256 is
+`6fe10ab401d66c1f3e71ec930338374b6c86ba3b4f16d43ffba74c96176c2f3c`.
+Zenodo's GitHub source archive contains the compact witness and self-contained
+replay/export tools; the dense gzip is a separate release asset. Hosted and
+downloaded-archive validation will be reported after publication.
 
 An explicit relative certificate path is relative to the current directory.
 --all in the historical two-sided checker locates its seven bundled files beside the script and works from any
@@ -57,7 +94,8 @@ package-integrity failure. R9 ends with `ALL EXACT CHECKS PASSED`; R16 reports `
 The historical Windows launcher checks R9 only. All R9/R16 proof-bearing files,
 expected outputs and commands retain their historical bytes.
 
-[Verification details](VERIFICATION.md), [new recovery certificate](certificates/two_sided_recovery/README.md),
+[Verification details](VERIFICATION.md), [new symmetric certificate](certificates/symmetric/README.md),
+[preserved recovery certificate](certificates/two_sided_recovery/README.md),
 [preserved seven-certificate inventory](certificates/two_sided/README.md),
 and [theorem/development mapping](DEVELOPMENT_AND_THEOREM.md) explain the checks.
 
@@ -72,12 +110,29 @@ and [theorem/development mapping](DEVELOPMENT_AND_THEOREM.md) explain the checks
 source theorem. See the [pinned manuscript](https://github.com/johnakwei/Science/blob/7934a1b1193307b09326c8cb3638f50552603388/The_limit_of_vector-valued_smoothing_for_Sidon_sets.pdf).
 These source results are attributed dependencies, not discoveries claimed here.
 
+The new symmetric point uses Hou--Zhao's original finite theorem directly;
+it does not require the asymmetric extension. Akwei's ramp/renewal work and
+finite linear-kernel observations motivated the choice of fixed kernels and
+the comparison. Standard weighted least-norm projection, quadratic-program
+duality and finite geometric-sum filter algebra supply the recovery machinery.
+The proof note identifies those dependencies and their sources.
+
+**Haoyu Chen** gives a distinct physical cardinality theorem with coefficient
+2 sqrt(2)/3 and explicit onset in his [version 3 note](https://zenodo.org/records/23273526).
+The present finite coefficient remains above that value. It gives a stronger
+fixed-certificate consequence than this project's earlier releases, with an
+exact symmetric representation and replay. No improvement over the strongest
+external physical result is claimed.
+
 **Stephen Wu/wustep** supplied the external [q2 benchmark](https://github.com/wustep/maths/tree/da2440b68979b78d201182118d30ca418e3c2001/problems/sidon-second-term/compute/q2).
 Its files are not bundled; q2 is not Akwei's one-ramp certificate.
 
 Our contributions are finite certificate construction/recovery, checking
-software, independent finite validation and reproducible preservation.
-The seven v1.2.0 certificates used SciPy L-BFGS-B generation. The new recovery
+software, independent finite validation and reproducible preservation. For
+v1.4.0, a floating banded solve proposed an 80-bit rational multiplier; exact
+full-box residual repair produced the accepted point. The public replay
+uses the rational multiplier and fixed operators, not that numerical solver.
+The seven v1.2.0 certificates used SciPy L-BFGS-B generation. The v1.3.0 recovery
 used SciPy sparse trust-constr on a lifted primal problem, followed by exact
 rational direction-and-lift recovery. The numerical trajectory was deliberately
 stopped after its saved best point stopped improving; solver convergence is
@@ -85,9 +140,9 @@ not claimed. A partial active-row KKT result was a comparator, not the winning
 certificate. Verification is solver-independent. Numerical generation and its
 dependencies are not bundled.
 
-The new files do not prove continuum attainment, a convergence-rate theorem,
-attainability within reflected signed C5, or a general physical forced-loss
-inequality. Data are fixed before N tends to infinity; no varying-data uniform
+The files do not prove attainment of the limiting coefficient, a general
+convergence-rate theorem or a universal physical forced-loss inequality.
+Data are fixed before N tends to infinity; no varying-data uniform
 remainder is asserted. Exact finite checking is not external peer review or
 formal verification of the complete analytic source theorem.
 
@@ -103,6 +158,10 @@ October 21, 2026; private development dates do not establish public priority.
 Version 1.3.0 was published October 22, 2026. Its Zenodo record and downloaded
 source archive were inspected, and every certificate replay passed from that
 archive, including both exact checking implementations for the recovered result.
+Version 1.4.0 is dated October 23, 2026. Its new version DOI will be added only
+after it is issued and the archived payload is inspected. The concept DOI
+below continues to identify the release series. No v1.4.0 hosted CI or archive
+acceptance is inferred from the historical release's checks.
 
 - [Version 1.3.0 DOI](https://doi.org/10.5281/zenodo.23555594)
 - [Version 1.3.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.3.0)

@@ -1,3 +1,66 @@
+# Version 1.4.0 - October 23, 2026
+
+Title: **MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates.**
+
+Adds a compact exact witness for 1,024 centered box kernels at n=K=1024,
+M=2048, L=8. It proves the project's strongest exact declaration
+
+```text
+sqrt(ab) < 471404576987/500000000000 = 0.942809153974.
+```
+
+The diagnostic coefficient is approximately 0.942809153973600631. All 16,385
+finite covers are exactly one, with normalized nonnegative symmetric kernels,
+normalized positive mixing weights, real finite boundary coordinates, zero
+unused prefixes and exact unit tails. The original Hou--Zhao finite symmetric
+theorem supplies the cardinality consequence for fixed data.
+
+The compact witness records an exact 80-bit multiplier. Standard-library replay
+reconstructs the fixed operators, every repaired boundary and every cover and
+energy value. It requires no older boundary, optimizer, network, third-party
+Python package or private MathIS checkout. Optional export writes the original
+dense JSON schema, and a separate direct streaming route checks that array.
+
+```text
+python -I -S certificates/symmetric/verify.py
+python -I -S tests/test_symmetric_public.py
+python -I -S certificates/symmetric/verify.py --export tmp/symmetric_certificate.json
+python -I -S certificates/symmetric/verify.py --check-array tmp/symmetric_certificate.json
+```
+
+The accepted flat-cover construction depends only on the chosen kernels,
+weights and multiplier, not the historical asymmetric boundary. Separate
+research comparisons establish a fixed-cover redistribution obstruction and
+a very tight nonnegative-dual comparison for these fixed operators/weights.
+Those comparisons are not inputs to the default public replay and are not a
+claim of exact global optimality or a universal conversion theorem.
+
+Hou and Zhao supply the original finite analytic model. John Akwei's
+ramp/renewal work and approximate finite linear-kernel formulas motivate the
+comparison; those formulas and the smoothing floor are not new claims here.
+Haoyu Chen separately gives the limiting physical coefficient in his stated
+model. Weighted least-norm projection, quadratic-program duality and finite
+filter cancellation are classical ingredients. Ariel M. Williams directed the
+finite construction, exact acceptance, software and preservation, with
+AI-assisted computation, drafting and review. Full attribution and limitations
+are in the theorem mapping and new proof note.
+
+This is an archival software/certificate-data milestone and a stronger
+fixed-certificate consequence than this project's earlier releases. No
+significant new generic theorem, finite-rate law, worldwide record, improvement
+over the strongest external physical result, exponent improvement or Erdos
+#30 solution is claimed. A
+journal-significance recommendation has not been established by this release.
+
+The historical R9/R16 and two-sided proof-bearing files, checkers, expected
+outputs, tags, release assets and issued Zenodo records remain preserved.
+Version 1.3.0 remains at https://doi.org/10.5281/zenodo.23555594 . The existing
+all-versions concept DOI remains https://doi.org/10.5281/zenodo.23439039 . A
+v1.4.0 version DOI and hosted/archive acceptance will be reported only after
+they are issued and verified. The existing MIT license covers our own new
+software, certificate data and documentation; third-party papers are cited
+without redistribution or relicensing.
+
 # Version 1.3.0 - October 22, 2026
 
 Title: **MathIS Sidon Frontier: R9, R16 and Exact Two-Sided Certificates.**

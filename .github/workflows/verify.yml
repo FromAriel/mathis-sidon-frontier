@@ -71,3 +71,9 @@ jobs:
 
       - name: Run standard-library recovery package acceptance and rejection tests
         run: python -I -S tests/test_two_sided_recovery_public.py
+
+      - name: Verify symmetric certificate and stronger bound exactly
+        run: python -I -S certificates/symmetric/verify.py
+
+      - name: Run symmetric package acceptance and rejection tests
+        run: python -I -S tests/test_symmetric_public.py

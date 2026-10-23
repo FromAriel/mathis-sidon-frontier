@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "bytes": 5290,
+      "path": "construction.py",
+      "sha256": "9164a10338edd4d894f594f8d78b1f3e2d0eef0983fbd83e048d190227c13a84"
+    },
+    {
+      "bytes": 793,
+      "path": "EXPECTED_RESULTS.json",
+      "sha256": "c8dface51e4f0aa0e8ec61d9980eec9b52f2eb22ac02c69b946a5d2d6ff361c8"
+    },
+    {
+      "bytes": 13268,
+      "path": "independent.py",
+      "sha256": "58fc9632540dca9ec9db80c5a737b40da1a82ef33130b3810cbae616d5715116"
+    },
+    {
+      "bytes": 8852,
+      "path": "PROOF.md",
+      "sha256": "4da669252b6810c1bd6ee9d0c454b829acb33d94396f5db7f8059725ffaf2991"
+    },
+    {
+      "bytes": 2890,
+      "path": "PROVENANCE.md",
+      "sha256": "81952e602961a52d3c5161df0189b09a32e3bfc80b2452ad73b1546fa69bd881"
+    },
+    {
+      "bytes": 3866,
+      "path": "README.md",
+      "sha256": "bea4771b101ed184a35f386e26aee0dcfd5c6cd93560f13a534325e8f2dfa32a"
+    },
+    {
+      "bytes": 4349,
+      "path": "runtime.py",
+      "sha256": "8388e183e64850274ea079fe40b2f471e9ef9816026793749bfcdb9f9a660e3b"
+    },
+    {
+      "bytes": 9309,
+      "path": "verify.py",
+      "sha256": "b3c83e62f9449c795610a99d494ed11769fb9b62c9be896031e567618cc952c7"
+    },
+    {
+      "bytes": 385193,
+      "path": "WITNESS.json",
+      "sha256": "3df58c5b1524250617a08c674ede9942e28698024c883cb39c544aca898d82b2"
+    }
+  ],
+  "format_version": "mathis.sidon.symmetric_manifest.v1"
+}
