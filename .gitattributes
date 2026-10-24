@@ -6,3 +6,4 @@ certificates/two_sided/* -text
 certificates/two_sided_recovery/* -text
 certificates/symmetric/* -text
 certificates/finite_grid/* -text
+research/pair_moment_floor/** -text whitespace=cr-at-eol

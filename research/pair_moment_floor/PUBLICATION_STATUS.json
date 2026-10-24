@@ -1,0 +1,8 @@
+{
+  "version": "1.6.0",
+  "status": "public preprint; external human verification and peer review pending",
+  "sealed_packet_manifest_sha256": "2d2c1c22f01ca82b47af877f222070468e28856799913b1a699199ec54916b89",
+  "manuscript_changes": "author and public-release/status wording only; all mathematical sections unchanged",
+  "historical_audit_status": "private/not-circulated wording describes pre-release audit state; no new human or formal verification is claimed",
+  "excluded": "third-party source PDFs, extracted text, compiler intermediates, operational logs, and all old dense certificates"
+}

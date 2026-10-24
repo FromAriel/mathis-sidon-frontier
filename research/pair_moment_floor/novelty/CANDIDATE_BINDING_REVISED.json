@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-24T00:03:31.216097+00:00",
+  "status": "revised novelty comparison, conditional on mathematical correctness",
+  "previous_binding": "CANDIDATE_BINDING.json",
+  "claim": "sqrt(N)+(2sqrt(2)/3)*N^(1/4)-2572 <= H2(N) < sqrt(N)+(2sqrt(2)/3)*N^(1/4)+1 for every integer N >= 2^60",
+  "comparison": "Statement and novelty-bearing steps unchanged. Revisions make the inherited cap explicit, extend BV quadrature to integrable noncompact profiles, state the long-lag S margin, and expand objective tail absorption.",
+  "candidate_files": [
+    {
+      "path": "STATEMENT.md",
+      "sha256": "915c9a7b4edcbae33bd192ae873abb673ec7f52a97db29c57e34ce84fbbf0ea1"
+    },
+    {
+      "path": "FULL_PROOF.md",
+      "sha256": "e03c60fa8c457e2199e502d84108bc3c978640b109ac458fe42904bf8a176524"
+    },
+    {
+      "path": "proof/RENEWAL_AND_MODEL.md",
+      "sha256": "2dc59270fe3921868af9cd8a9f9f4423098ea4d1f9f33c6f80dc5433b7a8e6e0"
+    },
+    {
+      "path": "proof/ALL_DISTANCE_ESTIMATE.md",
+      "sha256": "4ebb9d072d9030036cc6333320a5c60bddbe9daf304eb394056df250546a6bfe"
+    },
+    {
+      "path": "proof/OBJECTIVE_AND_UPPER.md",
+      "sha256": "7d29fb1c860d823ed176466db068ac44ba62fa7ebcfc6c0256aae59b17e6dac3"
+    }
+  ]
+}

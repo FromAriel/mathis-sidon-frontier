@@ -1,0 +1,16 @@
+{
+  "changes_from_audited_private_manuscript": "Author/date and release-status wording only; mathematics unchanged",
+  "command": "tectonic --untrusted --only-cached --keep-logs --color never main.tex",
+  "compiler": "Tectonic 0.17.0; cached resources",
+  "exit_code": 0,
+  "pages": 6,
+  "pdf_sha256": "17e165d0f86630c84dac29cf396cf7fcabaf9bd86b1076f1bd55306e93ed76fe",
+  "source_sha256": {
+    "completion.tex": "da4280ec4747542d4113e76e665c3c8936825de11054495eb6de2a7d9487887d",
+    "finite.tex": "4d646d54e2c1ccc4936f2704e0f5f9e0d82a78a256530293bc0b71fbe78486a5",
+    "main.tex": "73210698e02935692153fab76e9e24ee6522ad3f41e44c4ab9ba885f4369290a",
+    "renewal.tex": "43de26341f09ed17c6633b4e314efbdfaaa9be8d964484eca19e5a7a77a347b0"
+  },
+  "verification_status": "External human verification and peer review pending; no proof-assistant verification",
+  "visual_inspection": "All six rendered pages inspected; no clipping or overlaps"
+}

@@ -1,0 +1,84 @@
+\section{Parameter absorption and objective}
+The explicit selection rule is
+\(B_0=\lceil2(512+1)\rceil=1026\),
+\(D_0=\lceil2(256+1)\rceil=514\).
+For \(x\ge32768\), \(x\ge2B_0\), \(x^2\ge4(D_0+1)\), and
+\[
+ \frac12\le S\le1-\frac{514}{x^2},\qquad
+ \frac{H^2}{2\ell}\le N,\qquad 1-\beta^2\ge\frac{1026}{x}.
+\]
+For the upper estimate on \(S\), put
+\(q=(\ell-x^2)/x^2\le1/4\); then
+\(1-(1+q)^{-2}\ge q\ge514/x^2\).
+The square bracket in \eqref{structuredineq} is therefore at most \(-1/x\).
+The elementary exponential bound gives
+\[
+ 64e^{-x/24}\le\frac{64\,24^5}{x^4}\le x^{-2},
+ \qquad 64\,24^5<2^{30}\le x^2.
+\]
+Thus all short and medium budgets are at most
+\(1-257/x^2-w/x<1\), and Lemma~\ref{structured} covers the other lags.
+The construction is feasible for every integer \(N\ge2^{60}\).
+
+Positive part adds mass, while the cap changes only \(\Gamma\).
+Using the BV quadrature bound and \(\int b=-1/6\) gives
+\[
+ \sum_j\psi_j\ge\delta H
+ \left(U-\frac13-2\int_U^\infty|b|\right)-26\delta.
+\]
+The atoms have total mass \(\beta\delta H\) and \(HU=N-\ell\).
+Consequently
+\begin{equation}
+ \kappa\ge\delta N-1+\frac23\delta H
+ -\frac{1026\delta H}{x}-26\delta-12\delta H e^{-U/4}. \label{mass}
+\end{equation}
+Here \(\delta N\ge x^2-515\),
+\(\delta H\ge\sqrt2x-1\),
+\(1026\delta H/x<2052\), and \(26\delta<1\).
+Also \(U\ge x/2\), and
+\(e^{-U/4}\le24\,8^4/x^4\le x^{-2}\), so the last loss is at most
+\(24/x<1\). The losses in \eqref{mass} total at most 2571.
+The declared constant 2572 includes one further unit of slack.
+
+\section{An attributed uniform upper companion}
+Let \(\phi(t)=4/3-2|t|+(2/3)|t|^3\) on \(|t|\le1\), zero otherwise.
+It is the autocorrelation of a normalized ramp. Thus
+\(A_T(i,j)=\phi((i-j)/T)\) is PSD. For any feasible moment pair,
+\[
+ f^{\mathsf T}A_T f\le\operatorname{tr}(A_T\Gamma)
+ \le\frac43\kappa+2\sum_{d\ge1}\phi(d/T)\le\frac43\kappa+T.
+\]
+The last estimate uses the decreasing nonnegative kernel and its unit
+integral, and holds for real \(T>0\).
+Chen's finite-positive-measure comparison \cite[Lemma 4.4]{chen}, applied to
+\(\mu=\sum_j f_j\delta_{j/T}\) on \([0,N/T]\), yields
+\begin{equation}
+ \kappa^2\le\left(\frac NT+\frac23+200e^{-aN/T}\right)
+ \left(T+\frac43\kappa\right),\qquad a=\log(4/3),\quad 0<T\le N.
+ \label{upper}
+\end{equation}
+This uses energy Cauchy--Schwarz with a finite signed reference measure
+whose potential is exactly one on the closed interval. Its energy is at most
+\(N/T+2/3+200e^{-aN/T}\). It imposes no integrality on \(\kappa\), and
+no division by \(\kappa\) is required.
+
+For completeness, a simple large-onset root comparison suffices here.
+Set \(T=\sqrt2x^3\), \(g=2\sqrt2/3\), and
+\(\eta=200e^{-ax/\sqrt2}\). Equation~\eqref{upper} says
+\[
+ P_\eta(\kappa)\le0,\quad
+ P_\eta(z)=z^2-(gx+8/9+4\eta/3)z-x^4-gx^3-\sqrt2\eta x^3.
+\]
+At \(y=x^2+gx+1\), direct expansion gives
+\(P_0(y)=(10/9)x^2+(g/9)x+1/9\).
+Since \(a>1/4\) and \(\sqrt2<3/2\),
+\[
+ \eta\le200e^{-x/6}\le\frac{200\cdot24\cdot6^4}{x^4}\le x^{-2}
+ \quad(x\ge32768).
+\]
+The error at \(y\) is at most \(4+2x<(10/9)x^2\). Hence
+\(P_\eta(y)>0\). The quadratic has negative constant term and one positive
+root, so \(\kappa<y\), proving the upper half of Theorem~\ref{main}.
+Chen's sharper rational absorption gives this upper companion already for
+\(N\ge4{,}600{,}000\); its all-real-mass replay is retained in the evidence
+packet. The lower onset \(2^{60}\) dominates it.

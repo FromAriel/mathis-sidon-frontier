@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\Htwo}{\widehat h_2}
+\title{Effective sharpness of a pair-moment relaxation for Sidon sets}
+\author{Ariel M. Williams}
+\date{23 October 2026 --- public preprint v1.6.0}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give an effective proof of the asymptotic conjecture stated by Akwei for
+a specified noncyclic pair-moment relaxation of the Sidon problem.
+The construction is Akwei's renewal boundary profile and capped Fej\'er
+covariance, with a positive-part repair and explicit finite error bounds.
+For every integer \(N\ge2^{60}\), its optimum lies between
+\(\sqrt N+(2\sqrt2/3)N^{1/4}-2572\) and
+\(\sqrt N+(2\sqrt2/3)N^{1/4}+1\).
+The lower proof averages the complete renewal cancellation inequality across
+the centered endpoint atoms, retaining the sign of the renewal jump.
+It separates a triangular \(O(N^{-1/4})\) error from a global
+\(O(N^{-1/2})\) error. The upper bound transfers Chen's finite-measure
+energy estimate to the relaxation. No numerical feasibility campaign is used.
+\end{abstract}
+
+\section{The exact relaxation and attribution}
+For \(N\ge2\), let \(\Htwo(N)\) maximize
+\(\kappa=\sum_{j=0}^{N-1} f_j\) over real \(f\) and symmetric \(\Gamma\), subject to
+\begin{gather}
+ \begin{pmatrix}1&f^{\mathsf T}\\f&\Gamma\end{pmatrix}\succeq0,\qquad
+ \Gamma_{jj}=f_j,\quad 0\le f_j\le1,\quad \Gamma_{ij}\ge0, \label{model}\\
+ \sum_{j=0}^{N-1-d}\Gamma_{j,j+d}\le1\qquad(1\le d<N). \label{budgets}
+\end{gather}
+This is exactly Akwei's Definition 7.2 \cite{akwei}. The feasible set is
+compact: the diagonal is bounded and PSD gives
+\(|\Gamma_{ij}|^2\le f_i f_j\le1\).
+A Sidon indicator gives a feasible pair, but a general feasible pair need not
+be realized by a set or a probability distribution on sets.
+
+\begin{theorem}\label{main}
+For every integer \(N\ge2^{60}\),
+\[
+ \sqrt N+\frac{2\sqrt2}{3}N^{1/4}-2572
+ \le\Htwo(N)<
+ \sqrt N+\frac{2\sqrt2}{3}N^{1/4}+1.
+\]
+The lower bound has the explicit construction given below.
+\end{theorem}
+
+The conjecture, coefficient, renewal profile, centered atoms, covariance
+ansatz and cap are due to Akwei \cite[Section 7]{akwei}. His preceding
+Theorem 7.6 is computational at four values of \(N\), and Conjecture 7.7
+states the all-\(N\) bounded-remainder assertion. The contribution here is
+the uniform finite-interval analysis, including transition lags and
+constant objective loss. The upper companion is an attributed consequence
+of Chen's positive-measure bound \cite{chen} and the PSD trace argument
+already used by Akwei. It does not improve Chen's physical Sidon bound.
+Hou--Zhao \cite{hz} provide the original finite smoothing framework.
+Constants and onset in this note are deliberately conservative.
+
+\input{renewal}
+\input{finite}
+\input{completion}
+
+\section{Scope, reproducibility and review status}
+The theorem concerns only \eqref{model}--\eqref{budgets}. It does not exclude
+stronger pair models containing further valid quadratic or distinct-sum
+constraints. Covariance PSD is not a realizability theorem
+\cite{kuna}. No claim about a Sidon-set lower construction, a coefficient
+below the smoothing floor, or a resolution of Erd\H{o}s problem 30 follows.
+
+The accompanying evidence packet contains the frozen statement,
+three complete proof sections, two fresh independent internal mathematical
+reviews with source hashes, objection resolutions, and a separate bounded
+primary-source comparison. No optimizer, FFT, sampled feasibility,
+renewal table or numerical campaign is used. Existing rational smoothing
+certificates and public releases are unchanged.
+
+\paragraph{AI assistance and limitations.}
+This draft, its derivation and its internal mathematical reviews were
+prepared with assistance from OpenAI Codex. Internal AI review is not external
+human refereeing or proof-kernel formal verification. The literature audit
+is bounded and does not establish worldwide priority. This is a public
+attributed preprint. External human verification and peer review remain
+pending; public availability does not constitute external acceptance.
+
+\begin{thebibliography}{9}
+\bibitem{akwei} J. Akwei, \emph{The limit of vector-valued smoothing for Sidon
+sets}, 2026, current author manuscript at commit
+\texttt{7934a1b1193307b09326c8cb3638f50552603388}.
+\href{https://raw.githubusercontent.com/johnakwei/Science/7934a1b1193307b09326c8cb3638f50552603388/The_limit_of_vector-valued_smoothing_for_Sidon_sets.pdf}{Pinned original}.
+\bibitem{chen} H. Chen, \emph{An explicit second-order bound for Sidon sets
+and the limit of the fixed-kernel energy method},
+2026, version 3, \href{https://doi.org/10.5281/zenodo.23273526}{Zenodo 23273526}.
+\bibitem{hz} J. Hou and H. Zhao, \emph{An Improved Upper Bound for Finite Sidon
+Sets via Vector-Valued Smoothing}, 2026,
+\href{https://arxiv.org/abs/2607.01169v3}{arXiv:2607.01169v3}.
+\bibitem{kuna} T. Kuna, J. L. Lebowitz and E. R. Speer,
+\emph{Necessary and sufficient conditions for realizability of point
+processes}, Ann. Appl. Probab. 21 (2011), 1253--1281,
+\href{https://doi.org/10.1214/10-AAP703}{doi:10.1214/10-AAP703}.
+\end{thebibliography}
+\end{document}

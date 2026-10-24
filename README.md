@@ -1,6 +1,37 @@
 # MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates
 
-**Version 1.5.0. October 23, 2026. Author: Ariel M. Williams.**
+**Version 1.6.0. October 23, 2026. Author: Ariel M. Williams.**
+
+## v1.6.0: pair-moment conjecture proof preprint
+
+This release presents a proposed effective proof of Akwei's Conjecture 7.7
+for exactly the noncyclic pair-moment relaxation in his Definition 7.2:
+
+```text
+sqrt(N) + (2 sqrt(2)/3) N^(1/4) - 2572
+  <= h_hat_2(N)
+  < sqrt(N) + (2 sqrt(2)/3) N^(1/4) + 1, for every integer N >= 2^60.
+```
+
+**External human verification and peer review are pending.** The proof and
+manuscript received two separate internal AI-assisted mathematical reviews.
+They have not been verified in Lean or another proof assistant.
+Akwei is credited for the conjecture, model and construction; the upper
+companion uses Chen's attributed energy inequality.
+
+Read the [proof and audit guide](research/pair_moment_floor/README.md) or the
+[manuscript PDF](research/pair_moment_floor/manuscript/main.pdf).
+The package includes the full written argument, TeX sources, objection
+resolutions and a bounded primary-source novelty comparison.
+It concerns a relaxation, not a construction of Sidon sets, and does not
+improve the published numerical coefficient. No worldwide-priority claim
+or solution of Erdos Problem 30 is made.
+
+All earlier certificates, checkers, release tags and assets are preserved.
+Their data and verification commands below are unchanged. The large original
+certificate remains available from v1.5.0; it is not attached again to v1.6.0.
+
+## Preserved numerical certificates
 
 Exact rational certificates, standalone standard-library Python checkers, and
 theorem/development mappings. The project's strongest included certificate proves

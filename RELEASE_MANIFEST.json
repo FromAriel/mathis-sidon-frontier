@@ -1,10 +1,10 @@
 {
-  "description": "Current v1.5.0 documentation with issued DOI; immutable release tag retains original manifest",
+  "description": "Analytical preprint release; historical certificate and checker bytes preserved; excludes this manifest",
   "files": [
     {
-      "bytes": 222,
+      "bytes": 279,
       "path": ".gitattributes",
-      "sha256": "9608ffea8dd8e048ab1cb464b4e6a5f7cd1a21010b098d133b4b9783ffc9f97f"
+      "sha256": "b2c1d93da7973cb656a5c656afa50b23f102968d3e2c6a50538c16ad4c4cc479"
     },
     {
       "bytes": 3186,
@@ -22,9 +22,9 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 1829,
+      "bytes": 1799,
       "path": "CITATION.cff",
-      "sha256": "6762038e542d1c28f85c1c129b9f9bd92ebe5c13ef6d0f4e46370f437b845d98"
+      "sha256": "90ac3f0b9e606af2ac72007414d970ffcc81b0c15da8c947ed82a2b82c062c2d"
     },
     {
       "bytes": 22963,
@@ -42,14 +42,14 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 16457,
+      "bytes": 17866,
       "path": "README.md",
-      "sha256": "fd3c8f1c1aca3c8d5e5f33118725d08ccd263a71475fd9e1fc4ca95e0e9704b6"
+      "sha256": "96e8ec517626f64d6dc5ef0894c564110cb070eff0462d508027658e5ca4b767"
     },
     {
-      "bytes": 14111,
+      "bytes": 15324,
       "path": "RELEASE_NOTES.md",
-      "sha256": "8dcd0d0607f9e60a8cf0f51fffe41343c0d06de4d2c2de1d782b0774ecb298e5"
+      "sha256": "3c8306e31ce9c58e0a568bd359ccf7defa24e671c552c04634f623043f8f4ed3"
     },
     {
       "bytes": 16292,
@@ -297,6 +297,181 @@
       "sha256": "acebdec86babb249f68e96248d125daa98d5772c681140c13842e96752cc4b89"
     },
     {
+      "bytes": 4154,
+      "path": "research/pair_moment_floor/FINAL_ASSESSMENT.md",
+      "sha256": "17dfbf2e523c3bcc963be70d373a78deeb4a131b5e2271be8ac1b550e34e65c5"
+    },
+    {
+      "bytes": 1325,
+      "path": "research/pair_moment_floor/FULL_PROOF.md",
+      "sha256": "e03c60fa8c457e2199e502d84108bc3c978640b109ac458fe42904bf8a176524"
+    },
+    {
+      "bytes": 1424,
+      "path": "research/pair_moment_floor/GATE_DECISION.json",
+      "sha256": "2aca8e1b23b8b493491e01cff3416817b4fab1de8aa275be5d68580f449201af"
+    },
+    {
+      "bytes": 5714,
+      "path": "research/pair_moment_floor/MANIFEST.json",
+      "sha256": "1fe67a8b776d33199b9c8b0f83f7bd77211d169bcb3b7d89810e703a135727f2"
+    },
+    {
+      "bytes": 4571,
+      "path": "research/pair_moment_floor/OBLIGATIONS_AND_OBJECTIONS.md",
+      "sha256": "b629dc82fcf472f8b4d7590ee34a6919835976c8ef29de5e7f4b78273c32c2af"
+    },
+    {
+      "bytes": 606,
+      "path": "research/pair_moment_floor/PUBLICATION_STATUS.json",
+      "sha256": "34ea7b4975f10e295c5fb4a0be0a01296896a89595cddfb70ca7cddcf03a65f7"
+    },
+    {
+      "bytes": 3283,
+      "path": "research/pair_moment_floor/README.md",
+      "sha256": "82647391cbec75182125c3754e7134ad257f25e5960979bc325042d90f681aab"
+    },
+    {
+      "bytes": 1777,
+      "path": "research/pair_moment_floor/STATEMENT.md",
+      "sha256": "915c9a7b4edcbae33bd192ae873abb673ec7f52a97db29c57e34ce84fbbf0ea1"
+    },
+    {
+      "bytes": 1145,
+      "path": "research/pair_moment_floor/VALIDATION.json",
+      "sha256": "8300a80b295bf96be0ce703d855975943567cafa2007cddf8a1ff0eeb34c58aa"
+    },
+    {
+      "bytes": 940,
+      "path": "research/pair_moment_floor/manuscript/COMPILE_RECEIPT.json",
+      "sha256": "30bd860648558a6c3f22b621a98ab045633441431233d417ccd1e3142f0b6709"
+    },
+    {
+      "bytes": 3394,
+      "path": "research/pair_moment_floor/manuscript/completion.tex",
+      "sha256": "da4280ec4747542d4113e76e665c3c8936825de11054495eb6de2a7d9487887d"
+    },
+    {
+      "bytes": 5769,
+      "path": "research/pair_moment_floor/manuscript/finite.tex",
+      "sha256": "4d646d54e2c1ccc4936f2704e0f5f9e0d82a78a256530293bc0b71fbe78486a5"
+    },
+    {
+      "bytes": 91157,
+      "path": "research/pair_moment_floor/manuscript/main.pdf",
+      "sha256": "17e165d0f86630c84dac29cf396cf7fcabaf9bd86b1076f1bd55306e93ed76fe"
+    },
+    {
+      "bytes": 5382,
+      "path": "research/pair_moment_floor/manuscript/main.tex",
+      "sha256": "73210698e02935692153fab76e9e24ee6522ad3f41e44c4ab9ba885f4369290a"
+    },
+    {
+      "bytes": 3512,
+      "path": "research/pair_moment_floor/manuscript/renewal.tex",
+      "sha256": "43de26341f09ed17c6633b4e314efbdfaaa9be8d964484eca19e5a7a77a347b0"
+    },
+    {
+      "bytes": 1003,
+      "path": "research/pair_moment_floor/novelty/CANDIDATE_BINDING.json",
+      "sha256": "c0c6e7f26336f2b2bfc4999f9cabad6ff679ea408633eb28b99787043a8b92f8"
+    },
+    {
+      "bytes": 1272,
+      "path": "research/pair_moment_floor/novelty/CANDIDATE_BINDING_REVISED.json",
+      "sha256": "352fbe14ac6f2c5764d1daffa2815a2d84703815fd3693a2a9e61c7a01434dae"
+    },
+    {
+      "bytes": 7698,
+      "path": "research/pair_moment_floor/novelty/FINAL_CLAIM_COMPARISON.md",
+      "sha256": "3a25a97da1c749d8353034450e1839376644172edafbed3a17b125be2e93320b"
+    },
+    {
+      "bytes": 8734,
+      "path": "research/pair_moment_floor/novelty/PRIMARY_SOURCE_NOVELTY_AUDIT.md",
+      "sha256": "ae36a1936c640e37cd62bcbd053f0bf8931a7fcd350cd98ba5dbca049858bdba"
+    },
+    {
+      "bytes": 1038,
+      "path": "research/pair_moment_floor/novelty/REVISION_CHECK.md",
+      "sha256": "a28361a408779e0224def52bf4228018c9c11f98cb4d3ffe3cc2118b9075b0c2"
+    },
+    {
+      "bytes": 5028,
+      "path": "research/pair_moment_floor/novelty/SEARCH_LOG.md",
+      "sha256": "c550371112f0849c80d7a83a848e5ca88d2df59cd74382db47e800b9e6139933"
+    },
+    {
+      "bytes": 19322,
+      "path": "research/pair_moment_floor/novelty/SOURCE_LEDGER.json",
+      "sha256": "7c96327a957d354350dc0c6e836e3c7c231250723cdc882e04086429209e64ed"
+    },
+    {
+      "bytes": 1466,
+      "path": "research/pair_moment_floor/novelty/VALIDATION.md",
+      "sha256": "d0db162551ceafbb6645d2ee4e8f4fdb3203d24fbaad20c205799b13679a4fcb"
+    },
+    {
+      "bytes": 7761,
+      "path": "research/pair_moment_floor/proof/ALL_DISTANCE_ESTIMATE.md",
+      "sha256": "4ebb9d072d9030036cc6333320a5c60bddbe9daf304eb394056df250546a6bfe"
+    },
+    {
+      "bytes": 3704,
+      "path": "research/pair_moment_floor/proof/OBJECTIVE_AND_UPPER.md",
+      "sha256": "7d29fb1c860d823ed176466db068ac44ba62fa7ebcfc6c0256aae59b17e6dac3"
+    },
+    {
+      "bytes": 5506,
+      "path": "research/pair_moment_floor/proof/RENEWAL_AND_MODEL.md",
+      "sha256": "2dc59270fe3921868af9cd8a9f9f4423098ea4d1f9f33c6f80dc5433b7a8e6e0"
+    },
+    {
+      "bytes": 4392,
+      "path": "research/pair_moment_floor/reviews/finite/FINAL_BINDING_RECEIPT.json",
+      "sha256": "5eaf7536068e4ce667d70b8ed0f396620dd772aa2c1c16e56c2d1e923d4c5469"
+    },
+    {
+      "bytes": 11771,
+      "path": "research/pair_moment_floor/reviews/finite/FINAL_FINITE_REVIEW.md",
+      "sha256": "04104a3ab279ae353c6950163734a4104bb920f0739fd256d121c0a78d55aec2"
+    },
+    {
+      "bytes": 9087,
+      "path": "research/pair_moment_floor/reviews/finite/INDEPENDENT_FINITE_RECONSTRUCTION.md",
+      "sha256": "83f033e162b99b29b94617fec5d0765c661ac5e53763a68d746e81a5a957619a"
+    },
+    {
+      "bytes": 9167,
+      "path": "research/pair_moment_floor/reviews/operators/FINAL_OPERATOR_REVIEW.md",
+      "sha256": "18eba2b47fdfa8eb726ec0018405bdb8b64a54c2c2076495caeb076f098d850d"
+    },
+    {
+      "bytes": 8269,
+      "path": "research/pair_moment_floor/reviews/operators/INDEPENDENT_OPERATOR_LEMMAS.md",
+      "sha256": "ed0482da61d56754be49a6c5a84ad100acb3135788c248b8991e7d9f15b762ae"
+    },
+    {
+      "bytes": 4481,
+      "path": "research/pair_moment_floor/reviews/operators/MANUSCRIPT_REVIEW.md",
+      "sha256": "c6690ae61923c17cde9e90f09b60da9a38ec20ffa8645006697efc063923b1c8"
+    },
+    {
+      "bytes": 2339,
+      "path": "research/pair_moment_floor/reviews/operators/OPERATOR_REVIEW_RECEIPT.md",
+      "sha256": "b7ec80a0a499b089accd801711e7cc3a52298828dbea8b9142efc013c920ff74"
+    },
+    {
+      "bytes": 3074,
+      "path": "research/pair_moment_floor/reviews/operators/SOURCE_CANCELLATION_RECONSTRUCTION.md",
+      "sha256": "951b949f235d26a9880a256670045df5498a6dd984df1e412bf4be01e310c00d"
+    },
+    {
+      "bytes": 3809,
+      "path": "research/pair_moment_floor/reviews/operators/UPPER_BOUND_EXACT_REPLAY.md",
+      "sha256": "b97bc4c5e3c9648393cc9ac5e1a25214e0092d4bf22f251398340ea5e8285859"
+    },
+    {
       "bytes": 13697,
       "path": "tests/test_finite_grid_arrays_public.py",
       "sha256": "fe44046ca83e04f85104907421453fe807043ebccf6ecb1317f84bf77ad7ddcf"
@@ -327,5 +502,5 @@
       "sha256": "71ba65656bb7dc27caf302ee148cfc6356d56ad1f1186d806e82c3664ae2a8dd"
     }
   ],
-  "version": "1.5.0"
+  "version": "1.6.0"
 }

@@ -1,0 +1,137 @@
+\section{The finite construction and all-distance estimates}
+Write \(x=N^{1/4}\) and fix
+\begin{equation}
+ \ell=\lceil x^2\rceil+514,\quad \delta=1/\ell,\quad
+ H=\lfloor\sqrt2x^3\rfloor,\quad \beta=1-1026/x,
+ \quad c=(\ell-1)/2. \label{params}
+\end{equation}
+For \(x\ge32768\), \(N\ge8\ell\), \(x^3\le H\le\sqrt2x^3\),
+\(\ell\le5x^2/4\), and \(1/2\le\beta\le1\).
+Define, for \(0\le j<N\),
+\begin{align}
+ \psi_j&=\delta[\sigma((j-c)/H)+\sigma((N-1-j-c)/H)-1]_+,\notag\\
+ \alpha_j&=\frac{\beta\delta H}{2\ell}
+ \mathbf1_{\{j<\ell\ \text{or}\ j\ge N-\ell\}},
+ \qquad f_j=\psi_j+\alpha_j. \label{profile}
+\end{align}
+Since \(\psi\le2\delta\), \(f\le2/x^2+1/x<1/2\). Put
+\[
+ \widetilde\psi_j=\min\left\{\psi_j,
+ \sqrt{\frac{\delta(f_j-f_j^2)}{1-\delta}}\right\},\quad
+ \epsilon_j=f_j-f_j^2-\frac{1-\delta}{\delta}\widetilde\psi_j^2.
+\]
+Let \(D_{jj}=\widetilde\psi_j/\sqrt\delta\),
+\((\Phi_\ell)_{ij}=(1-|i-j|/\ell)_+\), and set
+\begin{equation}
+ \Gamma=ff^{\mathsf T}+D(I-\delta\Phi_\ell)D+\operatorname{diag}(\epsilon).
+ \label{covariance}
+\end{equation}
+The Fej\'er symbol gives \(0\preceq\Phi_\ell\preceq\ell I\).
+Thus \eqref{covariance} satisfies \eqref{model}: its covariance is PSD,
+its diagonal is \(f\), and off-diagonal entries are nonnegative because
+\(0\le\widetilde\psi\le f\) and \(0\le(\Phi_\ell)_{ij}\le1\).
+
+All sequences below have zero extension. Write \(CC,AB,AA\) for the lag
+sums of \(\psi\psi\), \(\alpha\psi+\psi\alpha\), and \(\alpha\alpha\),
+and \(CT\) for the lag sum of \(\widetilde\psi\widetilde\psi\).
+Then, with \(w=(1-d/\ell)_+\) and \(S=\delta^2N\),
+\begin{equation}
+ P_N(d)=CC(d)+AB(d)+AA(d)-wCT(d). \label{pair}
+\end{equation}
+
+\begin{lemma}\label{structured}
+For \(1\le d\le\lfloor N/2\rfloor\),
+\begin{equation}
+ P_N(d)\le S+w\left[
+ \frac{\beta^2\delta^2H^2}{2\ell}-S+\frac{512}{x}\right]
+ +\frac{256}{x^2}+64e^{-x/24}. \label{structuredineq}
+\end{equation}
+Every remaining lag satisfies \(P_N(d)<1\).
+\end{lemma}
+\begin{proof}
+For integrable BV \(F\), lattice quadrature on any shifted mesh of width \(a\)
+has error at most \(a\TV(F)\). This follows by summing cellwise variation;
+applying the estimate to \(|F|\) proves absolute convergence. In particular
+\begin{equation}
+ D_1:=\sum|\psi_j-\delta|
+ \le\delta(\ell+8H+20)\le10\delta H. \label{L1}
+\end{equation}
+Indeed the shifted steps miss at most \(\ell\) sites, each sampled \(b\)
+costs at most \(4H+10\), and positive part contracts distance from 1.
+Expanding one factor at a time gives
+\begin{equation}
+ |CC(d)-\delta^2(N-d)|\le30\delta^2H,
+ \qquad AB(d)\le4\delta^2H. \label{coarse}
+\end{equation}
+Monotonicity of \(t(1-t)\) on \([0,1/2]\) proves
+\(\widetilde\psi\ge\min(\psi,\delta)\).
+Hence \(\sum(\psi-\widetilde\psi)\le D_1\),
+\(CC-CT\le40\delta^2H\), and for \(d<\ell\),
+\begin{equation}
+ S-CT(d)\le71\delta^2H. \label{hole}
+\end{equation}
+Exact interval counting, with \(a_0=\beta\delta H/(2\ell)\), gives
+\begin{equation}
+ AA(d)=a_0^2\{2(\ell-d)_++(\ell-|d-(N-\ell)|)_+\}. \label{atoms}
+\end{equation}
+
+It remains to improve \eqref{coarse} away from very short lags. Set
+\(U=(N-\ell)/H\) and
+\(\chi_U(z)=[1+b(z)+b(U-z)]\mathbf1_{[0,U]}(z)\).
+Then \(0\le\chi_U\le2\), \(\TV(\chi_U)\le26\), so the product
+\(\chi_U(z)\chi_U(z+s)\) has variation at most 104.
+The difference between \(\psi_j\) and \(\delta\chi_U((j-c)/H)\)
+is nonnegative and supported on at most \(\ell\) outer sites; its total
+mass is at most \((4/3)e^{-U/4}\). Its cost to the complete un-capped
+pair sum is at most \(8e^{-U/4}\).
+
+For \(\ell/2\le d\le N/2\), put \(s=d/H\), \(V=U-s\ge N/(4H)\).
+Expanding the finite continuous autocorrelation gives
+\begin{equation}
+ \left|\int\chi_U(z)\chi_U(z+s)dz-C_U(s)\right|
+ \le(30+4U)e^{-V/4}. \label{finitecorr}
+\end{equation}
+The two linear tails and two same-end product tails cost at most
+\(5\int_V^\infty|b|\le30e^{-V/4}\).
+The two cross-end products cost at most
+\((16/9)V e^{-V/4}+(16/9)V e^{-(U+s)/4}\le4Ue^{-V/4}\).
+Discrete continuous/continuous quadrature costs at most \(104\delta^2\).
+
+Let \(h_j=(j-c)/H\), \(0\le j<\ell\). These shifts have mean zero and
+\(|h_j|\le\ell/(2H)\). Exact reflection leaves two inward atom terms,
+with normalization \(\beta\delta^2H\) times the average
+\(\chi_U(s+h_j)\). Outward atom/\(\chi_U\) terms vanish because
+\(\lceil c\rceil+\lceil\ell/2\rceil=\ell\).
+All \(s+h_j>0\); their remote boundary corrections have magnitude at most
+\((4/3)e^{-N/(16H)}\). Since \(\beta\le1\) and \(\sigma\ge0\), average
+the \emph{whole} inequality in Lemma~\ref{renewal} to obtain
+\[
+ C_U(s)+\frac1\ell\sum_j\sigma(s+h_j)
+ \le U+12\frac1\ell\sum_j|h_j|\le U+6\ell/H.
+\]
+This argument retains the renewal jump rather than differentiating it.
+Together with \eqref{finitecorr}, it yields
+\begin{equation}
+ CC(d)+AB(d)\le S+109/x^2+\mathcal T_N,
+ \qquad \mathcal T_N=64e^{-x/24}. \label{medium}
+\end{equation}
+For completeness, put \(z=N/H\), so \(x/\sqrt2\le z\le x\).
+The total tail ledger is at most
+\([\delta^2H(32+4z)+8]e^{-z/16}\le32e^{-x/24}\), leaving slack in
+\(\mathcal T_N\).
+
+For \(d<\ell/2\), \(w\ge1/2\), and \eqref{coarse} gives
+\(CC+AB\le S+136w/x\). For \(\ell/2\le d<\ell\), use \eqref{medium}.
+Equation~\eqref{hole} costs at most \(142w/x\). For \(d\ge\ell\), the
+hole vanishes and \eqref{medium} applies directly. Thus
+\eqref{pair} and \eqref{atoms} prove \eqref{structuredineq}, with room
+between 278 and 512 and between 109 and 256.
+
+For \(N/2<d\le N-2\ell\), there is no atom/atom term, and
+\(P_N(d)\le1/2+68/x<1\) by \eqref{coarse}.
+For \(N-2\ell+1\le d<N\), the opposite atom triangle is at most \(1/2\),
+the continuous overlap is at most \(8\delta^2\ell\), and
+\(AB\le4\delta^2H\). Hence \(P_N(d)\le1/2+8/x^2+8/x<1\).
+This is an exhaustive integer partition; the opposite strip peaks at
+\(d=N-\ell\).
+\end{proof}

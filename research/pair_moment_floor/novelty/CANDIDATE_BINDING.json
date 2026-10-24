@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-24T00:01:43.802909+00:00",
+  "status": "novelty comparison conditional on mathematical correctness, not proof acceptance",
+  "claim": "sqrt(N)+(2sqrt(2)/3)*N^(1/4)-2572 <= H2(N) < sqrt(N)+(2sqrt(2)/3)*N^(1/4)+1 for every integer N >= 2^60",
+  "candidate_files": [
+    {
+      "path": "STATEMENT.md",
+      "sha256": "915c9a7b4edcbae33bd192ae873abb673ec7f52a97db29c57e34ce84fbbf0ea1"
+    },
+    {
+      "path": "FULL_PROOF.md",
+      "sha256": "e03c60fa8c457e2199e502d84108bc3c978640b109ac458fe42904bf8a176524"
+    },
+    {
+      "path": "proof/RENEWAL_AND_MODEL.md",
+      "sha256": "8f959a31027401759cd8f080a7f325b05a2faa35bd716ae0cc97c73471315a2a"
+    },
+    {
+      "path": "proof/ALL_DISTANCE_ESTIMATE.md",
+      "sha256": "ada2326c22f2e29285cd0fa8f7eac66e704c996089736f2a8ebcc14f0a15bf3d"
+    },
+    {
+      "path": "proof/OBJECTIVE_AND_UPPER.md",
+      "sha256": "f9f11f1964fe2111680f4356b0c7f8c378014bf33d208b9b48df6d2cb2c73729"
+    }
+  ]
+}

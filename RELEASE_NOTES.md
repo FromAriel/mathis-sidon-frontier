@@ -1,3 +1,27 @@
+# Version 1.6.0 - October 23, 2026
+
+Adds a proposed effective proof of Akwei's Conjecture 7.7 for exactly the
+noncyclic pair-moment relaxation in Definition 7.2. For every integer
+N >= 2^60, the proposed bounds are
+sqrt(N) + (2 sqrt(2)/3) N^(1/4) - 2572 and
+sqrt(N) + (2 sqrt(2)/3) N^(1/4) + 1.
+
+**External human verification and peer review remain pending.** Two separate
+internal AI-assisted mathematical reviews, the full proof, a public preprint
+PDF and TeX sources, objections and bounded novelty audits are included in
+[research/pair_moment_floor/](research/pair_moment_floor/README.md).
+No proof-assistant verification is claimed.
+
+Akwei receives credit for the conjecture, model and construction; Chen's
+energy inequality supplies the attributed upper companion. This release
+does not improve the published numerical coefficient, construct Sidon sets,
+establish worldwide priority or solve Erdos Problem 30.
+
+All prior certificate and checker bytes, tags, release assets and versioned
+DOI records are preserved. No old dense certificate is reattached.
+This is a compact analytical-preprint release under the existing Zenodo
+concept DOI [10.5281/zenodo.23439039](https://doi.org/10.5281/zenodo.23439039).
+
 # Version 1.5.0 - October 23, 2026
 
 Title: **MathIS Sidon Frontier: Exact Symmetric and Two-Sided Certificates.**
