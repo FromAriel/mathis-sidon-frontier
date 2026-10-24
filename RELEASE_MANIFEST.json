@@ -1,5 +1,5 @@
 {
-  "description": "Analytical preprint release; historical certificate and checker bytes preserved; excludes this manifest",
+  "description": "Current v1.6.0 DOI metadata; frozen release tag and all mathematical files unchanged",
   "files": [
     {
       "bytes": 279,
@@ -22,9 +22,9 @@
       "sha256": "85e9e878cf3d129fdccbd74d54fbb88c1a6a0c0e6f6b50f6c7064826046b0e75"
     },
     {
-      "bytes": 1799,
+      "bytes": 1830,
       "path": "CITATION.cff",
-      "sha256": "90ac3f0b9e606af2ac72007414d970ffcc81b0c15da8c947ed82a2b82c062c2d"
+      "sha256": "e410bf12b702fa4b02d90141865a438c5d4d9016cfcdf2c87b54683c8759ace3"
     },
     {
       "bytes": 22963,
@@ -42,14 +42,14 @@
       "sha256": "1c8af8efd080db7c3a9d9077cee17c158b936972cdf3c9772981d45aea034858"
     },
     {
-      "bytes": 17866,
+      "bytes": 18114,
       "path": "README.md",
-      "sha256": "96e8ec517626f64d6dc5ef0894c564110cb070eff0462d508027658e5ca4b767"
+      "sha256": "bdaa18207e1c5e6283e8a808f9e78e2ca36c7bddd0e57951ef40386741ce7823"
     },
     {
-      "bytes": 15324,
+      "bytes": 15415,
       "path": "RELEASE_NOTES.md",
-      "sha256": "3c8306e31ce9c58e0a568bd359ccf7defa24e671c552c04634f623043f8f4ed3"
+      "sha256": "784db55b276a1a8a349519218a58e410804abbf3947e3288bda7858e60a8f011"
     },
     {
       "bytes": 16292,

@@ -1,5 +1,7 @@
 # Version 1.6.0 - October 23, 2026
 
+Archived version DOI: [10.5281/zenodo.23607543](https://doi.org/10.5281/zenodo.23607543).
+
 Adds a proposed effective proof of Akwei's Conjecture 7.7 for exactly the
 noncyclic pair-moment relaxation in Definition 7.2. For every integer
 N >= 2^60, the proposed bounds are

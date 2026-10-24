@@ -4,6 +4,8 @@
 
 ## v1.6.0: pair-moment conjecture proof preprint
 
+Archived version: [10.5281/zenodo.23607543](https://doi.org/10.5281/zenodo.23607543).
+
 This release presents a proposed effective proof of Akwei's Conjecture 7.7
 for exactly the noncyclic pair-moment relaxation in his Definition 7.2:
 
@@ -283,6 +285,8 @@ and Zenodo records passed the separate post-publication preservation audit.
 The documentation follow-up does not alter the frozen v1.5.0 tag or assets.
 
 - [Version 1.5.0 DOI](https://doi.org/10.5281/zenodo.23600836)
+- [Version 1.6.0 DOI](https://doi.org/10.5281/zenodo.23607543)
+- [Version 1.6.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.6.0)
 - [Version 1.5.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.5.0)
 - [Version 1.4.0 DOI](https://doi.org/10.5281/zenodo.23592514)
 - [Version 1.4.0 release](https://github.com/FromAriel/mathis-sidon-frontier/releases/tag/v1.4.0)
